@@ -1,0 +1,28 @@
+name = "M_uuid"
+version = "0.1.0"
+license = "MIT"
+author = "John S. Urban"
+maintainer = "urbanjost@comcast.com"
+copyright = "Copyright 2021, John S. Urban"
+
+[build]
+auto-executables = true
+auto-tests = true
+auto-examples = true
+
+[install]
+library = true
+
+[[executable]]
+   name="unique"
+   source-dir="app"
+   main="unique.f90"
+   [executable.dependencies]
+   M_CLI2 = { git = "https://github.com/urbanjost/M_CLI2.git" }
+
+[[test]]
+name="test_suite_M_uuid"
+source-dir="test"
+main="test_suite_M_uuid.f90"
+[test.dependencies]
+M_msg = { git = "https://github.com/urbanjost/M_msg.git" }
