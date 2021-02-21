@@ -4,6 +4,9 @@ license = "MIT"
 author = "John S. Urban"
 maintainer = "urbanjost@comcast.com"
 copyright = "Copyright 2021, John S. Urban"
+categories = ["Universally Unique ID"]
+keywords = ["fortran", "UUID", "RFC 4122", "Universally Unique ID"]
+homepage = "https://github.com/urbanjost/M_uuid.git"
 
 [build]
 auto-executables = true
