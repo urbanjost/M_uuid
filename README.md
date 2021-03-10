@@ -1,4 +1,3 @@
-![fpm](docs/images/fpm_logo.gif)
 ## NAME
    M_uuid(3f) - a module of UUID (Universally Unique IDentifier) procedures
    (LICENSE:CUSTOM OPEN)
@@ -10,7 +9,8 @@
    `Remember you are unique, just like everyone else.`
 ## DESCRIPTION
    A universally unique identifier (UUID) is a 128-bit number used to
-   identify information in computer systems.
+   identify information on computer systems. In particular, they are
+   commonly used to create unique filenames and database and table keys.
 
    When generated according to the standard methods, UUIDs are for
    practical purposes unique, without depending for their uniqueness
@@ -30,7 +30,13 @@
    provide support for generating them, and for parsing their textual
    representation.
 
-   RFC 4122 defines a Uniform Resource Name (URN) namespace for UUIDs.
+   Note that several UUID types contain information that can be decyphered
+   to recreate the creation time or the MAC address of the device that
+   generated the UUID which has several uses for verifying when and
+   where data was generated.
+
+   [RFC 4122](https://tools.ietf.org/html/rfc4122)
+   defines a Uniform Resource Name (URN) namespace for UUIDs.
    A UUID presented as a URN appears as follows:
 ```text
              urn:uuid:123e4567-e89b-12d3-a456-426655440000
@@ -40,7 +46,14 @@
 ## PROCEDURES
        * generate_uuid(version) ! generate 36-character UUID string
 
-                                                          March 09, 2021                                                 M_uuid(3)
+## PEDIGREE
+ This is a modified version of generate_uuid(3f).  generate_uuid(3f)
+ was originally derived from the xmlf90 codebase, (c) Alberto Garcia &
+ Jon Wakelin, 2003-2004.  It also calls RNG routines from Scott Ladd
+ <scott.ladd@coyotegulch.com>, and the libFoX modules. Although some
+ sections have been replaced, generate_uuid(3f) was originally based on
+ the libFoX version.
+
 ## BUILDING THE MODULE USING make(1)
      git clone https://github.com/urbanjost/M_uuid.git
      cd M_uuid/src
@@ -62,21 +75,20 @@ This will compile the Fortran module and basic example
 program that exercise the routine.
 
 ## USER DOCUMENTATION
-   - a simple [index](https://urbanjost.github.io/M_uuid/) to
-     the individual manpages in HTML form
+   - a simple index to the man-pages for the
+   [routines](https://urbanjost.github.io/M_uuid/man3.html) 
+   and [programs](https://urbanjost.github.io/M_uuid/man1.html) 
+   in HTML form.
 
    - A single page that uses javascript to combine all the HTML
      descriptions of the manpages is at 
      [BOOK_M_draw](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
 
-   - Or all the HTML appended together is in 
-     [M_draw](https://urbanjost.github.io/M_draw/M_uuid.html)
+## UNIT TESTS ![fpm](docs/images/testtube.gif)
+   Running the example programs and test programs tests basic
+   functionality.
 
-## UNIT TESTS
-There are no automated unit tests per-se. Running the example programs
-and demo programs ensures the library is functioning.
-
-## SUPPORTS FPM
+## SUPPORTS FPM ![fpm](docs/images/fpm_logo.gif)
 
    Alternatively, download the github repository and build it with
    fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
@@ -95,3 +107,8 @@ and demo programs ensures the library is functioning.
         [dependencies]
         M_uuid        = { git = "https://github.com/urbanjost/M_uuid.git" }
 ```
+## REFERENCES ![ref](docs/images/ref.gif)
+
+   * [RFC-4122](https://tools.ietf.org/html/rfc4122)
+   * [Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+   * [FOX](http://fortranwiki.org/fortran/show/FoX)
