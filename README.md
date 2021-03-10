@@ -1,4 +1,3 @@
-![fpm](docs/images/fpm_logo.gif)
 ## NAME
    M_uuid(3f) - a module of UUID (Universally Unique IDentifier) procedures
    (LICENSE:CUSTOM OPEN)
@@ -76,7 +75,7 @@ program that exercise the routine.
 There are no automated unit tests per-se. Running the example programs
 and demo programs ensures the library is functioning.
 
-## SUPPORTS FPM
+## SUPPORTS FPM ![fpm](docs/images/fpm_logo.gif)
 
    Alternatively, download the github repository and build it with
    fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
