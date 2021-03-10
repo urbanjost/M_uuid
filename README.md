@@ -9,7 +9,8 @@
    `Remember you are unique, just like everyone else.`
 ## DESCRIPTION
    A universally unique identifier (UUID) is a 128-bit number used to
-   identify information in computer systems.
+   identify information on computer systems. In particular, they are
+   commonly used to create unique filenames and database and table keys.
 
    When generated according to the standard methods, UUIDs are for
    practical purposes unique, without depending for their uniqueness
@@ -39,7 +40,14 @@
 ## PROCEDURES
        * generate_uuid(version) ! generate 36-character UUID string
 
-                                                          March 09, 2021                                                 M_uuid(3)
+## PEDIGREE
+ This is a modified version of generate_uuid(3f).  generate_uuid(3f)
+ was originally derived from the xmlf90 codebase, (c) Alberto Garcia &
+ Jon Wakelin, 2003-2004.  It also calls RNG routines from Scott Ladd
+ <scott.ladd@coyotegulch.com>, and the libFoX modules. Although some
+ sections have been replaced, generate_uuid(3f) was originally based on
+ the libFoX version.
+
 ## BUILDING THE MODULE USING make(1)
      git clone https://github.com/urbanjost/M_uuid.git
      cd M_uuid/src
