@@ -30,7 +30,13 @@
    provide support for generating them, and for parsing their textual
    representation.
 
-   RFC 4122 defines a Uniform Resource Name (URN) namespace for UUIDs.
+   Note that several UUID types contain information that can be decyphered
+   to recreate the creation time or the MAC address of the device that
+   generated the UUID which has several uses for verifying when and
+   where data was generated.
+
+   [RFC 4122](https://tools.ietf.org/html/rfc4122)
+   defines a Uniform Resource Name (URN) namespace for UUIDs.
    A UUID presented as a URN appears as follows:
 ```text
              urn:uuid:123e4567-e89b-12d3-a456-426655440000
@@ -102,3 +108,8 @@ and demo programs ensures the library is functioning.
         [dependencies]
         M_uuid        = { git = "https://github.com/urbanjost/M_uuid.git" }
 ```
+## REFERENCES
+
+   * [RFC-4122](https://tools.ietf.org/html/rfc4122)
+   * [Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+   * [FOX](http://fortranwiki.org/fortran/show/FoX)
