@@ -1,3 +1,9 @@
+module testit
+use M_msg
+use M_verify, only : unit_check_command, unit_check_keep_going, unit_check_level
+use M_uuid, only : generate_uuid
+public test_suite_m_uuid
+contains
 subroutine test_suite_m_uuid()
 ! this should contains tests for all public procedures in the module
 call test_generate_uuid()
@@ -7,15 +13,13 @@ end subroutine test_suite_m_uuid
 !==================================================================================================================================!
 subroutine test_generate_uuid()
 use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
-$DOCUMENT COMMENT
 
-   This just checks that we can generate the various types of UUID
-   (without crashing) and checks that they have the correct syntax. We
-   could also check that the UUID changes for each call and I think there
-   is an additional check we could make within the UUID itself. But for
-   now this is enough.
+!   This just checks that we can generate the various types of UUID
+!   (without crashing) and checks that they have the correct syntax. We
+!   could also check that the UUID changes for each call and I think there
+!   is an additional check we could make within the UUID itself. But for
+!   now this is enough.
 
-$DOCUMENT END
 character(len=36) :: uuid
    call unit_check_start('generate_uuid') ! start tests
  
@@ -65,3 +69,15 @@ logical :: lout
 end function check_uuid
 !==================================================================================================================================!
 end subroutine test_generate_uuid
+end module testit
+
+program runtest
+use M_msg
+use M_verify, only : unit_check_command, unit_check_keep_going, unit_check_level
+use testit
+implicit none
+   unit_check_command=''
+   unit_check_keep_going=.true.
+   unit_check_level=0
+   call test_suite_M_uuid()
+end program runtest
