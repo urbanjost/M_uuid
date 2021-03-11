@@ -85,7 +85,7 @@ program that exercise the routine.
    - Or all the HTML appended together is in 
      [M_draw](https://urbanjost.github.io/M_draw/M_uuid.html)
 
-## UNIT TESTS ![fpm](docs/images/testtube.jpg)
+## UNIT TESTS ![fpm](docs/images/testtube.gif)
 There are no automated unit tests per-se. Running the example programs
 and demo programs ensures the library is functioning.
 
