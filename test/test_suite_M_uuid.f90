@@ -74,7 +74,8 @@ end subroutine test_generate_uuid
 !==================================================================================================================================!
 function exercise()
 logical :: exercise
-integer,parameter :: sz=27777777
+!integer,parameter :: sz=27777777
+integer,parameter :: sz=1000000
 character(len=36),allocatable :: uuid(:)
 integer :: i,j
    exercise=.true.
