@@ -108,7 +108,7 @@ and demo programs ensures the library is functioning.
         [dependencies]
         M_uuid        = { git = "https://github.com/urbanjost/M_uuid.git" }
 ```
-## REFERENCES
+## REFERENCES ![ref](docs/images/ref.gif)
 
    * [RFC-4122](https://tools.ietf.org/html/rfc4122)
    * [Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
