@@ -88,6 +88,10 @@ integer :: i,j
       call unique_strings(uuid,icount)
 
       if(icount.ne.size(uuid))then
+<<<<<<< HEAD
+=======
+         write(*,*)'error: duplicates found in ',size(uuid),' values'
+>>>>>>> e988d53f7dafcb9b0a48e48f9d5355cfbfd3e4fa
          exercise=.false.
          exit TYPES
       endif
@@ -138,8 +142,12 @@ integer,intent(out)                         :: ivals
       do i=2,isize
         if(array(i).ne.array(i-1))then
            ivals=ivals+1
+<<<<<<< HEAD
         else
            write(*,*)'<ERROR> at ',i,' and ', i+1,' duplicates ',array(i)
+=======
+           array(ivals)=array(i)
+>>>>>>> e988d53f7dafcb9b0a48e48f9d5355cfbfd3e4fa
         endif
       enddo
    else
