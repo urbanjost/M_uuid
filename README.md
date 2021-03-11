@@ -75,15 +75,14 @@ This will compile the Fortran module and basic example
 program that exercise the routine.
 
 ## USER DOCUMENTATION
-   - a simple [index](https://urbanjost.github.io/M_uuid/) to
-     the individual manpages in HTML form
+   - a simple index to the man-pages for the
+   [routines](https://urbanjost.github.io/M_uuid/man3.html) 
+   and [programs](https://urbanjost.github.io/M_uuid/man1.html) 
+   in HTML form.
 
    - A single page that uses javascript to combine all the HTML
      descriptions of the manpages is at 
      [BOOK_M_draw](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
-
-   - Or all the HTML appended together is in 
-     [M_draw](https://urbanjost.github.io/M_draw/M_uuid.html)
 
 ## UNIT TESTS ![fpm](docs/images/testtube.gif)
 There are no automated unit tests per-se. Running the example programs
