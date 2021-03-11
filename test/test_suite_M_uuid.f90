@@ -42,7 +42,7 @@ character(len=36) :: uuid
    uuid = generate_uuid(5)
    call unit_check('generate_uuid',uuid=='',msg='Version 5 (NOT IMPLEMENTED)')
 
-   call unit_check('compare',exercise(),msg='test for duplicates')
+   call unit_check('compare',exercise(1000000),msg='test for duplicates in 1000000 values')
    call unit_check_done('generate_uuid')
 !==================================================================================================================================!
 contains
@@ -72,10 +72,9 @@ end function check_uuid
 !==================================================================================================================================!
 end subroutine test_generate_uuid
 !==================================================================================================================================!
-function exercise()
+function exercise(sz)
 logical :: exercise
-!integer,parameter :: sz=27777777
-integer,parameter :: sz=1000000
+integer :: sz
 character(len=36),allocatable :: uuid(:)
 integer :: i,j
    exercise=.true.
@@ -85,21 +84,68 @@ integer :: i,j
       do i=1,sz
          uuid(i)=generate_uuid(j)
       enddo
-      write(*,*)'looking for duplicates in ',size(uuid),' values for type ',j
-      INFINITE: do
-      do i=1,size(uuid)-1,2
-         if(uuid(i).eq.uuid(i+1))then
-            write(*,*)'error: duplicates found at ',i,uuid(i),uuid(i+1)
-            exercise=.false.
-            exit TYPES
-         endif
-      enddo
-      write(*,*)size(uuid)/2,' adjacent values were different for type',j
-      uuid=uuid(1::2)
-      if(size(uuid).le.2)exit INFINITE
-      enddo INFINITE
+      call sort_shell_strings_lh(uuid)
+      call unique_strings(uuid,icount)
+
+      if(icount.ne.size(uuid))then
+         write(*,*)'error: duplicates found in ',size(uuid),' values'
+         exercise=.false.
+         exit TYPES
+      endif
    enddo TYPES
 end function exercise
+!==================================================================================================================================!
+subroutine sort_shell_strings_lh(lines)
+! ident_5="@(#)M_sort::sort_shell_strings_lh(3fp):sort strings(a-z) over specified field using shell sort"
+character(len=*) :: lines(:)
+   character(len=:),allocatable :: ihold
+   integer           :: n, igap, i,j,k, jg
+   n=size(lines)
+   if(n.gt.0)then
+      allocate(character(len=len(lines(1))) :: ihold)
+   else
+      ihold=''
+   endif
+   igap=n
+   INFINITE: do
+      igap=igap/2
+      if(igap.eq.0) exit INFINITE
+      k=n-igap
+      i=1
+      INNER: do
+         j=i
+         INSIDE: do
+            jg=j+igap
+            if(lle(lines(j),lines(jg)))exit INSIDE
+            ihold=lines(j)
+            lines(j)=lines(jg)
+            lines(jg)=ihold
+            j=j-igap
+            if(j.lt.1) exit INSIDE
+         enddo INSIDE
+         i=i+1
+         if(i.gt.k) exit INNER
+      enddo INNER
+   enddo INFINITE
+end subroutine sort_shell_strings_lh
+
+subroutine unique_strings(array,ivals)
+character(len=*),intent(inout),allocatable  :: array(:)
+integer,intent(out)                         :: ivals
+   integer                                  :: i,isize
+   isize=size(array)
+   if(isize.ge.2)then
+      ivals=1
+      do i=2,isize
+        if(array(i).ne.array(i-1))then
+           ivals=ivals+1
+           array(ivals)=array(i)
+        endif
+      enddo
+   else
+      ivals=isize
+   endif
+end subroutine unique_strings
 !==================================================================================================================================!
 end module scr_uuid
 !==================================================================================================================================!
