@@ -85,8 +85,8 @@ program that exercise the routine.
      [BOOK_M_draw](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
 
 ## UNIT TESTS ![fpm](docs/images/testtube.gif)
-There are no automated unit tests per-se. Running the example programs
-and demo programs ensures the library is functioning.
+   Running the example programs and test programs tests basic
+   functionality.
 
 ## SUPPORTS FPM ![fpm](docs/images/fpm_logo.gif)
 
