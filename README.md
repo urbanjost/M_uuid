@@ -84,11 +84,11 @@ program that exercise the routine.
      descriptions of the manpages is at 
      [BOOK_M_draw](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
 
-## UNIT TESTS ![fpm](docs/images/testtube.gif)
+## UNIT TESTS ![-](docs/images/testtube.gif)
    Running the example programs and test programs tests basic
    functionality.
 
-## SUPPORTS FPM ![fpm](docs/images/fpm_logo.gif)
+## SUPPORTS FPM ![-](docs/images/fpm_logo.gif)
 
    Alternatively, download the github repository and build it with
    fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
@@ -107,7 +107,7 @@ program that exercise the routine.
         [dependencies]
         M_uuid        = { git = "https://github.com/urbanjost/M_uuid.git" }
 ```
-## REFERENCES ![ref](docs/images/ref.gif)
+## REFERENCES ![-](docs/images/ref.gif)
 
    * [RFC-4122](https://tools.ietf.org/html/rfc4122)
    * [Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)

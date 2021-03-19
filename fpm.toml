@@ -1,9 +1,11 @@
+# TOML file for fpm as described at https://github.com/fortran-lang/fpm/blob/master/manifest-reference.md
 name = "M_uuid"
 version = "0.1.0"
 license = "MIT"
 author = "John S. Urban"
 maintainer = "urbanjost@comcast.com"
 copyright = "Copyright 2021, John S. Urban"
+description = "module to produce a UUID string"
 categories = ["Universally Unique ID"]
 keywords = ["fortran", "UUID", "RFC 4122", "Universally Unique ID"]
 homepage = "https://github.com/urbanjost/M_uuid.git"
