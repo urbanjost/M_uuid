@@ -6,7 +6,8 @@
        use m_uuid, only : generate_uuid
 ```
 ## QUOTE
-   `Remember you are unique, just like everyone else.`
+####   __Remember you are unique, just like everyone else__.
+
 ## DESCRIPTION
    A universally unique identifier (UUID) is a 128-bit number used to
    identify information on computer systems. In particular, they are
@@ -118,7 +119,6 @@ program that exercise the routine.
 
 ---
 ## [CHANGELOG](CHANGELOG.md)
----
 
 ## REFERENCES ![-](docs/images/ref.gif)
 
