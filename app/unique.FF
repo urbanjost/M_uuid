@@ -40,7 +40,7 @@ subroutine setup()
 ! @(#)help_usage(3f): sets help information
 
 $!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-$DOCUMENT variable -varname version_text
+$BLOCK variable -varname version_text
 @(#)PRODUCT:        GPF (General Purpose Fortran) utilities and examples>
 @(#)PROGRAM:        unique(1)>
 @(#)DESCRIPTION:    output a UUID (Universally Unique ID)>
@@ -48,9 +48,9 @@ $DOCUMENT variable -varname version_text
 @(#)AUTHOR:         John S. Urban>
 @(#)HOME PAGE:      http://www.urbanjost.altervista.org/index.html>
 @(#)COMPILED:       Tue, Feb 9th, 2021 9:19:16 PM>
-$DOCUMENT END
+$BLOCK
 $!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-$DOCUMENT variable -varname help_text -file unique.1.man
+$BLOCK variable -varname help_text -file unique.1.man
 NAME
     unique(1f) - [FUNIX] generate a UUID (Universally Unique ID) string
                   per RFC 4122
@@ -113,7 +113,7 @@ AUTHOR
    John S. Urban
 LICENSE
    Public Domain
-$DOCUMENT END
+$BLOCK
 end subroutine setup
 $!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 end program unique 

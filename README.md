@@ -74,21 +74,7 @@
 This will compile the Fortran module and basic example
 program that exercise the routine.
 
-## USER DOCUMENTATION
-   - a simple index to the man-pages for the
-   [routines](https://urbanjost.github.io/M_uuid/man3.html) 
-   and [programs](https://urbanjost.github.io/M_uuid/man1.html) 
-   in HTML form.
-
-   - A single page that uses javascript to combine all the HTML
-     descriptions of the manpages is at 
-     [BOOK_M_draw](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
-
-## UNIT TESTS ![-](docs/images/testtube.gif)
-   Running the example programs and test programs tests basic
-   functionality.
-
-## SUPPORTS FPM ![-](docs/images/fpm_logo.gif)
+## BUILD and TEST with FPM ![-](docs/images/fpm_logo.gif)
 
    Alternatively, download the github repository and build it with
    fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
@@ -107,8 +93,36 @@ program that exercise the routine.
         [dependencies]
         M_uuid        = { git = "https://github.com/urbanjost/M_uuid.git" }
 ```
+
+## USER DOCUMENTATION
+   - a simple index to the man-pages for the
+   [routines](https://urbanjost.github.io/M_uuid/man3.html) 
+   and [programs](https://urbanjost.github.io/M_uuid/man1.html) 
+   in HTML form.
+
+   - A single page that uses javascript to combine all the HTML
+     descriptions of the manpages is at 
+     [BOOK_M_draw](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
+
+---
+## DEVELOPER DOCUMENTATION (experimental)
+<!--
+### doxygen
+
+- [doxygen(1) output](https://urbanjost.github.io/M_uuid/doxygen_out/html/index.html).
+
+### ford
+-->
+
+- [ford(1) output](https://urbanjost.github.io/M_uuid/fpm-ford/index.html).
+
+---
+## [CHANGELOG](CHANGELOG.md)
+---
+
 ## REFERENCES ![-](docs/images/ref.gif)
 
    * [RFC-4122](https://tools.ietf.org/html/rfc4122)
    * [Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
    * [FOX](http://fortranwiki.org/fortran/show/FoX)
+---
