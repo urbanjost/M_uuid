@@ -47,13 +47,6 @@
 ## PROCEDURES
        * generate_uuid(version) ! generate 36-character UUID string
 
-## PEDIGREE
- This is a modified version of generate_uuid(3f).  generate_uuid(3f)
- was originally derived from the xmlf90 codebase, (c) Alberto Garcia &
- Jon Wakelin, 2003-2004.  It also calls RNG routines from Scott Ladd
- <scott.ladd@coyotegulch.com>, and the libFoX modules. Although some
- sections have been replaced, generate_uuid(3f) was originally based on
- the libFoX version.
 
 ## BUILDING THE MODULE USING make(1)
      git clone https://github.com/urbanjost/M_uuid.git
@@ -95,7 +88,10 @@ program that exercise the routine.
         M_uuid        = { git = "https://github.com/urbanjost/M_uuid.git" }
 ```
 
-## USER DOCUMENTATION
+## DOCUMENTATION
+
+### USER
+
    - a simple index to the man-pages for the
    [routines](https://urbanjost.github.io/M_uuid/man3.html) 
    and [programs](https://urbanjost.github.io/M_uuid/man1.html) 
@@ -105,20 +101,21 @@ program that exercise the routine.
      descriptions of the manpages is at 
      [BOOK_M_draw](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
 
----
-## DEVELOPER DOCUMENTATION (experimental)
+   - [CHANGELOG](CHANGELOG.md) provides a history of significant changes
+
+### DEVELOPER (experimental)
+   - [ford(1) output](https://urbanjost.github.io/M_uuid/fpm-ford/index.html).
 <!--
-### doxygen
-
-- [doxygen(1) output](https://urbanjost.github.io/M_uuid/doxygen_out/html/index.html).
-
-### ford
+   - [doxygen(1) output](https://urbanjost.github.io/M_uuid/doxygen_out/html/index.html).
 -->
-
-- [ford(1) output](https://urbanjost.github.io/M_uuid/fpm-ford/index.html).
-
 ---
-## [CHANGELOG](CHANGELOG.md)
+## PEDIGREE
+ This is a modified version of generate_uuid(3f).  generate_uuid(3f)
+ was originally derived from the xmlf90 codebase, (c) Alberto Garcia &
+ Jon Wakelin, 2003-2004.  It also calls RNG routines from Scott Ladd
+ <scott.ladd@coyotegulch.com>, and the libFoX modules. Although some
+ sections have been replaced, generate_uuid(3f) was originally based on
+ the libFoX version.
 
 ## REFERENCES ![-](docs/images/ref.gif)
 

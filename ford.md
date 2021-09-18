@@ -5,7 +5,7 @@ src_dir: src
          test
 output_dir: docs/fpm-ford
 project: M_uuid
-summary: generate UUIDs 
+summary: generate UUIDs (Universally Unique ID)
 project_github: https://github.com/urbanjost/M_uuid
 project_download:
 author: John S. Urban
