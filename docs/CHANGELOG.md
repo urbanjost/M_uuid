@@ -1,20 +1,24 @@
 ## M_uuid Changelog
 
-The intent of this changelog is to keep everyone in the loop about
-what's new in the M_uuid  project. It is a curated, chronologically ordered
-list of notable changes including records of change such as bug fixes,
-new features, changes, and relevant notifications.
+The intent of this log is to keep everyone in the loop about what's new
+in the M_uuid  project. It is a curated, chronologically ordered list
+of notifications of notable events such as bug fixes, new features,
+and usage changes.
 
-   - [x] annotated source files
+"Do unto others as you would have them to unto you", as they say. When I
+find OS (Open Source) resources, I am hoping a lot of these boxes can be
+checked ...
    - [x] git repository (github)
+   - [x] annotated source files with an open license
+   - [x] unit test
    - [x] make(1) build
    - [x] fpm(1) build
-   - [x] user manual
+   - [x] user manual (on-line)
    - [x] man-page
-   - [x] demo program
-   - [ ] app program
-   - [x] unit test
+   - [x] app program
+   - [x] demo program for public procedures
    - [x] developer documents (ford(1))
+   - [x] CI/CD(Continious Integration/Development) verification (github actions)
    - [ ] registered in fpm(1) repository
 
 ---
