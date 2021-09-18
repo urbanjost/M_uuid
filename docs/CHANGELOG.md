@@ -5,6 +5,17 @@ what's new in the M_uuid  project. It is a curated, chronologically ordered
 list of notable changes including records of change such as bug fixes,
 new features, changes, and relevant notifications.
 
+   - [x] source files
+   - [x] make(1) build
+   - [x] fpm(1) build
+   - [x] registered in fpm(1) repository
+   - [x] user manual
+   - [x] man-page
+   - [x] demo program
+   - [x] unit test
+   - [x] developer documents (ford(1))
+   - [x] git repository (github)
+
 ---
 **2021-02-10**  John S. Urban  <https://github.com/urbanjost>
 
@@ -13,9 +24,6 @@ new features, changes, and relevant notifications.
 ---
 
 <!--
-   - [x] manpage
-   - [x] demo program
-   - [ ] unit test
 ### :orange_circle: DIFF:
        + renamed ADVICE(3f) to ALERT(3f)
 ### :green_circle: ADD:

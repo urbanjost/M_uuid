@@ -101,7 +101,7 @@ program that exercise the routine.
      descriptions of the manpages is at 
      [BOOK_M_draw](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
 
-   - [CHANGELOG](CHANGELOG.md) provides a history of significant changes
+   - [CHANGELOG](docs/CHANGELOG.md) provides a history of significant changes
 
 ### DEVELOPER (experimental)
    - [ford(1) output](https://urbanjost.github.io/M_uuid/fpm-ford/index.html).
