@@ -8,7 +8,7 @@ and usage changes.
 "Do unto others as you would have them do unto you", as they say. When I
 find OS (Open Source) resources, I am hoping a lot of these boxes can be
 checked ...
-   - [x] git repository (github)
+   - [x] git repository on WWW (github)
    - [x] annotated source files with an open license
    - [x] unit test
    - [x] make(1) build
