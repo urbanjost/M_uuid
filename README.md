@@ -103,7 +103,7 @@ program that exercise the routine.
 
    - [CHANGELOG](docs/CHANGELOG.md) provides a history of significant changes
 
-### DEVELOPER (experimental)
+### DEVELOPER
    - [ford(1) output](https://urbanjost.github.io/M_uuid/fpm-ford/index.html).
 <!--
    - [doxygen(1) output](https://urbanjost.github.io/M_uuid/doxygen_out/html/index.html).
