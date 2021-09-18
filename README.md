@@ -108,6 +108,7 @@ program that exercise the routine.
 <!--
    - [doxygen(1) output](https://urbanjost.github.io/M_uuid/doxygen_out/html/index.html).
 -->
+   - [github action status](docs/STATUS.md) 
 ---
 ## PEDIGREE
  This is a modified version of generate_uuid(3f).  generate_uuid(3f)
