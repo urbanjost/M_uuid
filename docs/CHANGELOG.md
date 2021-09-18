@@ -5,7 +5,7 @@ in the M_uuid  project. It is a curated, chronologically ordered list
 of notifications of notable events such as bug fixes, new features,
 and usage changes.
 
-"Do unto others as you would have them to unto you", as they say. When I
+"Do unto others as you would have them do unto you", as they say. When I
 find OS (Open Source) resources, I am hoping a lot of these boxes can be
 checked ...
    - [x] git repository (github)
