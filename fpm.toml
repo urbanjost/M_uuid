@@ -2,10 +2,7 @@
 name = "M_uuid"
 version = "1.0.0"
 license = "MIT, custom OpenSource license"
-author = "John S. Urban, Toby White, Gen-Tao Chiang, Andrew Walker"
- (c) 2005-2009 Toby White <tow@uszla.me.uk>
- (c) 2007-2009 Gen-Tao Chiang <gtc25@cam.ac.uk>
- (c) 2008-2012 Andrew Walker <a.walker@ucl.ac.uk>
+author = ["John S. Urban", "Toby White <tow@uszla.me.uk>", "Gen-Tao Chiang <gtc25@cam.ac.uk>", "Andrew Walker <a.walker@ucl.ac.uk>"]
 maintainer = "urbanjost@comcast.com"
 copyright = "Copyright 2021, John S. Urban, 2005-2009 Toby White, 2007-2009 Gen-Tao Chiang, 2008-2012 Andrew Walker"
 description = "module to produce a UUID string"
