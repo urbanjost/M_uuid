@@ -1,7 +1,7 @@
 ## STATUS
 
 On each push or pull request this repository automatically runs "fpm
-test" to run its unit tests on Ubunto(gfortran,ifort), MacOS(gfortran),
+test" to run its unit tests on Ubuntu(gfortran,ifort), MacOS(gfortran),
 and MSWindows(gfortran) using github actions.
 
 The results are able to be viewed using the **Actions** button at the
