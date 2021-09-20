@@ -99,7 +99,7 @@ program that exercise the routine.
 
    - A single page that uses javascript to combine all the HTML
      descriptions of the manpages is at 
-     [BOOK_M_draw](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
+     [BOOK_M_uuid](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
 
    - [CHANGELOG](docs/CHANGELOG.md) provides a history of significant changes
 
