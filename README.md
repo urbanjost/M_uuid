@@ -1,6 +1,6 @@
 ## NAME
    M_uuid(3f) - a module of UUID (Universally Unique IDentifier) procedures
-   (LICENSE:CUSTOM OPEN)
+   (LICENSE:BSD-4-Clause)
 ## SYNOPSIS
 ```text
        use m_uuid, only : generate_uuid

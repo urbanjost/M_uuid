@@ -41,7 +41,7 @@ module M_uuid
 !>
 !!##NAME
 !!    M_uuid(3f) - [M_uuid] a module of UUID (Universally Unique IDentifier) procedures
-!!    (LICENSE:CUSTOM OPEN)
+!!    (LICENSE:BSD-4-Clause)
 !!
 !!##SYNOPSIS
 !!
@@ -124,7 +124,7 @@ contains
 !>
 !!##NAME
 !!    generate_uuid(3f) - [M_uuid] generate a UUID (Universally Unique IDentifier) string per RFC 4122
-!!    (LICENSE:CUSTOM OPEN)
+!!    (LICENSE:BSD-4-Clause)
 !!
 !!##SYNOPSIS
 !!
@@ -535,7 +535,7 @@ end subroutine date_to_unix
 !>
 !!##NAME
 !!    mtprng_init(3f) - [M_random:MERSENNE TWISTER] Initialize the Mersenne Twister random number generator with "seed"
-!!    (LICENSE:CUSTOM OPEN)
+!!    (LICENSE:BSD-4-Clause)
 !!
 !!##SYNOPSIS
 !!
@@ -601,7 +601,7 @@ end subroutine mtprng_init
 !>
 !!##NAME
 !!    mtprng_rand64(3f) - [M_random:MERSENNE TWISTER] Obtain the next 64-bit integer in the pseudo-random sequence
-!!    (LICENSE:CUSTOM OPEN)
+!!    (LICENSE:BSD-4-Clause)
 !!
 !!##SYNOPSIS
 !!

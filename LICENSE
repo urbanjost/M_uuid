@@ -1,3 +1,5 @@
+BSD-4-Clause
+
 This is a modification of the UUID routine from the FOX library.
 
 generate_uuid(3f) was originally derived from the xmlf90 codebase, (c)
@@ -30,7 +32,7 @@ on the libFoX version, with licensing as follows:
  This software is provided by the copyright holders and contributors
  "AS IS" and any express or implied warranties, including, but not
  limited to, the implied warranties of merchantability and fitness for
- a particular purpose are disclaimed.  In no event shall the copyright
+ a particular purpose are disclaimed. In no event shall the copyright
  owner or contributors be liable for any direct, indirect, incidental,
  special, exemplary, or consequential damages (including, but not
  limited to, procurement of substitute goods or services; loss of use,
