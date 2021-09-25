@@ -92,8 +92,8 @@ program that exercise the routine.
 
 ### USER
 ![gmake](docs/images/manpages.gif)
-   There are man-pages in the repository download in the docs/ directory
-   that may be installed on ULS (Unix-Like Systems).
+   - There are man-pages in the repository download in the docs/ directory
+     that may be installed on ULS (Unix-Like Systems).
 
    + [manpages.zip](https://urbanjost.github.io/M_uuid/manpages.zip)
    + [manpages.tgz](https://urbanjost.github.io/M_uuid/manpages.tgz)
