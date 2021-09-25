@@ -9,6 +9,8 @@
 ####   __Remember you are unique, just like everyone else__.
 
 ## DESCRIPTION
+
+_from Wikipedia_ ...
    A universally unique identifier (UUID) is a 128-bit number used to
    identify information on computer systems. In particular, they are
    commonly used to create unique filenames and database and table keys.
@@ -42,11 +44,12 @@
 ```text
              urn:uuid:123e4567-e89b-12d3-a456-426655440000
 ```
-       **-- Wikipedia**
+   + Wikipedia contributors. (2021, September 21). Universally unique identifier. 
+     In Wikipedia, The Free Encyclopedia. Retrieved 01:41, September 25, 2021, from
+     https://en.wikipedia.org/w/index.php?title=Universally_unique_identifier&oldid=1045581110
 
-## PROCEDURES
-       * generate_uuid(version) ! generate 36-character UUID string
-
+## LIST OF PROCEDURES
+   + generate_uuid(version) ! generate 36-character UUID string
 
 ## BUILDING THE MODULE USING make(1) ![gmake](docs/images/gnu.gif)
      git clone https://github.com/urbanjost/M_uuid.git
