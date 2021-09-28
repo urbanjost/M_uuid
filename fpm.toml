@@ -16,7 +16,7 @@ auto-tests = true
 auto-examples = true
 
 [install]
-library = true
+#library = true
 
 [[executable]]
    name="unique"
