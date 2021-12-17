@@ -4,7 +4,7 @@
 
          @section Introduction
 
-     M_sort - Fortran modules for creating UUIDs (Universally Unique IDs)
+     M_uuid - Fortran modules for creating UUIDs (Universally Unique IDs)
 
          @image html html/images/sort.gif
 */'

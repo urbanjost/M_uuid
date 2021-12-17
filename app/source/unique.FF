@@ -50,7 +50,7 @@ $BLOCK variable -varname version_text
 @(#)COMPILED:       Tue, Feb 9th, 2021 9:19:16 PM>
 $BLOCK
 $!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-$BLOCK variable -varname help_text -file unique.1.man
+$BLOCK variable -varname help_text -file unique.1m_uuid.man
 NAME
     unique(1f) - [FUNIX] generate a UUID (Universally Unique ID) string
                   per RFC 4122

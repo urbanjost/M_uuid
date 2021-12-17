@@ -3,7 +3,7 @@
    (LICENSE:BSD-4-Clause)
 ## SYNOPSIS
 ```text
-       use m_uuid, only : generate_uuid
+       use M_uuid, only : generate_uuid
 ```
 ## QUOTE
 ####   __Remember you are unique, just like everyone else__.
@@ -94,7 +94,7 @@ program that exercise the routine.
 ## DOCUMENTATION
 
 ### USER
-![gmake](docs/images/manpages.gif)
+![manpages](docs/images/manpages.gif)
    - There are man-pages in the repository download in the docs/ directory
      that may be installed on ULS (Unix-Like Systems).
 
