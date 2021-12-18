@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="54.1% of total for source files.">213 statements</a>
+    title="52.7% of total for source files.">213 statements</a>
      </li> 
      
      
@@ -308,11 +308,11 @@
 <a name="ln-41"></a><span class="c">!&gt;</span>
 <a name="ln-42"></a><span class="c">!!##NAME</span>
 <a name="ln-43"></a><span class="c">!!    M_uuid(3f) - [M_uuid] a module of UUID (Universally Unique IDentifier) procedures</span>
-<a name="ln-44"></a><span class="c">!!    (LICENSE:CUSTOM OPEN)</span>
+<a name="ln-44"></a><span class="c">!!    (LICENSE:BSD-4-Clause)</span>
 <a name="ln-45"></a><span class="c">!!</span>
 <a name="ln-46"></a><span class="c">!!##SYNOPSIS</span>
 <a name="ln-47"></a><span class="c">!!</span>
-<a name="ln-48"></a><span class="c">!!    use m_uuid, only : generate_uuid</span>
+<a name="ln-48"></a><span class="c">!!    use M_uuid, only : generate_uuid</span>
 <a name="ln-49"></a><span class="c">!!</span>
 <a name="ln-50"></a><span class="c">!!##QUOTE</span>
 <a name="ln-51"></a><span class="c">!!    Remember you are unique, just like everyone else.</span>
@@ -391,7 +391,7 @@
 <a name="ln-124"></a><span class="c">!&gt;</span>
 <a name="ln-125"></a><span class="c">!!##NAME</span>
 <a name="ln-126"></a><span class="c">!!    generate_uuid(3f) - [M_uuid] generate a UUID (Universally Unique IDentifier) string per RFC 4122</span>
-<a name="ln-127"></a><span class="c">!!    (LICENSE:CUSTOM OPEN)</span>
+<a name="ln-127"></a><span class="c">!!    (LICENSE:BSD-4-Clause)</span>
 <a name="ln-128"></a><span class="c">!!</span>
 <a name="ln-129"></a><span class="c">!!##SYNOPSIS</span>
 <a name="ln-130"></a><span class="c">!!</span>
@@ -802,7 +802,7 @@
 <a name="ln-535"></a><span class="c">!&gt;</span>
 <a name="ln-536"></a><span class="c">!!##NAME</span>
 <a name="ln-537"></a><span class="c">!!    mtprng_init(3f) - [M_random:MERSENNE TWISTER] Initialize the Mersenne Twister random number generator with &quot;seed&quot;</span>
-<a name="ln-538"></a><span class="c">!!    (LICENSE:CUSTOM OPEN)</span>
+<a name="ln-538"></a><span class="c">!!    (LICENSE:BSD-4-Clause)</span>
 <a name="ln-539"></a><span class="c">!!</span>
 <a name="ln-540"></a><span class="c">!!##SYNOPSIS</span>
 <a name="ln-541"></a><span class="c">!!</span>
@@ -868,7 +868,7 @@
 <a name="ln-601"></a><span class="c">!&gt;</span>
 <a name="ln-602"></a><span class="c">!!##NAME</span>
 <a name="ln-603"></a><span class="c">!!    mtprng_rand64(3f) - [M_random:MERSENNE TWISTER] Obtain the next 64-bit integer in the pseudo-random sequence</span>
-<a name="ln-604"></a><span class="c">!!    (LICENSE:CUSTOM OPEN)</span>
+<a name="ln-604"></a><span class="c">!!    (LICENSE:BSD-4-Clause)</span>
 <a name="ln-605"></a><span class="c">!!</span>
 <a name="ln-606"></a><span class="c">!!##SYNOPSIS</span>
 <a name="ln-607"></a><span class="c">!!</span>
@@ -970,392 +970,6 @@
 <a name="ln-703"></a><span class="c">!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()!</span>
 <a name="ln-704"></a><span class="c">!==================================================================================================================================!</span>
 <a name="ln-705"></a><span class="k">end module </span><span class="n">M_uuid</span>
-<a name="ln-706"></a><span class="c">!&gt;</span>
-<a name="ln-707"></a><span class="c">!! UUID (Universally unique identifier)</span>
-<a name="ln-708"></a><span class="c">!!</span>
-<a name="ln-709"></a><span class="c">!!    From Wikipedia, the free encyclopedia</span>
-<a name="ln-710"></a><span class="c">!!</span>
-<a name="ln-711"></a><span class="c">!!    A universally unique identifier (UUID) is a 128-bit number used to</span>
-<a name="ln-712"></a><span class="c">!!    identify information in computer systems.</span>
-<a name="ln-713"></a><span class="c">!!</span>
-<a name="ln-714"></a><span class="c">!!    When generated according to the standard methods, UUIDs are for practical</span>
-<a name="ln-715"></a><span class="c">!!    purposes unique, without depending for their uniqueness on a central</span>
-<a name="ln-716"></a><span class="c">!!    registration authority or coordination between the parties generating</span>
-<a name="ln-717"></a><span class="c">!!    them, unlike most other numbering schemes. While the probability that</span>
-<a name="ln-718"></a><span class="c">!!    a UUID will be duplicated is not zero, it is close enough to zero to</span>
-<a name="ln-719"></a><span class="c">!!    be negligible.</span>
-<a name="ln-720"></a><span class="c">!!</span>
-<a name="ln-721"></a><span class="c">!!    Thus, anyone can create a UUID and use it to identify something with near</span>
-<a name="ln-722"></a><span class="c">!!    certainty that the identifier does not duplicate one that has already</span>
-<a name="ln-723"></a><span class="c">!!    been, or will be, created to identify something else. Information labeled</span>
-<a name="ln-724"></a><span class="c">!!    with UUIDs by independent parties can therefore be later combined into</span>
-<a name="ln-725"></a><span class="c">!!    a single database, or transmitted on the same channel, without needing</span>
-<a name="ln-726"></a><span class="c">!!    to resolve conflicts between identifiers.</span>
-<a name="ln-727"></a><span class="c">!!</span>
-<a name="ln-728"></a><span class="c">!!    Adoption of UUIDs and GUIDs is widespread, with many computing platforms</span>
-<a name="ln-729"></a><span class="c">!!    providing support for generating them, and for parsing their textual</span>
-<a name="ln-730"></a><span class="c">!!    representation.</span>
-<a name="ln-731"></a><span class="c">!!</span>
-<a name="ln-732"></a><span class="c">!!    6   Versions 6.1 Nil UUID</span>
-<a name="ln-733"></a><span class="c">!!    6.2 Version 1 (date-time and MAC address)</span>
-<a name="ln-734"></a><span class="c">!!    6.3 Version 2 (date-time and MAC address, DCE security version)</span>
-<a name="ln-735"></a><span class="c">!!    6.4 Versions 3 and 5 (namespace name-based)</span>
-<a name="ln-736"></a><span class="c">!!    6.5 Version 4 (random)</span>
-<a name="ln-737"></a><span class="c">!!</span>
-<a name="ln-738"></a><span class="c">!!    7 Collisions</span>
-<a name="ln-739"></a><span class="c">!!    8 Uses 8.1 In COM</span>
-<a name="ln-740"></a><span class="c">!!    8.2 As database keys</span>
-<a name="ln-741"></a><span class="c">!!</span>
-<a name="ln-742"></a><span class="c">!! Standards</span>
-<a name="ln-743"></a><span class="c">!!</span>
-<a name="ln-744"></a><span class="c">!!    UUIDs are standardized by the Open Software Foundation (OSF) as part of</span>
-<a name="ln-745"></a><span class="c">!!    the Distributed Computing Environment (DCE).[3][4]</span>
-<a name="ln-746"></a><span class="c">!!</span>
-<a name="ln-747"></a><span class="c">!!    UUIDs are documented as part of ISO/IEC 11578:1996 &quot;Information technology</span>
-<a name="ln-748"></a><span class="c">!!    – Open Systems Interconnection – Remote Procedure Call (RPC)&quot; and</span>
-<a name="ln-749"></a><span class="c">!!    more recently in ITU-T Rec. X.667 | ISO/IEC 9834-8:2005.[5]</span>
-<a name="ln-750"></a><span class="c">!!</span>
-<a name="ln-751"></a><span class="c">!!    The Internet Engineering Task Force (IETF) published the Standards-Track,</span>
-<a name="ln-752"></a><span class="c">!!    RFC 4122,[2] technically equivalent to ITU-T Rec. X.667 | ISO/IEC 9834-8.</span>
-<a name="ln-753"></a><span class="c">!!</span>
-<a name="ln-754"></a><span class="c">!! Format</span>
-<a name="ln-755"></a><span class="c">!!</span>
-<a name="ln-756"></a><span class="c">!!    In its canonical textual representation, the sixteen octets of a UUID</span>
-<a name="ln-757"></a><span class="c">!!    are represented as 32 hexadecimal (base 16) digits, displayed in five</span>
-<a name="ln-758"></a><span class="c">!!    groups separated by hyphens, in the form 8-4-4-4-12 for a total of 36</span>
-<a name="ln-759"></a><span class="c">!!    characters (32 alphanumeric characters and four hyphens).</span>
-<a name="ln-760"></a><span class="c">!!</span>
-<a name="ln-761"></a><span class="c">!!    For example:</span>
-<a name="ln-762"></a><span class="c">!!</span>
-<a name="ln-763"></a><span class="c">!!       123e4567-e89b-12d3-a456-426655440000</span>
-<a name="ln-764"></a><span class="c">!!       xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx</span>
-<a name="ln-765"></a><span class="c">!!</span>
-<a name="ln-766"></a><span class="c">!!    The four bits of digit M indicate the UUID version, and the one to</span>
-<a name="ln-767"></a><span class="c">!!    three most significant bits of digit N indicate the UUID variant. In the</span>
-<a name="ln-768"></a><span class="c">!!    example, M is 1 and N is a (10xx), meaning that the UUID is a variant 1,</span>
-<a name="ln-769"></a><span class="c">!!    version 1 UUID; that is, a time-based DCE/RFC 4122 UUID.</span>
-<a name="ln-770"></a><span class="c">!!</span>
-<a name="ln-771"></a><span class="c">!!    The canonical 8-4-4-4-12 format string is based on the &quot;record layout&quot;</span>
-<a name="ln-772"></a><span class="c">!!    for the 16 bytes of the UUID:[2]</span>
-<a name="ln-773"></a><span class="c">!!</span>
-<a name="ln-774"></a><span class="c">!!    UUID record layout</span>
-<a name="ln-775"></a><span class="c">!!</span>
-<a name="ln-776"></a><span class="c">!!    Name</span>
-<a name="ln-777"></a><span class="c">!!</span>
-<a name="ln-778"></a><span class="c">!!    Length (bytes)</span>
-<a name="ln-779"></a><span class="c">!!</span>
-<a name="ln-780"></a><span class="c">!!    Length (hex digits)</span>
-<a name="ln-781"></a><span class="c">!!</span>
-<a name="ln-782"></a><span class="c">!!    Contents</span>
-<a name="ln-783"></a><span class="c">!!</span>
-<a name="ln-784"></a><span class="c">!!       time_low 4 8 integer giving the low 32 bits of the time</span>
-<a name="ln-785"></a><span class="c">!!       time_mid 2 4 integer giving the middle 16 bits of the time</span>
-<a name="ln-786"></a><span class="c">!!       time_hi_and_version 2 4 4-bit &quot;version&quot; in the most significant bits, followed by the high 12 bits of the time</span>
-<a name="ln-787"></a><span class="c">!!</span>
-<a name="ln-788"></a><span class="c">!!       clock_seq_hi_and_res clock_seq_low 2 4 1-3 bit &quot;variant&quot; in the most</span>
-<a name="ln-789"></a><span class="c">!!       significant bits, followed by the 13-15 bit clock sequence node 6 12 the 48-bit node id</span>
-<a name="ln-790"></a><span class="c">!!</span>
-<a name="ln-791"></a><span class="c">!!    These fields correspond to those in version 1 and 2 time-based UUIDs,</span>
-<a name="ln-792"></a><span class="c">!!    but the same 8-4-4-4-12 representation is used for all UUIDs, even for</span>
-<a name="ln-793"></a><span class="c">!!    UUIDs which are constructed differently.</span>
-<a name="ln-794"></a><span class="c">!!</span>
-<a name="ln-795"></a><span class="c">!!    RFC 4122 defines a Uniform Resource Name (URN) namespace for UUIDs. A</span>
-<a name="ln-796"></a><span class="c">!!    UUID presented as a URN appears as follows:[2]</span>
-<a name="ln-797"></a><span class="c">!!</span>
-<a name="ln-798"></a><span class="c">!!       urn:uuid:123e4567-e89b-12d3-a456-426655440000</span>
-<a name="ln-799"></a><span class="c">!!</span>
-<a name="ln-800"></a><span class="c">!! Encoding</span>
-<a name="ln-801"></a><span class="c">!!</span>
-<a name="ln-802"></a><span class="c">!!    The binary encoding of UUIDs varies between systems. Many systems encode</span>
-<a name="ln-803"></a><span class="c">!!    the UUID entirely in a big-endian format.</span>
-<a name="ln-804"></a><span class="c">!!</span>
-<a name="ln-805"></a><span class="c">!!    For example, 00112233-4455-6677-8899-aabbccddeeff is encoded as the</span>
-<a name="ln-806"></a><span class="c">!!    bytes 00 11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff.</span>
-<a name="ln-807"></a><span class="c">!!</span>
-<a name="ln-808"></a><span class="c">!!    Other systems, notably Microsoft&#39;s marshalling of UUIDs in their COM/OLE</span>
-<a name="ln-809"></a><span class="c">!!    libraries, use a mixed-endian format, whereby the first three components</span>
-<a name="ln-810"></a><span class="c">!!    of the UUID are little-endian, and the last two are big-endian.</span>
-<a name="ln-811"></a><span class="c">!!</span>
-<a name="ln-812"></a><span class="c">!!    For example,</span>
-<a name="ln-813"></a><span class="c">!!</span>
-<a name="ln-814"></a><span class="c">!!       00112233-4455-6677-8899-aabbccddeeff</span>
-<a name="ln-815"></a><span class="c">!!</span>
-<a name="ln-816"></a><span class="c">!!    is encoded as the bytes 33 22 11 00 55 44 77 66 88 99 aa bb cc dd ee ff.</span>
-<a name="ln-817"></a><span class="c">!!</span>
-<a name="ln-818"></a><span class="c">!! Variants</span>
-<a name="ln-819"></a><span class="c">!!</span>
-<a name="ln-820"></a><span class="c">!!    One of the variants defined by RFC 4122, variant 0 (indicated by the</span>
-<a name="ln-821"></a><span class="c">!!    one-bit pattern 0xxx N=0..7), is for backwards compatibility with</span>
-<a name="ln-822"></a><span class="c">!!    the circa 1988, now obsolete, Apollo Network Computing System 1.5</span>
-<a name="ln-823"></a><span class="c">!!    UUID format. In this format, the first 6 octets of the UUID are a</span>
-<a name="ln-824"></a><span class="c">!!    48-bit timestamp (the number of 4 microsecond units of time since 1</span>
-<a name="ln-825"></a><span class="c">!!    Jan 1980 UTC); the next 2 octets are reserved; the next octet is the</span>
-<a name="ln-826"></a><span class="c">!!    &quot;address family&quot;; and the final 7 octets are a 56-bit host ID in the</span>
-<a name="ln-827"></a><span class="c">!!    form specified by the address family. Though different in detail, the</span>
-<a name="ln-828"></a><span class="c">!!    similarity with modern version 1 UUIDs is evident. The variant bits in</span>
-<a name="ln-829"></a><span class="c">!!    the current UUID specification coincide with the high bits of the address</span>
-<a name="ln-830"></a><span class="c">!!    family octet in NCS UUIDs. Though the address family could hold values in</span>
-<a name="ln-831"></a><span class="c">!!    the range 0..255, only the values 0..13 were ever defined. Accordingly,</span>
-<a name="ln-832"></a><span class="c">!!    the variant 0 bit pattern 0xxx avoids conflicts with historical NCS UUIDs,</span>
-<a name="ln-833"></a><span class="c">!!    should any still exist in databases.[7]</span>
-<a name="ln-834"></a><span class="c">!!</span>
-<a name="ln-835"></a><span class="c">!!    The 3-bit variant bit pattern 111x N=e..f is reserved for possible</span>
-<a name="ln-836"></a><span class="c">!!    future variants.[2]</span>
-<a name="ln-837"></a><span class="c">!!</span>
-<a name="ln-838"></a><span class="c">!!    The other two variants, variants 1 and 2, are used by the current UUID</span>
-<a name="ln-839"></a><span class="c">!!    specifications. Variant 1 UUIDs (10xx N=8..b, 2 bits) are referred to</span>
-<a name="ln-840"></a><span class="c">!!    as RFC 4122/DCE 1.1 UUIDs, or &quot;Leach-Salz&quot; UUIDs, after the authors</span>
-<a name="ln-841"></a><span class="c">!!    of the original Internet Draft. Variant 2 (110x N=c..d, 3 bits) is</span>
-<a name="ln-842"></a><span class="c">!!    characterized in the RFC as &quot;reserved, Microsoft Corporation backward</span>
-<a name="ln-843"></a><span class="c">!!    compatibility&quot;, and was used for early GUIDs on the Microsoft Windows</span>
-<a name="ln-844"></a><span class="c">!!    platform. Variant bits aside, the two variants are the same except that</span>
-<a name="ln-845"></a><span class="c">!!    when reduced to a binary form for storage or transmission, variant 1</span>
-<a name="ln-846"></a><span class="c">!!    UUIDs use &quot;network&quot; (big-endian) byte order, while variant 2 GUIDs use</span>
-<a name="ln-847"></a><span class="c">!!    &quot;native&quot; (little-endian) byte order. In their textual representations,</span>
-<a name="ln-848"></a><span class="c">!!    variants 1 and 2 are the same except for the variant bits.</span>
-<a name="ln-849"></a><span class="c">!!</span>
-<a name="ln-850"></a><span class="c">!!    When byte swapping is required to convert between the big-endian byte</span>
-<a name="ln-851"></a><span class="c">!!    order of variant 1 and the little-endian byte order of variant 2, the</span>
-<a name="ln-852"></a><span class="c">!!    fields above define the swapping. The first three fields are unsigned</span>
-<a name="ln-853"></a><span class="c">!!    32- and 16-bit integers and are subject to swapping, while the last two</span>
-<a name="ln-854"></a><span class="c">!!    fields consist of uninterpreted bytes, not subject to swapping. This</span>
-<a name="ln-855"></a><span class="c">!!    byte swapping applies even for version 3, 4, and 5 UUID&#39;s where the</span>
-<a name="ln-856"></a><span class="c">!!    canonical fields do not correspond to the content of the UUID.[2]</span>
-<a name="ln-857"></a><span class="c">!!</span>
-<a name="ln-858"></a><span class="c">!!    Note that while some important GUIDs, such as the identifier for the</span>
-<a name="ln-859"></a><span class="c">!!    Component Object Model IUnknown interface, are nominally variant 2 UUIDs,</span>
-<a name="ln-860"></a><span class="c">!!    many identifiers generated and used in Microsoft Windows software</span>
-<a name="ln-861"></a><span class="c">!!    and referred to as &quot;GUIDs&quot; are standard variant 1 RFC 4122/DCE 1.1</span>
-<a name="ln-862"></a><span class="c">!!    network byte-order UUIDs, rather than little-endian variant 2 UUIDs. The</span>
-<a name="ln-863"></a><span class="c">!!    current version of the Microsoft guidgen tool produces standard variant</span>
-<a name="ln-864"></a><span class="c">!!    1 UUIDs. Some Microsoft documentation states that &quot;GUID&quot; is a synonym</span>
-<a name="ln-865"></a><span class="c">!!    for &quot;UUID&quot;,[8] as standardized in RFC 4122. RFC 4122 itself states that</span>
-<a name="ln-866"></a><span class="c">!!    UUIDs &quot;are also known as GUIDs&quot;. All this suggests that &quot;GUID&quot;, while</span>
-<a name="ln-867"></a><span class="c">!!    originally referring to a variant of UUID used by Microsoft, has become</span>
-<a name="ln-868"></a><span class="c">!!    simply an alternative name for UUID, with both variant 1 and variant 2</span>
-<a name="ln-869"></a><span class="c">!!    GUIDs being extant.</span>
-<a name="ln-870"></a><span class="c">!!</span>
-<a name="ln-871"></a><span class="c">!! Versions</span>
-<a name="ln-872"></a><span class="c">!!</span>
-<a name="ln-873"></a><span class="c">!!    For both variants 1 and 2, five &quot;versions&quot; are defined in the standards,</span>
-<a name="ln-874"></a><span class="c">!!    and each version may be more appropriate than the others in specific</span>
-<a name="ln-875"></a><span class="c">!!    use cases. Version is indicated by the M in the string representation.</span>
-<a name="ln-876"></a><span class="c">!!</span>
-<a name="ln-877"></a><span class="c">!!    Version 1 UUIDs are generated from a time and a node id (usually the</span>
-<a name="ln-878"></a><span class="c">!!    MAC address); version 2 UUIDs are generated from an identifier (usually</span>
-<a name="ln-879"></a><span class="c">!!    a group or user id), time, and a node id; versions 3 and 5 produce</span>
-<a name="ln-880"></a><span class="c">!!    deterministic UUIDs generated by hashing a namespace identifier and name;</span>
-<a name="ln-881"></a><span class="c">!!    and version 4 UUIDs are generated using a random or pseudo-random number.</span>
-<a name="ln-882"></a><span class="c">!!</span>
-<a name="ln-883"></a><span class="c">!! Nil UUID</span>
-<a name="ln-884"></a><span class="c">!!</span>
-<a name="ln-885"></a><span class="c">!!    The &quot;nil&quot; UUID, a special case, is the UUID,</span>
-<a name="ln-886"></a><span class="c">!!</span>
-<a name="ln-887"></a><span class="c">!!       00000000-0000-0000-0000-000000000000; that is, all bits set to zero.[2]</span>
-<a name="ln-888"></a><span class="c">!!</span>
-<a name="ln-889"></a><span class="c">!! Version 1 (date-time and MAC address)[edit]</span>
-<a name="ln-890"></a><span class="c">!!</span>
-<a name="ln-891"></a><span class="c">!!    Version 1 concatenates the 48-bit MAC address of the &quot;node&quot; (that is, the</span>
-<a name="ln-892"></a><span class="c">!!    computer generating the UUID), with a 60-bit timestamp, being the number</span>
-<a name="ln-893"></a><span class="c">!!    of 100-nanosecond intervals since midnight 15 October 1582 Coordinated</span>
-<a name="ln-894"></a><span class="c">!!    Universal Time (UTC), the date on which the Gregorian calendar was first</span>
-<a name="ln-895"></a><span class="c">!!    adopted. RFC 4122 states that the time value rolls over around 3400 AD,[2]</span>
-<a name="ln-896"></a><span class="c">!!    depending on the algorithm used, which implies that the 60-bit timestamp</span>
-<a name="ln-897"></a><span class="c">!!    is a signed quantity. However some software, such as the libuuid library,</span>
-<a name="ln-898"></a><span class="c">!!    treats the timestamp as unsigned, putting the rollover time in 5236 AD.[9]</span>
-<a name="ln-899"></a><span class="c">!!</span>
-<a name="ln-900"></a><span class="c">!!    A 13- or 14-bit &quot;uniquifying&quot; clock sequence extends the timestamp in</span>
-<a name="ln-901"></a><span class="c">!!    order to handle cases where the processor clock does not advance fast</span>
-<a name="ln-902"></a><span class="c">!!    enough, or where there are multiple processors and UUID generators per</span>
-<a name="ln-903"></a><span class="c">!!    node. With each version 1 UUID corresponding to a single point in space</span>
-<a name="ln-904"></a><span class="c">!!    (the node) and time (intervals and clock sequence), the chance of two</span>
-<a name="ln-905"></a><span class="c">!!    properly-generated version 1 UUID&#39;s being unintentionally the same is</span>
-<a name="ln-906"></a><span class="c">!!    practically nil. Since the time and clock sequence total 74 bits, 274</span>
-<a name="ln-907"></a><span class="c">!!    (1.8x1022 or 18 sextillion) version 1 UUIDs can be generated per node id,</span>
-<a name="ln-908"></a><span class="c">!!    at a maximum average rate of 163 billion per second per node id.[2]</span>
-<a name="ln-909"></a><span class="c">!!</span>
-<a name="ln-910"></a><span class="c">!!    In contrast to other UUID versions, version 1 and 2 UUIDs based on</span>
-<a name="ln-911"></a><span class="c">!!    MAC addresses from network cards rely for their uniqueness in part on</span>
-<a name="ln-912"></a><span class="c">!!    an identifier issued by a central registration authority, namely the</span>
-<a name="ln-913"></a><span class="c">!!    Organizationally Unique Identifier (OUI) part of the MAC address, which</span>
-<a name="ln-914"></a><span class="c">!!    is issued by the IEEE to manufacturers of networking equipment.[10] The</span>
-<a name="ln-915"></a><span class="c">!!    uniqueness of version 1 and 2 UUIDs based on network card MAC addresses</span>
-<a name="ln-916"></a><span class="c">!!    also depends on network card manufacturers properly assigning unique</span>
-<a name="ln-917"></a><span class="c">!!    MAC addresses to their cards, which like other manufacturing processes</span>
-<a name="ln-918"></a><span class="c">!!    is subject to error.</span>
-<a name="ln-919"></a><span class="c">!!</span>
-<a name="ln-920"></a><span class="c">!!    Usage of the node&#39;s network card MAC address for the node id means</span>
-<a name="ln-921"></a><span class="c">!!    that a version 1 UUID can be tracked back to the computer that created</span>
-<a name="ln-922"></a><span class="c">!!    it. Documents can sometimes be traced to the computers where they were</span>
-<a name="ln-923"></a><span class="c">!!    created or edited through UUIDs embedded into them by word processing</span>
-<a name="ln-924"></a><span class="c">!!    software. This privacy hole was used when locating the creator of the</span>
-<a name="ln-925"></a><span class="c">!!    Melissa virus.[11]</span>
-<a name="ln-926"></a><span class="c">!!</span>
-<a name="ln-927"></a><span class="c">!!    RFC 4122 does allow the MAC address in a version 1 (or 2) UUID to be</span>
-<a name="ln-928"></a><span class="c">!!    replaced by a random 48-bit node id, either because the node does not</span>
-<a name="ln-929"></a><span class="c">!!    have a MAC address, or because it is not desirable to expose it. In that</span>
-<a name="ln-930"></a><span class="c">!!    case, the RFC requires that the least significant bit of the first octet</span>
-<a name="ln-931"></a><span class="c">!!    of the node id should be set to 1.[2] This corresponds to the multicast</span>
-<a name="ln-932"></a><span class="c">!!    bit in MAC addresses and setting it serves to differentiate UUIDs where</span>
-<a name="ln-933"></a><span class="c">!!    the node id is randomly-generated from those based on MAC addresses from</span>
-<a name="ln-934"></a><span class="c">!!    network cards, which typically have unicast MAC addresses.[2]</span>
-<a name="ln-935"></a><span class="c">!!</span>
-<a name="ln-936"></a><span class="c">!! Version 2 (date-time and MAC address, DCE security version)[edit]</span>
-<a name="ln-937"></a><span class="c">!!</span>
-<a name="ln-938"></a><span class="c">!!    RFC 4122 reserves version 2 for &quot;DCE security&quot; UUIDs; but it does not</span>
-<a name="ln-939"></a><span class="c">!!    provide any details. For this reason, many UUID implementations omit</span>
-<a name="ln-940"></a><span class="c">!!    version 2. However, the specification of version 2 UUIDs is provided by</span>
-<a name="ln-941"></a><span class="c">!!    the DCE 1.1 Authentication and Security Services specification.[4]</span>
-<a name="ln-942"></a><span class="c">!!</span>
-<a name="ln-943"></a><span class="c">!!    Version 2 UUIDs are similar to version 1, except that the least</span>
-<a name="ln-944"></a><span class="c">!!    significant 8 bits of the clock sequence are replaced by a &quot;local domain&quot;</span>
-<a name="ln-945"></a><span class="c">!!    number, and the least significant 32 bits of the timestamp are replaced</span>
-<a name="ln-946"></a><span class="c">!!    by an integer identifier meaningful within the specified local domain. On</span>
-<a name="ln-947"></a><span class="c">!!    POSIX systems, local domain numbers 0 and 1 are for user ids (UIDs),</span>
-<a name="ln-948"></a><span class="c">!!    and group ids (GIDs), respectively, and other local domain numbers</span>
-<a name="ln-949"></a><span class="c">!!    are site-defined.[4] On non-POSIX systems, all local domain numbers</span>
-<a name="ln-950"></a><span class="c">!!    are site-defined.</span>
-<a name="ln-951"></a><span class="c">!!</span>
-<a name="ln-952"></a><span class="c">!!    The ability to include a 40-bit domain/identifier in the UUID comes</span>
-<a name="ln-953"></a><span class="c">!!    with a tradeoff. On the one hand, 40 bits allow about 1 trillion</span>
-<a name="ln-954"></a><span class="c">!!    domain/identifier values per node id. On the other hand, with the</span>
-<a name="ln-955"></a><span class="c">!!    clock value truncated to the 28 most significant bits, compared to</span>
-<a name="ln-956"></a><span class="c">!!    60 bits in version 1, the clock in a version 2 UUID will &quot;tick&quot; only</span>
-<a name="ln-957"></a><span class="c">!!    once every 429.49 seconds, a little more than 7 minutes, as opposed</span>
-<a name="ln-958"></a><span class="c">!!    to every 100 nanoseconds for version 1. And with a clock sequence of</span>
-<a name="ln-959"></a><span class="c">!!    only 6 bits, compared to 14 bits in version 1, only 64 unique UUID&#39;s</span>
-<a name="ln-960"></a><span class="c">!!    per node/domain/identifier can be generated per 7 minute clock tick,</span>
-<a name="ln-961"></a><span class="c">!!    compared to 16,384 clock sequence values for version 1.[12] Thus,</span>
-<a name="ln-962"></a><span class="c">!!    Version 2 may not be suitable for cases where UUIDs are required, per</span>
-<a name="ln-963"></a><span class="c">!!    node/domain/identifier, at a rate exceeding about 1 per 7 seconds.</span>
-<a name="ln-964"></a><span class="c">!!</span>
-<a name="ln-965"></a><span class="c">!! Versions 3 and 5 (namespace name-based)</span>
-<a name="ln-966"></a><span class="c">!!</span>
-<a name="ln-967"></a><span class="c">!!    Version 3 and 5 UUIDs are generated by hashing a namespace identifier</span>
-<a name="ln-968"></a><span class="c">!!    and name. Version 3 uses MD5 as the hashing algorithm, and version</span>
-<a name="ln-969"></a><span class="c">!!    5 uses SHA1.[2]</span>
-<a name="ln-970"></a><span class="c">!!</span>
-<a name="ln-971"></a><span class="c">!!    The namespace identifier is itself a UUID. The specification provides</span>
-<a name="ln-972"></a><span class="c">!!    UUIDs to represent the namespaces for URLs, fully qualified domain</span>
-<a name="ln-973"></a><span class="c">!!    names, object identifiers, and X.500 distinguished names; but any</span>
-<a name="ln-974"></a><span class="c">!!    desired UUID may be used as a namespace designator.</span>
-<a name="ln-975"></a><span class="c">!!</span>
-<a name="ln-976"></a><span class="c">!!    To determine the version 3 UUID corresponding to a given namespace and</span>
-<a name="ln-977"></a><span class="c">!!    name, the UUID of the namespace is transformed to a string of bytes,</span>
-<a name="ln-978"></a><span class="c">!!    concatenated with the input name, then hashed with MD5, yielding</span>
-<a name="ln-979"></a><span class="c">!!    128 bits. Six or seven bits are then replaced by fixed values, the</span>
-<a name="ln-980"></a><span class="c">!!    4-bit version (e.g. 0011 for version 3), and the 2- or 3-bit UUID</span>
-<a name="ln-981"></a><span class="c">!!    &quot;variant&quot; (e.g. 10 indicating a RFC 4122 UUIDs, or 110 indicating</span>
-<a name="ln-982"></a><span class="c">!!    a legacy Microsoft GUID). Since 6 or 7 bits are thus predetermined,</span>
-<a name="ln-983"></a><span class="c">!!    only 121 or 122 bits contribute to the uniqueness of the UUID.</span>
-<a name="ln-984"></a><span class="c">!!</span>
-<a name="ln-985"></a><span class="c">!!    Version 5 UUIDs are similar, but SHA1 is used instead of MD5. Since</span>
-<a name="ln-986"></a><span class="c">!!    SHA1 generates 160-bit digests, the digest is truncated to 128-bits</span>
-<a name="ln-987"></a><span class="c">!!    before the version and variant bits are inserted.</span>
-<a name="ln-988"></a><span class="c">!!</span>
-<a name="ln-989"></a><span class="c">!!    Version 3 and 5 UUIDs have the property that the same namespace and</span>
-<a name="ln-990"></a><span class="c">!!    name will map to the same UUID. However, neither the namespace nor</span>
-<a name="ln-991"></a><span class="c">!!    name can be determined from the UUID, given the other, except by</span>
-<a name="ln-992"></a><span class="c">!!    brute-force search.</span>
-<a name="ln-993"></a><span class="c">!!</span>
-<a name="ln-994"></a><span class="c">!!    RFC 4122 recommends version 5 (SHA1) over version 3 (MD5) and counsels</span>
-<a name="ln-995"></a><span class="c">!!    against use of UUIDs of either version as security credentials.[2]</span>
-<a name="ln-996"></a><span class="c">!!</span>
-<a name="ln-997"></a><span class="c">!! Version 4 (random)</span>
-<a name="ln-998"></a><span class="c">!!</span>
-<a name="ln-999"></a><span class="c">!!    A version 4 UUID is randomly generated. As in other UUIDs, four bits</span>
-<a name="ln-1000"></a><span class="c">!!    are used to indicate version 4, and 2 or 3 bits to indicate the variant</span>
-<a name="ln-1001"></a><span class="c">!!    (10 or 110 for variants 1 and 2, respectively). Thus, for variant 1</span>
-<a name="ln-1002"></a><span class="c">!!    (that is, most UUIDs) a random version 4 UUID will have 6 predetermined</span>
-<a name="ln-1003"></a><span class="c">!!    variant and version bits, leaving 122 bits for the randomly-generated</span>
-<a name="ln-1004"></a><span class="c">!!    part, for a total of 2122, or 5.3x1036 (5.3 undecillion) possible</span>
-<a name="ln-1005"></a><span class="c">!!    version 4 variant 1 UUIDs. There are half as many possible version 4</span>
-<a name="ln-1006"></a><span class="c">!!    variant 2 UUIDs (legacy GUIDs) because there is one less random bit</span>
-<a name="ln-1007"></a><span class="c">!!    available, 3 bits being consumed for the variant.</span>
-<a name="ln-1008"></a><span class="c">!!</span>
-<a name="ln-1009"></a><span class="c">!!    Some pseudorandom number generators lack necessary entropy to produce</span>
-<a name="ln-1010"></a><span class="c">!!    sufficiently pseudorandom numbers. For example, the WinAPI GUID</span>
-<a name="ln-1011"></a><span class="c">!!    generator, which uses a pseudorandom number generator, has been shown</span>
-<a name="ln-1012"></a><span class="c">!!    to produce UUIDs which follow a predictable pattern.[citation needed]</span>
-<a name="ln-1013"></a><span class="c">!!    RFC 4122 advises that &quot;distributed applications generating UUIDs at a</span>
-<a name="ln-1014"></a><span class="c">!!    variety of hosts must be willing to rely on the random number source</span>
-<a name="ln-1015"></a><span class="c">!!    at all hosts. If this is not feasible, the namespace variant should</span>
-<a name="ln-1016"></a><span class="c">!!    be used.&quot;</span>
-<a name="ln-1017"></a><span class="c">!!</span>
-<a name="ln-1018"></a><span class="c">!! Collisions</span>
-<a name="ln-1019"></a><span class="c">!!</span>
-<a name="ln-1020"></a><span class="c">!!    Collision occurs when the same UUID is generated more than once and</span>
-<a name="ln-1021"></a><span class="c">!!    assigned to different referents. In the case of standard version 1</span>
-<a name="ln-1022"></a><span class="c">!!    and 2 UUIDs using unique MAC addresses from network cards, collisions</span>
-<a name="ln-1023"></a><span class="c">!!    can occur only when an implementation varies from the standards,</span>
-<a name="ln-1024"></a><span class="c">!!    either inadvertently or intentionally.</span>
-<a name="ln-1025"></a><span class="c">!!</span>
-<a name="ln-1026"></a><span class="c">!!    In contrast with version 1 and 2 UUIDs using randomly-generated node</span>
-<a name="ln-1027"></a><span class="c">!!    ids, hash-based version 3 and 5 UUIDs, and random version 4 UUIDs,</span>
-<a name="ln-1028"></a><span class="c">!!    collisions can occur even without implementation problems, albeit</span>
-<a name="ln-1029"></a><span class="c">!!    with a probability so small that it can normally be ignored. This</span>
-<a name="ln-1030"></a><span class="c">!!    probability can be computed precisely based on analysis of the</span>
-<a name="ln-1031"></a><span class="c">!!    birthday problem.[13]</span>
-<a name="ln-1032"></a><span class="c">!!</span>
-<a name="ln-1033"></a><span class="c">!!    For example, the number of random version 4 UUIDs which need to be</span>
-<a name="ln-1034"></a><span class="c">!!    generated in order to have a 50% probability of at least one collision</span>
-<a name="ln-1035"></a><span class="c">!!    is 2.71 quintillion, computed as follows:</span>
-<a name="ln-1036"></a><span class="c">!!</span>
-<a name="ln-1037"></a><span class="c">!!    n ≈ 1 2   + 1 4   + 2 × ln ⁡ ( 2 ) × 2 122     ≈ 2.71 × 10 18     {\displaystyle n\approx {\frac {1}{2}}+{\sqrt {{\frac {1}{4}}+2\times \ln(2)\times 2^{122}}}\approx 2.71\times 10^{18}}  {\displaystyle n\approx {\frac {1}{2}}+{\sqrt {{\frac {1}{4}}+2\times \ln(2)\times 2^{122}}}\approx 2.71\times 10^{18}}[14]</span>
-<a name="ln-1038"></a><span class="c">!!</span>
-<a name="ln-1039"></a><span class="c">!!    This number is equivalent to generating 1 billion UUIDs per second</span>
-<a name="ln-1040"></a><span class="c">!!    for about 85 years, and a file containing this many UUIDs, at 16</span>
-<a name="ln-1041"></a><span class="c">!!    bytes per UUID, would be about 45 exabytes, many times larger than</span>
-<a name="ln-1042"></a><span class="c">!!    the largest databases currently in existence, which are on the order</span>
-<a name="ln-1043"></a><span class="c">!!    of hundreds of petabytes.[15][16]</span>
-<a name="ln-1044"></a><span class="c">!!</span>
-<a name="ln-1045"></a><span class="c">!!    The smallest number of version 4 UUIDs which must be generated for</span>
-<a name="ln-1046"></a><span class="c">!!    the probability of finding a collision to be p is approximated by</span>
-<a name="ln-1047"></a><span class="c">!!    the formula:</span>
-<a name="ln-1048"></a><span class="c">!!</span>
-<a name="ln-1049"></a><span class="c">!!       2 × 2 122   × ln ⁡ 1 1 − p        {\displaystyle {\sqrt {2\times 2^{122}\times \ln {\frac {1}{1-p}}}}}  {\displaystyle {\sqrt {2\times 2^{122}\times \ln {\frac {1}{1-p}}}}}</span>
-<a name="ln-1050"></a><span class="c">!!</span>
-<a name="ln-1051"></a><span class="c">!!    Thus, for there to be a one in a billion chance of duplication,</span>
-<a name="ln-1052"></a><span class="c">!!    103 trillion version 4 UUIDs must be generated.</span>
-<a name="ln-1053"></a><span class="c">!!</span>
-<a name="ln-1054"></a><span class="c">!! Uses</span>
-<a name="ln-1055"></a><span class="c">!!</span>
-<a name="ln-1056"></a><span class="c">!!    Significant uses include ext2/ext3/ext4 filesystem userspace tools</span>
-<a name="ln-1057"></a><span class="c">!!    (e2fsprogs uses libuuid provided by util-linux), LUKS encrypted</span>
-<a name="ln-1058"></a><span class="c">!!    partitions, GNOME, KDE, and Mac OS X,[17] most of which are derived from</span>
-<a name="ln-1059"></a><span class="c">!!    the original implementation by Theodore Ts&#39;o.[9]</span>
-<a name="ln-1060"></a><span class="c">!!</span>
-<a name="ln-1061"></a><span class="c">!!    One of the uses of UUIDs in Solaris (using Open Software Foundation</span>
-<a name="ln-1062"></a><span class="c">!!    implementation) is identification of a running operating system instance</span>
-<a name="ln-1063"></a><span class="c">!!    for the purpose of pairing crash dump data with Fault Management Event</span>
-<a name="ln-1064"></a><span class="c">!!    in the case of kernel panic.[18]</span>
-<a name="ln-1065"></a><span class="c">!!</span>
-<a name="ln-1066"></a><span class="c">!!</span>
-<a name="ln-1067"></a><span class="c">!! As database keys</span>
-<a name="ln-1068"></a><span class="c">!!</span>
-<a name="ln-1069"></a><span class="c">!!    UUIDs are commonly used as a unique key in database tables. The</span>
-<a name="ln-1070"></a><span class="c">!!    NEWID function in Microsoft SQL Server version 4 Transact-SQL returns</span>
-<a name="ln-1071"></a><span class="c">!!    standard random version 4 UUIDs, while the NEWSEQUENTIALID function</span>
-<a name="ln-1072"></a><span class="c">!!    returns 128-bit identifiers similar to UUIDs which are committed</span>
-<a name="ln-1073"></a><span class="c">!!    to ascend in sequence until the next system reboot.[22] The Oracle</span>
-<a name="ln-1074"></a><span class="c">!!    Database SYS_GUID function does not return a standard GUID, despite</span>
-<a name="ln-1075"></a><span class="c">!!    the name. Instead, it returns a 16-byte 128-bit RAW value based</span>
-<a name="ln-1076"></a><span class="c">!!    on a host identifier and a process or thread identifier, somewhat</span>
-<a name="ln-1077"></a><span class="c">!!    similar to a GUID.[23] PostgreSQL contains a UUID datatype,[24]</span>
-<a name="ln-1078"></a><span class="c">!!    and can generate most versions of UUIDs through the use of functions</span>
-<a name="ln-1079"></a><span class="c">!!    from modules.[25][26] MySQL provides a UUID function, which generates</span>
-<a name="ln-1080"></a><span class="c">!!    standard version 1 UUIDs.[27]</span>
-<a name="ln-1081"></a><span class="c">!!</span>
-<a name="ln-1082"></a><span class="c">!!    The random nature of standard version 3, 4, and 5 UUIDs and the</span>
-<a name="ln-1083"></a><span class="c">!!    ordering of the fields within standard version 1 and 2 UUIDs may</span>
-<a name="ln-1084"></a><span class="c">!!    create problems with database locality or performance when UUIDs</span>
-<a name="ln-1085"></a><span class="c">!!    are used as primary keys. For example, in 2002 Jimmy Nilsson</span>
-<a name="ln-1086"></a><span class="c">!!    reported a significant improvement in performance with Microsoft</span>
-<a name="ln-1087"></a><span class="c">!!    SQL Server when the version 4 UUIDs being used as keys were modified</span>
-<a name="ln-1088"></a><span class="c">!!    to include a non-random suffix based on system time. This so-called</span>
-<a name="ln-1089"></a><span class="c">!!    &quot;COMB&quot; (combined time-GUID) approach made the UUIDs non-standard and</span>
-<a name="ln-1090"></a><span class="c">!!    significantly more likely to be duplicated, as Nilsson acknowledged,</span>
-<a name="ln-1091"></a><span class="c">!!    but Nilsson only required uniqueness within the application.[28]</span>
 </pre></div>
 
     </section>
@@ -1374,7 +988,7 @@
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/cmacmackin/ford">FORD</a>
-             on 2021-09-18 12:59  
+             on 2021-12-16 22:30  
           </p>
         </div>
         <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> M_uuid was developed by John S. Urban</p></div>

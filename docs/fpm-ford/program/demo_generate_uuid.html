@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="15.9% of total for programs.">10 statements</a>
+    title="13.7% of total for programs.">10 statements</a>
      </li> 
      
      
@@ -339,23 +339,23 @@
     
     <section>
     <h2 id="src">Source Code</h2>
-    <div class="highlight"><pre><span></span>          <span class="k">program </span><span class="n">demo_generate_uuid</span>
-          <span class="k">use </span><span class="n">M_uuid</span><span class="p">,</span> <span class="k">only</span> <span class="p">:</span> <span class="n">generate_uuid</span>
-          <span class="k">implicit none</span>
-<span class="k">          </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span> <span class="kd">::</span> <span class="n">uuid</span>
-             <span class="c">!</span>
-             <span class="n">uuid</span><span class="o">=</span><span class="n">generate_uuid</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c">! version 1 (time-based UUID)</span>
-             <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a36)&#39;</span><span class="p">)</span><span class="n">uuid</span>
-             <span class="c">!</span>
-             <span class="n">uuid</span><span class="o">=</span><span class="n">generate_uuid</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c">! version 4 (pseudo-RNG-based), default</span>
-             <span class="c">!</span>
-             <span class="c">! RFC 4122 defines a Uniform Resource Name (URN) namespace for UUIDs.</span>
-             <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(&quot;urn:uuid:&quot;,a36)&#39;</span><span class="p">)</span><span class="n">uuid</span>
-             <span class="c">!</span>
-             <span class="c">! a good scratch file name</span>
-             <span class="k">open</span><span class="p">(</span><span class="k">file</span><span class="o">=</span><span class="s1">&#39;/tmp/scratch_&#39;</span><span class="o">//</span><span class="n">uuid</span><span class="p">,</span><span class="n">unit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-             <span class="c">!</span>
-          <span class="k">end program </span><span class="n">demo_generate_uuid</span>
+    <div class="highlight"><pre><span></span>     <span class="k">program </span><span class="n">demo_generate_uuid</span>
+     <span class="k">use </span><span class="n">M_uuid</span><span class="p">,</span> <span class="k">only</span> <span class="p">:</span> <span class="n">generate_uuid</span>
+     <span class="k">implicit none</span>
+<span class="k">     </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span> <span class="kd">::</span> <span class="n">uuid</span>
+        <span class="c">!</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="n">generate_uuid</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c">! version 1 (time-based UUID)</span>
+        <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(a36)&#39;</span><span class="p">)</span><span class="n">uuid</span>
+        <span class="c">!</span>
+        <span class="n">uuid</span><span class="o">=</span><span class="n">generate_uuid</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c">! version 4 (pseudo-RNG-based), default</span>
+        <span class="c">!</span>
+        <span class="c">! RFC 4122 defines a Uniform Resource Name (URN) namespace for UUIDs.</span>
+        <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(&quot;urn:uuid:&quot;,a36)&#39;</span><span class="p">)</span><span class="n">uuid</span>
+        <span class="c">!</span>
+        <span class="c">! a good scratch file name</span>
+        <span class="k">open</span><span class="p">(</span><span class="k">file</span><span class="o">=</span><span class="s1">&#39;/tmp/scratch_&#39;</span><span class="o">//</span><span class="n">uuid</span><span class="p">,</span><span class="n">unit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="c">!</span>
+     <span class="k">end program </span><span class="n">demo_generate_uuid</span>
 </pre></div>
 
     </section>
@@ -376,7 +376,7 @@
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/cmacmackin/ford">FORD</a>
-             on 2021-09-18 12:59  
+             on 2021-12-16 22:30  
           </p>
         </div>
         <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> M_uuid was developed by John S. Urban</p></div>
