@@ -316,7 +316,8 @@ integer             :: clicks,maxclicks
 real                :: rate
 real(kind=dp)       :: rate8,frac8
 integer(kind=i8b)   :: frac
-   call date_to_unix([1582,10,15,0,0,0,0,0,0],starttime,ierr)                  ! seconds from 1582-10-15-00-00-00 to Unix Epoch Time
+integer,parameter   :: ref(8)=[1582,10,15,0,0,0,0,0]
+   call date_to_unix(ref,starttime,ierr)                                       ! seconds from 1582-10-15-00-00-00 to Unix Epoch Time
    call date_to_unix(values,unixtime,ierr)                                     ! seconds from given date to Unix Epoch Time
    ! if system clock is higher resolution use it even though that makes fractional second wrong
    call system_clock(count=clicks,count_rate=rate,count_max=maxclicks)
@@ -518,9 +519,10 @@ integer,intent(out)             :: ierr         ! return 0 on success, otherwise
 real(kind=realtime)             :: julian
 real(kind=realtime),save        :: julian_at_epoch
 logical,save                    :: first=.true.
+integer,parameter   :: ref(8)=[1970,1,1,0,0,0,0,0]
 !-----------------------------------------------------------------------------------------------------------------------------------
 if(first) then                                        ! Convert zero of Unix Epoch Time to Julian Date and save
-   call date_to_julian([1970,1,1,0,0,0,0,0],julian_at_epoch,ierr)
+   call date_to_julian(ref,julian_at_epoch,ierr)
    if(ierr.ne.0) return                               ! Error
    first=.false.
 endif
