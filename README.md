@@ -91,10 +91,9 @@ program that exercise the routine.
         M_uuid        = { git = "https://github.com/urbanjost/M_uuid.git" }
 ```
 
-## DOCUMENTATION
+## DOCUMENTATION   ![docs](docs/images/docs.gif)
 
 ### USER
-![manpages](docs/images/manpages.gif)
    - A single page that uses javascript to combine all the HTML
      descriptions of the man-pages is at 
      [BOOK_M_uuid](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
@@ -106,8 +105,9 @@ program that exercise the routine.
    - There are man-pages in the repository download in the docs/ directory
      that may be installed on ULS (Unix-Like Systems).
 
-   + [manpages.zip](https://urbanjost.github.io/M_uuid/manpages.zip)
-   + [manpages.tgz](https://urbanjost.github.io/M_uuid/manpages.tgz)
+   - ![man-pages](docs/images/manpages.gif)
+      + [manpages.zip](https://urbanjost.github.io/M_uuid/manpages.zip)
+      + [manpages.tgz](https://urbanjost.github.io/M_uuid/manpages.tgz)
 
    - [CHANGELOG](docs/CHANGELOG.md) provides a history of significant changes
 
