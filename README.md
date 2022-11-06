@@ -1,3 +1,5 @@
+## ![M_uuid](docs/images/id.gif)
+
 ## NAME
    M_uuid(3f) - a module of UUID (Universally Unique IDentifier) procedures
    (LICENSE:BSD-4-Clause)
@@ -129,6 +131,9 @@ program that exercise the routine.
 ## REFERENCES ![-](docs/images/ref.gif)
 
    * [RFC-4122](https://tools.ietf.org/html/rfc4122)
+<!--
+   * [RFC-4122](https://datatracker.ietf.org/doc/html/rfc4122)
+-->
    * [Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier)
    * [FOX](http://fortranwiki.org/fortran/show/FoX)
 ---
