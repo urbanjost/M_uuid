@@ -1,6 +1,6 @@
 # TOML file for fpm as described at https://github.com/fortran-lang/fpm/blob/master/manifest-reference.md
 name = "M_uuid"
-version = "1.0.0"
+version = "1.0.1"
 license = "MIT, custom OpenSource license"
 author = ["John S. Urban", "Toby White <tow@uszla.me.uk>", "Gen-Tao Chiang <gtc25@cam.ac.uk>", "Andrew Walker <a.walker@ucl.ac.uk>"]
 maintainer = "urbanjost@comcast.com"
