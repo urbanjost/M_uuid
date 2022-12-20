@@ -37,10 +37,11 @@ jobs:
     - name: Display environment
       run: |
         #make -k -p -fNOTTHERE
+        set -x
         echo "end" > foo.f90
         gfortran -cpp -E -dM foo.f90
         gfortran --version
-        ./fpm --version
+        fpm --version
 
     - name: tests MSWindows (debug)
       run: ./fpm test --profile debug -flag "-D _WIN32"
