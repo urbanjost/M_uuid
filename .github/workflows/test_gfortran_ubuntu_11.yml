@@ -50,7 +50,7 @@ jobs:
       run: |
            gfortran --version
            ulimit -c unlimited -d unlimited -f unlimited -m unlimited -s unlimited -t unlimited -v unlimited -x unlimited
-      run: fpm test --profile debug
+           fpm test --profile debug
 
     - name: ubuntu with gfortran (release)
       run: |
