@@ -38,7 +38,6 @@ jobs:
     - name: Display environment
       run: |
         #make -k -p -fNOTTHERE
-        set -x
         echo "end" > foo.f90
         gfortran -cpp -E -dM foo.f90
         gfortran --version
