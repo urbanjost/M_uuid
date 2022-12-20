@@ -1,0 +1,59 @@
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj scroll
+makeobj scroll
+   set width=60 xleft=-30
+   circle  xleft 40 radius=7
+   move2   xleft+radius 40
+   draw2   xleft+radius bot=-25
+   uarc    xleft+radius+radius bot 180
+   draw2   xleft+radius+radius+width bot 
+   uarc    xleft+radius+radius+width-radius bot -90
+   draw2   xleft+radius+radius bot-radius
+   move2   xleft+width bot 
+   draw2   xleft+width  40
+   uarc    xleft+width-radius 40 90
+   draw2   xleft 40+radius
+   set   left=xleft+radius+7 height=40-5 right=xleft+radius+width-7-7 
+   parcel line
+   move2   left height=height-6
+   draw2   right height
+   post
+   execute line -a COUNT=1 -b eq(COUNT,8) -c COUNT=COUNT+1
+   right=right-12
+   execute line 
+   rmove2 1 1
+   getgp X1 Y1
+   rdraw2 30 33
+   getgp X2 Y2
+# XPAGE,YPAGE  the starting point of the ellipse or arc.
+# RMAJ,RMIN    lengths of the semimajor and semiminor axes, respectively.
+# ANGLE        is the angle of the major axis, in degrees.
+# THO,THF      angles in degrees with respect to ANGLE of starting and ending angles.
+# IPEN         3, the pen is up for the move; 2, the pen is down for the move.
+
+   color 0
+   polyfill TRUE
+   makepoly
+   ellipse X2 Y2 20 5 47 0 360 3
+   closepoly
+   polyfill FALSE
+   color 7
+   ellipse X2 Y2 20 5 47 0 360 3
+   move2 X1 Y1
+   draw2 X2 Y2-2
+closeobj scroll
+################################################
+makeobj 1234  # URBAN ART
+   page -50 50 -50 50
+   circleprecision 60
+   linewidth 200
+   color 7
+   invokeobj 0 0 0 1 1 1 0 0 0 scroll
+closeobj
+rm -f history.p6
+hcopy p6 -obj 1234 -f history.p6 -sz 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >history.gif
+page
+callobj 1234
