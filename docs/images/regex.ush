@@ -1,0 +1,23 @@
+sz 550 550
+makeobj 1234  # URBAN ART
+   page -50 50 -50 50
+   circleprecision 60
+   linewidth 200
+   color 7
+   circle 0 0 45
+   color 2
+   polyfill TRUE
+   circle 0 0 45
+   polyfill FALSE
+   color 7
+   linewidth 350
+   textsize 50 50
+   centertext TRUE
+   move2 0 0
+   drawstr (.*)
+
+closeobj
+rm -f regex.p6
+hcopy p6 -obj 1234 -f regex.p6 -sz 550 550
+page
+callobj 1234
