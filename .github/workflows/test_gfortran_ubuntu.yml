@@ -11,7 +11,7 @@ jobs:
         os: [ubuntu-latest ]
         include:
         - os: ubuntu-latest
-          gcc_v: 9
+          gcc_v: 12
 
     env:
       FC: gfortran
@@ -47,10 +47,16 @@ jobs:
         fpm --version
 
     - name: ubuntu with gfortran (debug)
+      run: |
+           gfortran --version
+           ulimit -c unlimited -d unlimited -f unlimited -m unlimited -s unlimited -t unlimited -v unlimited -x unlimited
       run: fpm test --profile debug
 
     - name: ubuntu with gfortran (release)
-      run: fpm test --profile release
+      run: |
+           gfortran --version
+           ulimit -c unlimited -d unlimited -f unlimited -m unlimited -s unlimited -t unlimited -v unlimited -x unlimited
+           fpm test --profile release
 
 #    - name: Run demo programs (fpm run)
 #      run: fpm run --profile release
