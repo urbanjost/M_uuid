@@ -1,4 +1,4 @@
-name: ubuntu with gfortran
+name: ubuntu with gfortran 12
 
 on: [push, pull_request]
 

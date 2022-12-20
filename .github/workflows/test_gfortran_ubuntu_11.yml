@@ -1,4 +1,4 @@
-name: ubuntu with gfortran
+name: ubuntu with gfortran 11
 
 on: [push, pull_request]
 
@@ -11,7 +11,7 @@ jobs:
         os: [ubuntu-latest ]
         include:
         - os: ubuntu-latest
-          gcc_v: 12
+          gcc_v: 11
 
     env:
       FC: gfortran
