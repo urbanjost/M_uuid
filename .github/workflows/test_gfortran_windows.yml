@@ -29,6 +29,7 @@ jobs:
     - name: Install fpm
       run: |
            echo $PATH
+           echo %PATH
            pwd
            uname -a
            curl https://raw.githubusercontent.com/urbanjost/index/main/bootstrap/fpm.F90 --output fpm.F90
