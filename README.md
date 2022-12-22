@@ -53,7 +53,10 @@ _from Wikipedia_ ...
 ## LIST OF PROCEDURES
    + generate_uuid(version) ! generate 36-character UUID string
 
-## BUILDING THE MODULE USING make(1) ![gmake](docs/images/gnu.gif)
+---
+![gmake](docs/images/gnu.gif)
+---
+## BUILDING THE MODULE USING make(1)
      git clone https://github.com/urbanjost/M_uuid.git
      cd M_uuid/src
      # change Makefile if not using one of the listed compilers
@@ -73,7 +76,10 @@ _from Wikipedia_ ...
 This will compile the Fortran module and basic example
 program that exercise the routine.
 
-## BUILD and TEST with FPM ![-](docs/images/fpm_logo.gif)
+---
+![-](docs/images/fpm_logo.gif)
+---
+## BUILD and TEST with FPM
 
    Alternatively, download the github repository and build it with
    fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
@@ -92,8 +98,10 @@ program that exercise the routine.
         [dependencies]
         M_uuid        = { git = "https://github.com/urbanjost/M_uuid.git" }
 ```
-
-## DOCUMENTATION   ![docs](docs/images/docs.gif)
+---
+![docs](docs/images/docs.gif)
+---
+## DOCUMENTATION
 
 ### USER
    - A single page that uses javascript to combine all the HTML
@@ -128,7 +136,10 @@ program that exercise the routine.
  sections have been replaced, generate_uuid(3f) was originally based on
  the libFoX version.
 
-## REFERENCES ![-](docs/images/ref.gif)
+---
+![-](docs/images/ref.gif)
+---
+## REFERENCES
 
    * [RFC-4122](https://tools.ietf.org/html/rfc4122)
 <!--
