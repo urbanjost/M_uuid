@@ -312,7 +312,7 @@
 <a id="ln-103" name="ln-103" href="#ln-103"></a><span class="c">!===================================================================================================================================</span>
 <a id="ln-104" name="ln-104" href="#ln-104"></a><span class="k">private</span><span class="w"></span>
 <a id="ln-105" name="ln-105" href="#ln-105"></a>
-<a id="ln-106" name="ln-106" href="#ln-106"></a><span class="c">! ident_1=&quot;@(#)M_uuid::M_uid(3fm): generate UUIDs according to RFC 4122&quot;</span>
+<a id="ln-106" name="ln-106" href="#ln-106"></a><span class="c">! ident_1=&quot;@(#) M_uuid M_uid(3fm) generate UUIDs according to RFC 4122&quot;</span>
 <a id="ln-107" name="ln-107" href="#ln-107"></a>
 <a id="ln-108" name="ln-108" href="#ln-108"></a><span class="c">! Only versions  0(Nil), 1 (time-based) and 4 (pseudo-RNG-based) are implemented.</span>
 <a id="ln-109" name="ln-109" href="#ln-109"></a>
@@ -394,7 +394,7 @@
 <a id="ln-185" name="ln-185" href="#ln-185"></a><span class="c">!!     urn:uuid:5b0946b8-0eb4-4966-619d-047b7f7e2056</span>
 <a id="ln-186" name="ln-186" href="#ln-186"></a><span class="k">function </span><span class="n">generate_uuid</span><span class="p">(</span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">uuid</span><span class="p">)</span><span class="w"></span>
 <a id="ln-187" name="ln-187" href="#ln-187"></a>
-<a id="ln-188" name="ln-188" href="#ln-188"></a><span class="c">! ident_2=&quot;@(#)M_uuid::generate_uuid(3f): generate(approximately) a UUID (Universally Unique IDentifier) string per RFC 4122&quot;</span>
+<a id="ln-188" name="ln-188" href="#ln-188"></a><span class="c">! ident_2=&quot;@(#) M_uuid generate_uuid(3f) generate(approximately) a UUID (Universally Unique IDentifier) string per RFC 4122&quot;</span>
 <a id="ln-189" name="ln-189" href="#ln-189"></a>
 <a id="ln-190" name="ln-190" href="#ln-190"></a><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">version</span><span class="w"></span>
 <a id="ln-191" name="ln-191" href="#ln-191"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">uuid</span><span class="w"></span>
@@ -530,7 +530,7 @@
 <a id="ln-321" name="ln-321" href="#ln-321"></a><span class="w">   </span><span class="k">call </span><span class="n">date_to_unix</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="n">unixtime</span><span class="p">,</span><span class="n">ierr</span><span class="p">)</span><span class="w">                                     </span><span class="c">! seconds from given date to Unix Epoch Time</span>
 <a id="ln-322" name="ln-322" href="#ln-322"></a><span class="w">   </span><span class="c">! if system clock is higher resolution use it even though that makes fractional second wrong</span>
 <a id="ln-323" name="ln-323" href="#ln-323"></a><span class="w">   </span><span class="k">call </span><span class="nb">system_clock</span><span class="p">(</span><span class="nb">count</span><span class="o">=</span><span class="n">clicks</span><span class="p">,</span><span class="n">count_rate</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span><span class="n">count_max</span><span class="o">=</span><span class="n">maxclicks</span><span class="p">)</span><span class="w"></span>
-<a id="ln-324" name="ln-324" href="#ln-324"></a><span class="w">   </span><span class="k">if</span><span class="p">(</span><span class="n">rate</span><span class="p">.</span><span class="n">gt</span><span class="p">.</span><span class="mi">1000</span><span class="p">)</span><span class="k">then</span><span class="w">                                                        </span><span class="c">! system clock available and higher resolution</span>
+<a id="ln-324" name="ln-324" href="#ln-324"></a><span class="w">   </span><span class="k">if</span><span class="p">(</span><span class="n">rate</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="k">then</span><span class="w">                                                        </span><span class="c">! system clock available and higher resolution</span>
 <a id="ln-325" name="ln-325" href="#ln-325"></a><span class="w">      </span><span class="n">rate8</span><span class="o">=</span><span class="kt">real</span><span class="p">(</span><span class="n">rate</span><span class="p">,</span><span class="nb">kind</span><span class="o">=</span><span class="n">dp</span><span class="p">)</span><span class="w"></span>
 <a id="ln-326" name="ln-326" href="#ln-326"></a><span class="w">      </span><span class="n">frac8</span><span class="o">=</span><span class="nb">mod</span><span class="p">(</span><span class="kt">real</span><span class="p">(</span><span class="n">clicks</span><span class="p">,</span><span class="nb">kind</span><span class="o">=</span><span class="n">dp</span><span class="p">),</span><span class="n">rate8</span><span class="p">)</span><span class="o">/</span><span class="n">rate8</span><span class="o">*</span><span class="mi">10000000_i8b</span><span class="w">                 </span><span class="c">! MOD(A,P) == A - INT (A/P) * P.</span>
 <a id="ln-327" name="ln-327" href="#ln-327"></a><span class="w">      </span><span class="n">frac</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">frac8</span><span class="p">)</span><span class="w">                                                          </span><span class="c">! truncate to one remainder of one second</span>
@@ -618,7 +618,7 @@
 <a id="ln-409" name="ln-409" href="#ln-409"></a><span class="c">! * Julian Date starts at noon; while Civil Calendar date starts at midnight</span>
 <a id="ln-410" name="ln-410" href="#ln-410"></a><span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
 <a id="ln-411" name="ln-411" href="#ln-411"></a>
-<a id="ln-412" name="ln-412" href="#ln-412"></a><span class="c">! ident_3=&quot;@(#)M_time::date_to_julian(3f): Converts proleptic Gregorian DAT date-time array to Julian Date&quot;</span>
+<a id="ln-412" name="ln-412" href="#ln-412"></a><span class="c">! ident_3=&quot;@(#) M_time date_to_julian(3f) Converts proleptic Gregorian DAT date-time array to Julian Date&quot;</span>
 <a id="ln-413" name="ln-413" href="#ln-413"></a>
 <a id="ln-414" name="ln-414" href="#ln-414"></a><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">               </span><span class="kd">::</span><span class="w"> </span><span class="n">dat</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">   </span><span class="c">! array like returned by DATE_AND_TIME(3f)</span>
 <a id="ln-415" name="ln-415" href="#ln-415"></a><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">realtime</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">julian</span><span class="w">   </span><span class="c">! Julian Date (non-negative, but may be non-integer)</span>
@@ -720,7 +720,7 @@
 <a id="ln-511" name="ln-511" href="#ln-511"></a><span class="c">!!    Public Domain</span>
 <a id="ln-512" name="ln-512" href="#ln-512"></a><span class="k">subroutine </span><span class="n">date_to_unix</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span><span class="n">unixtime</span><span class="p">,</span><span class="n">ierr</span><span class="p">)</span><span class="w"></span>
 <a id="ln-513" name="ln-513" href="#ln-513"></a>
-<a id="ln-514" name="ln-514" href="#ln-514"></a><span class="c">! ident_4=&quot;@(#)M_time::date_to_unix(3f): Convert DAT date-time array to Unix Epoch Time&quot;</span>
+<a id="ln-514" name="ln-514" href="#ln-514"></a><span class="c">! ident_4=&quot;@(#) M_time date_to_unix(3f) Convert DAT date-time array to Unix Epoch Time&quot;</span>
 <a id="ln-515" name="ln-515" href="#ln-515"></a>
 <a id="ln-516" name="ln-516" href="#ln-516"></a><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">              </span><span class="kd">::</span><span class="w"> </span><span class="n">dat</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">       </span><span class="c">! date time array similar to that returned by DATE_AND_TIME</span>
 <a id="ln-517" name="ln-517" href="#ln-517"></a><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">realtime</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">unixtime</span><span class="w">     </span><span class="c">! Unix time (seconds)</span>
@@ -787,7 +787,7 @@
 <a id="ln-578" name="ln-578" href="#ln-578"></a><span class="c">!!      867010878</span>
 <a id="ln-579" name="ln-579" href="#ln-579"></a><span class="k">subroutine </span><span class="n">mtprng_init</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"></span>
 <a id="ln-580" name="ln-580" href="#ln-580"></a>
-<a id="ln-581" name="ln-581" href="#ln-581"></a><span class="c">! ident_5=&quot;@(#)M_random::mtprng_int(3f): Initializes the Mersenne Twister random number generator with seed&quot;</span>
+<a id="ln-581" name="ln-581" href="#ln-581"></a><span class="c">! ident_5=&quot;@(#) M_random mtprng_int(3f) Initializes the Mersenne Twister random number generator with &quot;seed&quot;&quot;</span>
 <a id="ln-582" name="ln-582" href="#ln-582"></a>
 <a id="ln-583" name="ln-583" href="#ln-583"></a><span class="c">! arguments</span>
 <a id="ln-584" name="ln-584" href="#ln-584"></a><span class="kt">integer</span><span class="p">(</span><span class="n">INT32</span><span class="p">),</span><span class="w">     </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">seed</span><span class="w"></span>
@@ -851,7 +851,7 @@
 <a id="ln-642" name="ln-642" href="#ln-642"></a><span class="c">!!    end program demo_mtprng_rand64</span>
 <a id="ln-643" name="ln-643" href="#ln-643"></a><span class="k">function </span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"></span>
 <a id="ln-644" name="ln-644" href="#ln-644"></a>
-<a id="ln-645" name="ln-645" href="#ln-645"></a><span class="c">! ident_6=&quot;@(#)M_random::mtprng_rand64(3f): Obtain the next 64-bit integer in the pseudo-random sequence&quot;</span>
+<a id="ln-645" name="ln-645" href="#ln-645"></a><span class="c">! ident_6=&quot;@(#) M_random mtprng_rand64(3f) Obtain the next 64-bit integer in the pseudo-random sequence&quot;</span>
 <a id="ln-646" name="ln-646" href="#ln-646"></a>
 <a id="ln-647" name="ln-647" href="#ln-647"></a><span class="c">! arguments</span>
 <a id="ln-648" name="ln-648" href="#ln-648"></a><span class="k">type</span><span class="p">(</span><span class="n">mtprng_state</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">state</span><span class="w"></span>
@@ -925,14 +925,14 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>M_uuid was developed by John S. Urban<br>&copy; 2022 
+        <div class="col-xs-6 col-md-6"><p>M_uuid was developed by John S. Urban<br>&copy; 2023 
 </p>
         </div>
         <div class="col-xs-6 col-md-6">
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2022-12-31 16:50            </p>
+ on 2023-01-20 03:39            </p>
         </div>
       </div>
       <br>
