@@ -103,7 +103,7 @@ end type
 !===================================================================================================================================
 private
 
-! ident_1="@(#)M_uuid::M_uid(3fm): generate UUIDs according to RFC 4122"
+! ident_1="@(#) M_uuid M_uid(3fm) generate UUIDs according to RFC 4122"
 
 ! Only versions  0(Nil), 1 (time-based) and 4 (pseudo-RNG-based) are implemented.
 
@@ -185,7 +185,7 @@ contains
 !!     urn:uuid:5b0946b8-0eb4-4966-619d-047b7f7e2056
 function generate_uuid(version) result(uuid)
 
-! ident_2="@(#)M_uuid::generate_uuid(3f): generate(approximately) a UUID (Universally Unique IDentifier) string per RFC 4122"
+! ident_2="@(#) M_uuid generate_uuid(3f) generate(approximately) a UUID (Universally Unique IDentifier) string per RFC 4122"
 
 integer, intent(in), optional :: version
 character(len=36) :: uuid
@@ -321,7 +321,7 @@ integer,parameter   :: ref(8)=[1582,10,15,0,0,0,0,0]
    call date_to_unix(values,unixtime,ierr)                                     ! seconds from given date to Unix Epoch Time
    ! if system clock is higher resolution use it even though that makes fractional second wrong
    call system_clock(count=clicks,count_rate=rate,count_max=maxclicks)
-   if(rate.gt.1000)then                                                        ! system clock available and higher resolution
+   if(rate > 1000)then                                                        ! system clock available and higher resolution
       rate8=real(rate,kind=dp)
       frac8=mod(real(clicks,kind=dp),rate8)/rate8*10000000_i8b                 ! MOD(A,P) == A - INT (A/P) * P.
       frac=int(frac8)                                                          ! truncate to one remainder of one second
@@ -409,7 +409,7 @@ subroutine date_to_julian(dat,julian,ierr)
 ! * Julian Date starts at noon; while Civil Calendar date starts at midnight
 !-----------------------------------------------------------------------------------------------------------------------------------
 
-! ident_3="@(#)M_time::date_to_julian(3f): Converts proleptic Gregorian DAT date-time array to Julian Date"
+! ident_3="@(#) M_time date_to_julian(3f) Converts proleptic Gregorian DAT date-time array to Julian Date"
 
 integer,intent(in)               :: dat(8)   ! array like returned by DATE_AND_TIME(3f)
 real(kind=realtime),intent(out)  :: julian   ! Julian Date (non-negative, but may be non-integer)
@@ -511,7 +511,7 @@ end subroutine date_to_julian
 !!    Public Domain
 subroutine date_to_unix(dat,unixtime,ierr)
 
-! ident_4="@(#)M_time::date_to_unix(3f): Convert DAT date-time array to Unix Epoch Time"
+! ident_4="@(#) M_time date_to_unix(3f) Convert DAT date-time array to Unix Epoch Time"
 
 integer,intent(in)              :: dat(8)       ! date time array similar to that returned by DATE_AND_TIME
 real(kind=realtime),intent(out) :: unixtime     ! Unix time (seconds)
@@ -578,7 +578,7 @@ end subroutine date_to_unix
 !!      867010878
 subroutine mtprng_init(seed, state)
 
-! ident_5="@(#)M_random::mtprng_int(3f): Initializes the Mersenne Twister random number generator with seed"
+! ident_5="@(#) M_random mtprng_int(3f) Initializes the Mersenne Twister random number generator with "seed""
 
 ! arguments
 integer(INT32),     intent(in)  :: seed
@@ -642,7 +642,7 @@ end subroutine mtprng_init
 !!    end program demo_mtprng_rand64
 function mtprng_rand64(state) result(r)
 
-! ident_6="@(#)M_random::mtprng_rand64(3f): Obtain the next 64-bit integer in the pseudo-random sequence"
+! ident_6="@(#) M_random mtprng_rand64(3f) Obtain the next 64-bit integer in the pseudo-random sequence"
 
 ! arguments
 type(mtprng_state), intent(inout) :: state
