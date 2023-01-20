@@ -1,16 +1,16 @@
 ## ![M_uuid](docs/images/id.gif)
 
-## NAME
+## Name
    M_uuid(3f) - a module of UUID (Universally Unique IDentifier) procedures
    (LICENSE:BSD-4-Clause)
-## SYNOPSIS
+## Synopsis
 ```text
        use M_uuid, only : generate_uuid
 ```
-## QUOTE
+## Quote
 ####   __Remember you are unique, just like everyone else__.
 
-## DESCRIPTION
+## Description
 
 _from Wikipedia_ ...
    A universally unique identifier (UUID) is a 128-bit number used to
@@ -50,13 +50,13 @@ _from Wikipedia_ ...
      In Wikipedia, The Free Encyclopedia. Retrieved 01:41, September 25, 2021, from
      https://en.wikipedia.org/w/index.php?title=Universally_unique_identifier&oldid=1045581110
 
-## LIST OF PROCEDURES
+## List of Procedures
    + generate_uuid(version) ! generate 36-character UUID string
 
 ---
 ![gmake](docs/images/gnu.gif)
 ---
-## BUILDING THE MODULE USING make(1)
+## Building the Module using make(1)
      git clone https://github.com/urbanjost/M_uuid.git
      cd M_uuid/src
      # change Makefile if not using one of the listed compilers
@@ -79,7 +79,7 @@ program that exercise the routine.
 ---
 ![-](docs/images/fpm_logo.gif)
 ---
-## BUILD and TEST with FPM
+## Build and Test with FPM
 
    Alternatively, download the github repository and build it with
    fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
@@ -101,9 +101,9 @@ program that exercise the routine.
 ---
 ![docs](docs/images/docs.gif)
 ---
-## DOCUMENTATION
+## Documentation
 
-### USER
+### User
    - A single page that uses javascript to combine all the HTML
      descriptions of the man-pages is at 
      [BOOK_M_uuid](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
@@ -121,14 +121,14 @@ program that exercise the routine.
 
    - [CHANGELOG](docs/CHANGELOG.md) provides a history of significant changes
 
-### DEVELOPER
+### Developer
    - [ford(1) output](https://urbanjost.github.io/M_uuid/fpm-ford/index.html).
 <!--
    - [doxygen(1) output](https://urbanjost.github.io/M_uuid/doxygen_out/html/index.html).
 -->
    - [github action status](docs/STATUS.md) 
 ---
-## PEDIGREE
+## Pedigree
  This is a modified version of generate_uuid(3f).  generate_uuid(3f)
  was originally derived from the xmlf90 codebase, (c) Alberto Garcia &
  Jon Wakelin, 2003-2004.  It also calls RNG routines from Scott Ladd
@@ -139,7 +139,7 @@ program that exercise the routine.
 ---
 ![-](docs/images/ref.gif)
 ---
-## REFERENCES
+## References
 
    * [RFC-4122](https://tools.ietf.org/html/rfc4122)
 <!--
