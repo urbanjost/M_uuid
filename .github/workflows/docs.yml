@@ -1,4 +1,4 @@
-name: docs
+name: FORD docs deployed to gh-pages
 
 on: [push, pull_request]
 
