@@ -77,6 +77,7 @@ logical :: exercise
 integer :: sz
 character(len=36),allocatable :: uuid(:)
 integer :: i,j
+integer :: icount
    exercise=.true.
    TYPES: do j=1,4,3
       if(allocated(uuid))deallocate(uuid)
