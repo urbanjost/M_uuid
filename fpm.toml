@@ -1,4 +1,4 @@
-# TOML file for fpm as described at https://github.com/fortran-lang/fpm/blob/master/manifest-reference.md
+# TOML file for fpm as described at https://fpm.fortran-lang.org/en/spec/manifest.html
 name = "M_uuid"
 version = "1.0.1"
 license = "MIT, custom OpenSource license"
@@ -30,4 +30,4 @@ name="test_suite_M_uuid"
 source-dir="test"
 main="test_suite_M_uuid.f90"
 [test.dependencies]
-M_msg = { git = "https://github.com/urbanjost/M_msg.git" }
+M_framework = { git = "https://github.com/urbanjost/M_framework.git" }
