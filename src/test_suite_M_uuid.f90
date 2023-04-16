@@ -1,6 +1,7 @@
 module M_test_suite_M_uuid
-use M_msg
-use M_verify, only : unit_check_command, unit_check_keep_going, unit_check_level
+use M_framework__msg
+use M_framework__verify, only : unit_check_command, unit_check_keep_going, unit_check_level
+use M_framework__verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
 use M_uuid, only : generate_uuid
 private
 public test_suite_m_uuid
@@ -13,7 +14,6 @@ end subroutine test_suite_m_uuid
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()!
 !==================================================================================================================================!
 subroutine test_generate_uuid()
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
 
 !   This just checks that we can generate the various types of UUID
 !   (without crashing) and checks that they have the correct syntax. We
@@ -151,8 +151,8 @@ end subroutine unique_strings
 end module M_test_suite_M_uuid
 !==================================================================================================================================!
 program runtest
-use M_msg
-use M_verify, only : unit_check_command, unit_check_keep_going, unit_check_level, unit_check_stop
+use M_framework__msg
+use M_framework__verify, only : unit_check_command, unit_check_keep_going, unit_check_level, unit_check_stop
 use M_test_suite_M_uuid
 implicit none
    unit_check_command=''
