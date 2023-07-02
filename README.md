@@ -1,4 +1,5 @@
-## ![M_uuid](docs/images/id.gif)
+[![](docs/images/M_uuid_small.gif)](https://urbanjost.github.io/M_uuid/fpm-ford/index.html)
+# [M_uuid](https://urbanjost.github.io/M_uuid/man3.html)
 
 ## Name
    M_uuid(3f) - a module of UUID (Universally Unique IDentifier) procedures

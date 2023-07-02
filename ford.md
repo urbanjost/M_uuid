@@ -7,7 +7,7 @@ output_dir: docs/fpm-ford
 project: M_uuid
 summary: generate UUIDs (Universally Unique ID)
 project_github: https://github.com/urbanjost/M_uuid
-project_download:
+project_download: https://github.com/urbanjost/M_uuid/archive/refs/heads/master.zip
 author: John S. Urban
 author_email: urbanjost@comcast.net
 github: https://github.com/urbanjost/M_uuid

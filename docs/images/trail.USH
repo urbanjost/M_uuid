@@ -1,0 +1,4528 @@
+#<*ush* version 6.0.0> Aug 15 2022
+read framework.ush
+# ==> read framework.ush
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 100
+set w=60 h=28
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+move2 0 0
+draw2 0 50
+move2 0 0
+draw2 50 0
+closeobj
+rm -f framework.p6
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 100
+set w=60 h=58
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+rm -f framework.p6
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 100
+set w=60 h=58
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 100
+set w=60 h=58
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+move2 0 0
+draw2 0 50
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 100
+set w=60 h=58
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+move2 -50 -50
+draw2 50 50
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+move2 0 0
+draw2 0 50
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+dt
+rm -i framework.*
+dt
+rm framework_long.gif
+vi trail.USH
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 100
+set w=60 h=58
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+move2 -50 -50
+draw2 50 50
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+move2 0 0
+draw2 0 50
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi trail.USH
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 100
+set w=60 h=58
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 -50 -50
+draw2 50 50
+move2 0 0
+draw2 50 0
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+dt
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 100
+set w=60 h=58
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+linewidth 400
+move2 0 0
+draw2 50 50
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 -50 -50
+draw2 50 50
+move2 0 0
+draw2 50 0
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+circle 0 0 50
+vflush
+move2 0 0
+draw2 -50 0
+vflush
+closeobj 1234
+move2 0 0
+draw2 -50 1000
+move2 0 0
+linewidth 100
+draw2 -50 0
+move2 0 0
+draw2 -30 -30
+circle 0 0 20
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 100
+set w=60 h=58
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+linewidth 400
+move2 0 0
+draw2 50 50
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 -50 -50
+draw2 50 50
+move2 0 0
+draw2 50 0
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=60 h=38
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+linewidth 400
+invokeobj 0 0-19 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=60 h=78
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+linewidth 400
+invokeobj 0 0-4 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=60 h=68
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=55 h=62
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+!vi
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62 over=7 attic=14
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+move2 0-w/2-over h/2
+draw2 0+w/2-over h/2
+draw2 0 attic
+draw2 0-w/2-over h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62 over=7 attic=14
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62 over=7 attic=14
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+move2 0-w/4 -h2/2
+draw2 0-w/4 h2/2
+#*expression* error===> *a_2_d_* undeclared variable [h2 ]
+#*strgar2* could not turn string into number:h2/2:
+#*strgar2* error is -1
+move2 0+w/4 -h2/2
+draw2 0+w/4 h2/2
+#*expression* error===> *a_2_d_* undeclared variable [h2 ]
+#*strgar2* could not turn string into number:h2/2:
+#*strgar2* error is -1
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62 over=7 attic=14
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+move2 0-w/4 -h/2
+draw2 0-w/4 h/2
+move2 0+w/4 -h/2
+draw2 0+w/4 h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+move2 0 0
+draw2 50 0
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+color 1
+move2 0 0
+draw2 0 50
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62 over=7 attic=14
+# outer box
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+# root
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+# inner
+move2 0-w/3 -h/2
+draw2 0-w/3  h/2
+move2 0+w/3 -h/2
+draw2 0+w/3  h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+!vi
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62 over=7 attic=14
+# outer box
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+# root
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+# inner
+linewidth 200
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62 over=7 attic=14
+# outer box
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+# root
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+# inner
+linewidth 200
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62 over=7 attic=14
+# outer box
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+# root
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+move2 0 0
+draw2 w/3 attic/2
+move2 0 0
+draw2 0-w/3 attic/2
+# inner
+linewidth 200
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 400
+set w=49 h=62 over=7 attic=14
+# outer box
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+# root
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+# inner
+linewidth 200
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 400
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set w=49 h=62 over=7 attic=14
+# outer box
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+# root
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 attic
+# inner
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set w=49 h=62 over=7 attic=14
+# outer box
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+# root
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set w=49 h=52 over=7 attic=14
+# outer box
+move2 0-w/2 h/2
+draw2 w/2 h/2
+draw2 w/2 0-h/2
+draw2 0-w/2 0-h/2
+draw2 0-w/2 h/2
+# root
+move2 0-w/2-over h/2
+draw2 0+w/2+over h/2
+draw2 0 h/2+attic
+draw2 0-w/2-over h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set w=49 h=52 over=7 attic=14
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# root
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set w=49 h=52 over=7 attic=14
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+move2 0+outer h/3
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set w=49 h=52 over=7 attic=14
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0 0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/3  0 1 1 1 0 0 0 outerbrace
+invokeobj 0 02*-h/3 0 1 1 1 0 0 0 outerbrace
+#*expression* error===> second factor or quotient for "*" or "/" missing or null
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0 0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/3  0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*-h/3 0 1 1 1 0 0 0 outerbrace
+#*expression* error===> second factor or quotient for "*" or "/" missing or null
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2-h/4 0 1 1 1 0 0 0 outerbrace
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+genobj outerbrace
+makeobj innerbrace
+#*expression* error===> *a_2_d_* undeclared variable [innerbrace ]
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0       0 1 1 1 0 0 0 innerbrace
+#*expression* error===> *a_2_d_* undeclared variable [innerbrace ]
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+genobj outerbrace
+################################################
+makeobj innerbrace
+#*expression* error===> *a_2_d_* undeclared variable [innerbrace ]
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+#invokeobj 0 0       0 1 1 1 0 0 0 innerbrace
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0       0 1 1 1 0 0 0 innerbrace
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/6
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 outerbrace
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/6
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/4
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+!vi
+!vi
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+#   makepoly
+circle 0 0 50
+#   closepoly
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+!vi
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+polyfill FALSE
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+circle 0-0.8*inner 0-h/4 w/20
+polyfill FALSE
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/20
+polyfill FALSE
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/40
+polyfill FALSE
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+move2 0-inner h/3
+draw2 0+inner h/3
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+# door
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/40
+polyfill FALSE
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+move2 0-inner h/3
+draw2 0+inner h/3
+move2 0-inner h/3-h/4
+draw2 0+inner h/3-h/4
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+# door
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/40
+polyfill FALSE
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+man vogle
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj window
+makeobj window
+color 0
+polyfill TRUE
+rect 0-w/4 0-w/4 0+w/4 0+w/4
+polyfill FALSE
+closeobj window
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+move2 0-inner h/3
+draw2 0+inner h/3
+move2 0-inner h/3-h/4
+draw2 0+inner h/3-h/4
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+# door
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/40
+polyfill FALSE
+invokeobj w-2 h/4  0 1 1 1 0 0 0 window
+invokeobj w+2 h/4 0 1 1 1 0 0 0 window
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj window
+makeobj window
+color 0
+polyfill TRUE
+rect 0-w/5 0-w/5 0+w/5 0+w/5
+polyfill FALSE
+closeobj window
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+move2 0-inner h/3
+draw2 0+inner h/3
+move2 0-inner h/3-h/4
+draw2 0+inner h/3-h/4
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+# door
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/40
+polyfill FALSE
+invokeobj 0+w/2 h/4  0 1 1 1 0 0 0 window
+invokeobj 0-w/2 h/4 0 1 1 1 0 0 0 window
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj window
+makeobj window
+color 0
+polyfill TRUE
+rect 0-w/8 0-w/8 0+w/8 0+w/8
+polyfill FALSE
+closeobj window
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+move2 0-inner h/3
+draw2 0+inner h/3
+move2 0-inner h/3-h/4
+draw2 0+inner h/3-h/4
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+# door
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/40
+polyfill FALSE
+invokeobj 0+w/2 h/4  0 1 1 1 0 0 0 window
+invokeobj 0-w/2 h/4 0 1 1 1 0 0 0 window
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+r/vi
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj window
+makeobj window
+color 0
+polyfill TRUE
+rect 0-w/8 0-w/8 0+w/8 0+w/8
+polyfill FALSE
+closeobj window
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+move2 0-inner h/3
+draw2 0+inner h/3
+move2 0-inner h/3-h/4
+draw2 0+inner h/3-h/4
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+# door
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/40
+polyfill FALSE
+invokeobj 0+w/3 h/4  0 1 1 1 0 0 0 window
+invokeobj 0-w/3 h/4 0 1 1 1 0 0 0 window
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj window
+makeobj window
+linewidth 400
+color 7
+rect 0-w/8 0-w/8 0+w/8 0+w/8
+color 0
+polyfill TRUE
+rect 0-w/8 0-w/8 0+w/8 0+w/8
+polyfill FALSE
+closeobj window
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+move2 0-inner h/3
+draw2 0+inner h/3
+move2 0-inner h/3-h/4
+draw2 0+inner h/3-h/4
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+# door
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/40
+polyfill FALSE
+invokeobj 0+w/3 h/4  0 1 1 1 0 0 0 window
+invokeobj 0-w/3 h/4 0 1 1 1 0 0 0 window
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+vi framework.ush
+# ==> read
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+# horizontal
+move2 left h/3
+draw2 0-outer h/3
+move2 right h/3
+draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+# horizontal
+move2 0-outer h/3
+draw2 0-inner h/3
+move2 0+outer h/3
+draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj window
+makeobj window
+linewidth 400
+color 7
+rect 0-w/8 0-w/8 0+w/8 0+w/8
+color 0
+polyfill TRUE
+rect 0-w/8 0-w/8 0+w/8 0+w/8
+polyfill FALSE
+closeobj window
+################################################
+genobj frame
+makeobj frame
+linewidth 300
+set left=0-w/2 right=0+w/2
+# outer box
+move2 left h/2
+draw2 right h/2
+draw2 right 0-h/2
+draw2 left 0-h/2
+draw2 left h/2
+# roof
+move2 left-over  h/2
+draw2 right+over h/2
+draw2 0          h/2+attic
+draw2 left-over  h/2
+linewidth 200
+move2 0 h/2
+draw2 0+w/3 attic/2+h/2
+move2 0 h/2
+draw2 0-w/3 attic/2+h/2
+move2 0 h/2
+draw2 0 h/2+attic
+# inner
+set outer=w/3 inner=w/7
+# vertical
+move2 0-w/3 0-h/2
+draw2 0-w/3 0+h/2
+move2 0+w/3 0-h/2
+draw2 0+w/3 0+h/2
+move2 0-w/7 0-h/2
+draw2 0-w/7 0+h/2
+move2 0+w/7 0-h/2
+draw2 0+w/7 0+h/2
+invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+set move=h/8
+invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+move2 0-inner h/3
+draw2 0+inner h/3
+move2 0-inner h/3-h/4
+draw2 0+inner h/3-h/4
+linewidth 400
+move2 0-inner 0
+draw2 0+inner 0
+polyfill TRUE
+color 0
+# door
+makepoly
+move2 0-inner 0
+draw2 0+inner 0
+draw2 0+inner 0-h/2
+draw2 0-inner 0-h/2
+draw2 0-inner 0
+closepoly
+color 7
+linewidth 100
+circle 0-0.8*inner 0-h/4 w/40
+polyfill FALSE
+set s=0.9
+invokeobj 0+w/3 h/4  0 s s 1 0 0 0 window
+invokeobj 0-w/3 h/4  0 s s 1 0 0 0 window
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+circleprecision 60
+linewidth 200
+color 3
+polyfill TRUE
+circle 0 0 50
+polyfill FALSE
+color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+# *hcopy* creating framework.p6 with device p6 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+# *hcopy* creating |ppmtogif >framework.gif with device p6 640*4 640*4
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+# *hcopy* creating |ppmtogif >framework_long.gif with device p6 xsize ysize
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+quit
