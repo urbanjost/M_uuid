@@ -1,0 +1,87 @@
+sz 800 500
+set TRUE=1 FALSE=0
+################################################
+parcel roundrect
+ !set tall=50 width=80 radius=10
+ dotx=0-width/2+radius
+ doty=0-tall/2+radius
+ arc dotx doty radius 180 270
+ dotx=width/2-radius
+ draw2 dotx doty-radius
+ arc dotx doty radius 270 360
+ doty=abs(doty)
+ draw2 dotx+radius tall/2-radius
+ arc dotx doty radius 0 90
+ dotx=-dotx
+ draw2 dotx doty+radius
+ arc dotx doty radius 90 180
+ doty=-doty
+ draw2 dotx-radius doty
+post
+################################################
+genobj person
+makeobj person
+pushmatrix
+translate -21 6 0
+#scale .5 .5
+execute roundrect tall=30 width=30 radius=4
+polyfill TRUE
+makepoly
+ellipse 6.5 6 7 6 0 0 360 3
+closepoly
+
+makepoly
+move2 -12 -12
+draw2 12 -12
+draw2 12 -4
+#arc 12-3 -4 3 0 90
+uarc 12-3 -4 90
+draw2 -12+3 -1
+#arc 0-12+3 -4 3 90 180
+uarc -12+3 -4 90 
+draw2 -12 -12
+closepoly
+polyfill FALSE
+
+# XPAGE,YPAGE  the starting point of the ellipse or arc.
+# RMAJ,RMIN    lengths of the semimajor and semiminor axes, respectively.
+# ANGLE        is the angle of the major axis, in degrees.
+# THO,THF      angles in degrees with respect to ANGLE of starting and ending angles.
+# IPEN         3, the pen is up for the move; 2, the pen is down for the move.
+popmatrix
+closeobj 
+################################################
+genobj field
+makeobj field
+set x=17  y=2
+move2   x  y
+draw2 0-x  y
+uarc  0-x  0 180
+draw2   x  0-y
+uarc    x  0 180
+closeobj
+################################################
+makeobj 1234  # URBAN ART
+   #page -50 50 -50/8*5 50/8*5
+   page -50 50 -50/8*5-10 50/8*5+10
+   circleprecision 60
+   linewidth 200
+   color 7
+   execute roundrect tall=50 width=80 radius=10
+   callobj person
+   invokeobj 16 14 0 1 1 1 0 0 0 field
+   invokeobj 16 7 0 1 1 1 0 0 0 field
+   invokeobj 16 0 0 1 1 1 0 0 0 field
+   color 7
+   linewidth 200
+   textsize 10 10
+   centertext TRUE
+   move2 4 -20
+   drawstr UUID
+closeobj
+rm -f id.p6
+hcopy p6 -obj 1234 -f M_uuid.p6 -sz 550 550
+hcopy p6 -obj 1234 -sz 100*24 24*100/8*5 -f |ppmtogif >M_uuid.gif
+
+page
+callobj 1234

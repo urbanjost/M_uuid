@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="generate UUIDs (Universally Unique ID)">
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> M_uuid </title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+      <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+         <script src="./js/jquery-2.1.3.min.js"></script>
+         <script src="./js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">M_uuid </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+                 data-toggle="dropdown" role="button"
+                 aria-haspopup="true"
+                 aria-expanded="false">
+                 Contents <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                    <li><a href="./lists/files.html">Source Files</a></li>
+                  <li><a href="./lists/modules.html">Modules</a></li>
+                  <li><a href="./lists/procedures.html">Procedures</a></li>
+                  <li><a href="./lists/types.html">Derived Types</a></li>
+                  <li><a href="./lists/programs.html">Programs</a></li>
+              </ul>
+            </li>
+                <li class="visible-xs hidden-sm visible-lg">
+                  <a href="./lists/files.html">Source Files</a>
+                </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="./lists/modules.html">Modules</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="./lists/procedures.html">Procedures</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="./lists/types.html">Derived Types</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="./lists/programs.html">Programs</a>
+              </li>
+          </ul>
+            <form action="./search.html" class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+              </div>
+              <!--
+                  <button type="submit" class="btn btn-default">Submit</button>
+                  -->
+            </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <p>generate UUIDs (Universally Unique ID)</p>
+	<p> Find us on&hellip;</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="https://github.com/urbanjost/M_uuid" role="button">GitHub</a>
+          <a class="btn btn-lg btn-danger" style="float:right" href="https://github.com/urbanjost/M_uuid/archive/refs/heads/master.zip" role="button">Download the Source</a>
+        </p>
+      </div>
+
+      <div class="row" id='text'>
+        <div class="col-md-8">
+          <h1>M_uuid</h1>
+          <p><a href="https://urbanjost.github.io/M_uuid/fpm-ford/index.html"><img alt="" src="docs/images/M_uuid_small.gif"></a></p>
+<h1 id="m_uuid"><a href="https://urbanjost.github.io/M_uuid/man3.html">M_uuid</a></h1>
+<h2 id="name">Name</h2>
+<p>M_uuid(3f) - a module of UUID (Universally Unique IDentifier) procedures
+   (LICENSE:BSD-4-Clause)</p>
+<h2 id="synopsis">Synopsis</h2>
+<div class="codehilite"><pre><span></span><code>       use M_uuid, only : generate_uuid
+</code></pre></div>
+
+<h2 id="quote">Quote</h2>
+<h4 id="remember-you-are-unique-just-like-everyone-else"><strong>Remember you are unique, just like everyone else</strong>.</h4>
+<h2 id="description">Description</h2>
+<p><em>from Wikipedia</em> &hellip;
+   A universally unique identifier (UUID) is a 128-bit number used to
+   identify information on computer systems. In particular, they are
+   commonly used to create unique filenames and database and table keys.</p>
+<p>When generated according to the standard methods, UUIDs are for
+   practical purposes unique, without depending for their uniqueness
+   on a central registration authority or coordination between the
+   parties generating them, unlike most other numbering schemes. While
+   the probability that a UUID will be duplicated is not zero, it is
+   close enough to zero to be negligible.</p>
+<p>Thus, anyone can create a UUID and use it to identify something with
+   near certainty that the identifier does not duplicate one that has
+   already been or will be created to identify something else. Information
+   labeled with UUIDs by independent parties can therefore be later
+   combined into a single database, or transmitted on the same channel,
+   without needing to resolve conflicts between identifiers.</p>
+<p>Adoption of UUIDs and GUIDs is widespread. Many computing platforms
+   provide support for generating them, and for parsing their textual
+   representation.</p>
+<p>Note that several UUID types contain information that can be decyphered
+   to recreate the creation time or the MAC address of the device that
+   generated the UUID which has several uses for verifying when and
+   where data was generated.</p>
+<p><a href="https://tools.ietf.org/html/rfc4122">RFC 4122</a>
+   defines a Uniform Resource Name (URN) namespace for UUIDs.
+   A UUID presented as a URN appears as follows:</p>
+<div class="codehilite"><pre><span></span><code>             urn:uuid:123e4567-e89b-12d3-a456-426655440000
+</code></pre></div>
+
+<ul>
+<li>Wikipedia contributors. (2021, September 21). Universally unique identifier. 
+     In Wikipedia, The Free Encyclopedia. Retrieved 01:41, September 25, 2021, from
+     https://en.wikipedia.org/w/index.php?title=Universally_unique_identifier&amp;oldid=1045581110</li>
+</ul>
+<h2 id="list-of-procedures">List of Procedures</h2>
+<ul>
+<li>generate_uuid(version) ! generate 36-character UUID string</li>
+</ul>
+<hr>
+<h2 id="_1"><img alt="gmake" src="docs/images/gnu.gif"></h2>
+<h2 id="building-the-module-using-make1">Building the Module using make(1)</h2>
+<div class="codehilite"><pre><span></span><code> <span class="nv">git</span> <span class="nv">clone</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">urbanjost</span><span class="o">/</span><span class="nv">M_uuid</span>.<span class="nv">git</span>
+ <span class="nv">cd</span> <span class="nv">M_uuid</span><span class="o">/</span><span class="nv">src</span>
+ # <span class="nv">change</span> <span class="nv">Makefile</span> <span class="k">if</span> <span class="nv">not</span> <span class="nv">using</span> <span class="nv">one</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">listed</span> <span class="nv">compilers</span>
+
+ # <span class="k">for</span> <span class="nv">gfortran</span>
+ <span class="nv">make</span> <span class="nv">clean</span>
+ <span class="nv">make</span> <span class="nv">F90</span><span class="o">=</span><span class="nv">gfortran</span> <span class="nv">gfortran</span>
+
+ # <span class="k">for</span> <span class="nv">ifort</span>
+ <span class="nv">make</span> <span class="nv">clean</span>
+ <span class="nv">make</span> <span class="nv">F90</span><span class="o">=</span><span class="nv">ifort</span> <span class="nv">ifort</span>
+
+ # <span class="k">for</span> <span class="nv">nvfortran</span>
+ <span class="nv">make</span> <span class="nv">clean</span>
+ <span class="nv">make</span> <span class="nv">F90</span><span class="o">=</span><span class="nv">nvfortran</span> <span class="nv">nvfortran</span>
+</code></pre></div>
+
+<p>This will compile the Fortran module and basic example
+program that exercise the routine.</p>
+<hr>
+<h2 id="_2"><img alt="-" src="docs/images/fpm_logo.gif"></h2>
+<h2 id="build-and-test-with-fpm">Build and Test with FPM</h2>
+<p>Alternatively, download the github repository and build it with
+   fpm ( as described at <a href="https://github.com/fortran-lang/fpm">Fortran Package Manager</a> )</p>
+<p><code>bash
+        git clone https://github.com/urbanjost/M_uuid.git
+        cd M_uuid
+        fpm run "*"
+        fpm run --example "*"
+        fpm test</code></p>
+<p>or just list it as a dependency in your fpm.toml project file.</p>
+<div class="codehilite"><pre><span></span><code><span class="w">        </span><span class="k">[dependencies]</span><span class="w"></span>
+<span class="w">        </span><span class="n">M_uuid</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://github.com/urbanjost/M_uuid.git&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<hr>
+<h2 id="_3"><img alt="docs" src="docs/images/docs.gif"></h2>
+<h2 id="documentation">Documentation</h2>
+<h3 id="user">User</h3>
+<ul>
+<li>
+<p>A single page that uses javascript to combine all the HTML
+     descriptions of the man-pages is at 
+     <a href="https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html">BOOK_M_uuid</a>.</p>
+</li>
+<li>
+<p>a simple index to the man-pages in HTML form for the
+   <a href="https://urbanjost.github.io/M_uuid/man3.html">routines</a> 
+   and <a href="https://urbanjost.github.io/M_uuid/man1.html">programs</a> </p>
+</li>
+<li>
+<p>There are man-pages in the repository download in the docs/ directory
+     that may be installed on ULS (Unix-Like Systems).</p>
+</li>
+<li>
+<p><img alt="man-pages" src="docs/images/manpages.gif"></p>
+<ul>
+<li><a href="https://urbanjost.github.io/M_uuid/manpages.zip">manpages.zip</a></li>
+<li><a href="https://urbanjost.github.io/M_uuid/manpages.tgz">manpages.tgz</a></li>
+</ul>
+</li>
+<li>
+<p><a href="docs/CHANGELOG.md">CHANGELOG</a> provides a history of significant changes</p>
+</li>
+</ul>
+<h3 id="developer">Developer</h3>
+<ul>
+<li><a href="https://urbanjost.github.io/M_uuid/fpm-ford/index.html">ford(1) output</a>.</li>
+</ul>
+<!--
+   - [doxygen(1) output](https://urbanjost.github.io/M_uuid/doxygen_out/html/index.html).
+-->
+<h2 id="-github-action-status">- <a href="docs/STATUS.md">github action status</a></h2>
+<h2 id="pedigree">Pedigree</h2>
+<p>This is a modified version of generate_uuid(3f).  generate_uuid(3f)
+ was originally derived from the xmlf90 codebase, (c) Alberto Garcia &amp;
+ Jon Wakelin, 2003-2004.  It also calls RNG routines from Scott Ladd
+ <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#99;&#111;&#116;&#116;&#46;&#108;&#97;&#100;&#100;&#64;&#99;&#111;&#121;&#111;&#116;&#101;&#103;&#117;&#108;&#99;&#104;&#46;&#99;&#111;&#109;">&#115;&#99;&#111;&#116;&#116;&#46;&#108;&#97;&#100;&#100;&#64;&#99;&#111;&#121;&#111;&#116;&#101;&#103;&#117;&#108;&#99;&#104;&#46;&#99;&#111;&#109;</a>, and the libFoX modules. Although some
+ sections have been replaced, generate_uuid(3f) was originally based on
+ the libFoX version.</p>
+<hr>
+<h2 id="_4"><img alt="-" src="docs/images/ref.gif"></h2>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc4122">RFC-4122</a></li>
+</ul>
+<!--
+   * [RFC-4122](https://datatracker.ietf.org/doc/html/rfc4122)
+-->
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Wikipedia</a></li>
+<li><a href="http://fortranwiki.org/fortran/show/FoX">FOX</a></li>
+</ul>
+<hr>
+        </div>
+        <div class="col-md-4">
+	  <div class="well">
+          <h2>Developer Info</h2>
+          <h4>John S. Urban</h4>
+          
+            <div class="text-center"><div class="btn-group" role="group">
+              <a class="btn btn-lg btn-primary" href="https://github.com/urbanjost/M_uuid"><i class="fa fa-github fa-lg"></i></a>
+            </div></div>
+       </div>
+       </div>
+      </div>
+        <div class="row">
+          <hr>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Source Files</h3>
+              <ul><li><a href='./sourcefile/demo_generate_uuid.f90.html'>demo_generate_uuid.f90</a></li><li><a href='./sourcefile/m_uuid.f90.html'>M_uuid.f90</a></li><li><a href='./sourcefile/test_suite_m_uuid.f90.html'>test_suite_M_uuid.f90</a></li><li><a href='./sourcefile/unique.f90.html'>unique.f90</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Modules</h3>
+              <ul><li><a href='./module/m_test_suite_m_uuid.html'>M_test_suite_M_uuid</a></li><li><a href='./module/m_uuid.html'>M_uuid</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Procedures</h3>
+              <ul><li><a href='./proc/generate_uuid.html'>generate_uuid</a></li><li><a href='./proc/setup.html'>setup</a></li><li><a href='./proc/test_suite_m_uuid.html'>test_suite_m_uuid</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Derived Types</h3>
+              <ul><li><a href='./type/mtprng_state.html'>mtprng_state</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/types.html"><em>All derived types&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-md-6"><p>M_uuid was developed by John S. Urban<br>&copy; 2023 
+</p>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <p class="text-right">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2023-07-03 16:21              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+         ================================================== -->
+         <!-- Placed at the end of the document so the pages load faster -->
+    <!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        -->
+        <script src="./js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+        <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="./tipuesearch/tipuesearch_content.js"></script>
+          <script src="./tipuesearch/tipuesearch_set.js"></script>
+          <script src="./tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

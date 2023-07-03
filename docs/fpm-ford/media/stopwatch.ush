@@ -1,0 +1,74 @@
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+genobj stopwatch
+makeobj stopwatch
+   color 7
+   polyfill FALSE
+   circleprecision 200
+   circle 0 0 rad1=40
+   circle 0 0 rad2=rad1-5
+   circle 0 0 rad3=3
+# watch hands
+   set angle=315
+   move2 rad3*cosd(angle) rad3*sind(angle)
+   draw2 rad2*cosd(angle)*0.80 rad2*sind(angle)*0.80
+   set angle=95
+   move2 rad3*cosd(angle) rad3*sind(angle)
+   draw2 rad2/2*cosd(angle)*0.80 rad2/2*sind(angle)*0.80
+# button
+parcel button
+    move2 rad1*cosd(angle) rad1*sind(angle)
+    draw2 (rad1+bump)*cosd(angle) (rad1+bump)*sind(angle)
+    getgp x1 y1
+    set angle=angle-w
+    move2 rad1*cosd(angle) rad1*sind(angle)
+    draw2 (rad1+bump)*cosd(angle) (rad1+bump)*sind(angle)
+    getgp x2 y2
+    move2 x1 y1
+    uarc (x1+x2)/2 (y1+y2)/2 -180
+    color 7
+post
+set w=5
+execute button angle=90-45+w/2  bump=3
+execute button angle=90+45+w/2  bump=3
+# tic
+parcel tic
+    set inside=rad2-4
+    move2 inside*cosd(angle) inside*sind(angle)
+    draw2 rad2*cosd(angle)*0.90 rad2*sind(angle)*0.90
+post
+execute tic -a angle=0 -b ge(angle,360) -c angle=angle+45
+makepoly
+rect -3 rad1 3 rad1+5
+closepoly
+rect -6 rad1+5 6 rad1+7
+closeobj stopwatch
+################################################
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+   linewidth 200
+   color 7
+   invokeobj 0 0 0 1 1 1 0 0 0 stopwatch
+closeobj
+rm -f stopwatch.p6
+#hcopy p6 -obj 1234 -f stopwatch.p6 -sz 640 640
+hcopy p6 -obj 1234 -sz 320 320 -f |ppmtogif >M_stopwatch.gif
+page
+callobj 1234
+delobj 1234
+################################################
+set A=1 S=0.9
+sz 640 320
+page -100*A 100*A -50*A 50*A
+makeobj 1234  # URBAN ART
+   linewidth 170
+   color 7
+   invokeobj 0 0 0 S S 1 0 0 0 stopwatch
+closeobj
+rm -f stopwatch.p6
+hcopy p6 -obj 1234 -sz 640*4 320*4 -f |ppmtogif >stopwatch.gif
+page
+callobj 1234
+delobj 1234
+################################################
