@@ -1,0 +1,132 @@
+sz 640 640
+set TRUE=1 FALSE=0
+set w=49 h=52 over=7 attic=14
+################################################
+genobj outerbrace
+makeobj outerbrace
+   # horizontal
+   move2 left h/3
+   draw2 0-outer h/3
+   move2 right h/3
+   draw2 0+outer h/3
+closeobj outerbrace
+################################################
+genobj innerbrace
+makeobj innerbrace
+   # horizontal
+   move2 0-outer h/3
+   draw2 0-inner h/3
+   move2 0+outer h/3
+   draw2 0+inner h/3
+closeobj innerbrace
+################################################
+genobj window
+makeobj window
+linewidth 400
+color 7
+rect 0-w/8 0-w/8 0+w/8 0+w/8
+color 0
+polyfill TRUE
+rect 0-w/8 0-w/8 0+w/8 0+w/8
+polyfill FALSE
+closeobj window
+################################################
+genobj frame
+makeobj frame
+   linewidth 300
+   set left=0-w/2 right=0+w/2
+   # outer box
+   move2 left h/2
+   draw2 right h/2
+   draw2 right 0-h/2
+   draw2 left 0-h/2
+   draw2 left h/2
+
+   # roof
+   move2 left-over  h/2
+   draw2 right+over h/2
+   draw2 0          h/2+attic
+   draw2 left-over  h/2
+   linewidth 200
+   move2 0 h/2
+   draw2 0+w/3 attic/2+h/2
+   move2 0 h/2 
+   draw2 0-w/3 attic/2+h/2
+   move2 0 h/2 
+   draw2 0 h/2+attic
+
+   # inner 
+   set outer=w/3 inner=w/7
+   # vertical
+   move2 0-w/3 0-h/2
+   draw2 0-w/3 0+h/2
+   move2 0+w/3 0-h/2
+   draw2 0+w/3 0+h/2
+   move2 0-w/7 0-h/2
+   draw2 0-w/7 0+h/2
+   move2 0+w/7 0-h/2
+   draw2 0+w/7 0+h/2
+   invokeobj 0 0       0 1 1 1 0 0 0 outerbrace
+   invokeobj 0 0-h/4   0 1 1 1 0 0 0 outerbrace
+   invokeobj 0 0-2*h/4 0 1 1 1 0 0 0 outerbrace
+   set move=h/8
+   invokeobj 0 0-move  0 1 1 1 0 0 0 innerbrace
+   invokeobj 0 0-h/4-move   0 1 1 1 0 0 0 innerbrace
+   invokeobj 0 0-2*h/4-move 0 1 1 1 0 0 0 innerbrace
+   move2 0-inner h/3
+   draw2 0+inner h/3
+   move2 0-inner h/3-h/4
+   draw2 0+inner h/3-h/4
+   linewidth 400
+   move2 0-inner 0
+   draw2 0+inner 0
+   polyfill TRUE
+   color 0
+   # door
+   makepoly
+   move2 0-inner 0
+   draw2 0+inner 0
+   draw2 0+inner 0-h/2
+   draw2 0-inner 0-h/2
+   draw2 0-inner 0
+   closepoly
+   color 7
+   linewidth 100
+   circle 0-0.8*inner 0-h/4 w/40
+   polyfill FALSE
+   set s=0.9
+   invokeobj 0+w/3 h/4  0 s s 1 0 0 0 window
+   invokeobj 0-w/3 h/4  0 s s 1 0 0 0 window
+closeobj
+################################################
+page -50 50 -50 50
+color 7
+makeobj 1234  # URBAN ART
+   circleprecision 60
+   linewidth 200
+   color 3
+   polyfill TRUE
+   circle 0 0 50
+   polyfill FALSE
+   color 7
+linewidth 300
+invokeobj 0 0-8 0 1 1 1 0 0 0 frame
+closeobj 1234
+rm -f framework.p6 framework.gif framework_long.gif
+hcopy p6 -obj 1234 -f framework.p6 -sz 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >framework.gif
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale 
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >framework_long.gif
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
