@@ -196,9 +196,9 @@
       <ul class="list-group">
           <li class="list-group-item">
             <ul class="list-inline">
+                <li><a href='../module/m_uuid.html'>M_uuid</a></li>
                 <li><a href='<a href="https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html">iso_fortran_env</a>'>iso_fortran_env</a></li>
                 <li>M_CLI2</li>
-                <li><a href='../module/m_uuid.html'>M_uuid</a></li>
             </ul>
           </li>
       </ul>
@@ -484,76 +484,76 @@
 
 <span class="n">version_text</span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
 <span class="s1">&#39;@(#)PRODUCT:        GPF (General Purpose Fortran) utilities and examples&gt;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;@(#)PROGRAM:        unique(1)&gt;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;@(#)DESCRIPTION:    output a UUID (Universally Unique ID)&gt;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;@(#)VERSION:        1.0, 20180427&gt;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;@(#)AUTHOR:         John S. Urban&gt;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;@(#)HOME PAGE:      http://www.urbanjost.altervista.org/index.html&gt;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;@(#)COMPILED:       Tue, Feb 9th, 2021 9:19:16 PM&gt;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;@(#)PROGRAM:        unique(1)&gt;                                           &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;@(#)DESCRIPTION:    output a UUID (Universally Unique ID)&gt;               &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;@(#)VERSION:        1.0, 20180427&gt;                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;@(#)AUTHOR:         John S. Urban&gt;                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;@(#)HOME PAGE:      http://www.urbanjost.altervista.org/index.html&gt;      &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;@(#)COMPILED:       Tue, Feb 9th, 2021 9:19:16 PM&gt;                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
 <span class="s1">&#39;&#39;</span><span class="p">]</span><span class="w"></span>
 <span class="n">help_text</span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
 <span class="s1">&#39;NAME&#39;</span><span class="p">,&amp;</span><span class="w"></span>
 <span class="s1">&#39;    unique(1f) - [FUNIX] generate a UUID (Universally Unique ID) string&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;                  per RFC 4122&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;    (LICENSE:PD)&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;SYNOPSIS&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;    unique [[ --method] NAME][ -urn][ -repeat N]]|[ --help|--version]&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;DESCRIPTION&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   unique(3f) generates UUID strings according to the RFC 4122&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   standard.&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   A universally unique identifier (UUID) is a 128-bit number used to&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   identify information in computer systems. When generated according&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   to standard methods UUIDs are for practical purposes unique.&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   Standard methods 0,1, and 4 are supported as described in RFC 4122.&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                  per RFC 4122                                         &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;    (LICENSE:PD)                                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;SYNOPSIS                                                               &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;    unique [[ --method] NAME][ -urn][ -repeat N]]|[ --help|--version]  &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;DESCRIPTION                                                            &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   unique(3f) generates UUID strings according to the RFC 4122         &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   standard.                                                           &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   A universally unique identifier (UUID) is a 128-bit number used to  &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   identify information in computer systems. When generated according  &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   to standard methods UUIDs are for practical purposes unique.        &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   Standard methods 0,1, and 4 are supported as described in RFC 4122. &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
 <span class="s1">&#39;   UUID strings are particularly useful as keys for relational database&#39;</span><span class="p">,&amp;</span><span class="w"></span>
 <span class="s1">&#39;   entries, and for building unique temporary file names (especially in&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   cross-mounted filesystems that more than one OS is utilizing).&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;OPTIONS&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;    --method NAME  Select the UUID version type. Supported methods are&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;                   nil|0, random|4, time|1.&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   cross-mounted filesystems that more than one OS is utilizing).      &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;OPTIONS                                                                &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;    --method NAME  Select the UUID version type. Supported methods are &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                   nil|0, random|4, time|1.                            &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
 <span class="s1">&#39;                   0. Nil UUID (ie. &#39;&#39;&#39;&#39;00000000-0000-0000-0000-000000000000&#39;&#39;&#39;&#39;)&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;                   1. time-based UUID&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;                   2. Not implemented&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;                   3. Not implemented&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;                   4. pseudo-RNG(Random Number Generator) based&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;                   5. Not implemented&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;    --urn       RFC 4122 defines a Uniform Resource Name (URN)&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;                namespace for UUIDs. IE., the output is&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;                prefixed with &quot;urn:uuid:&quot;.&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;    --repeat N  Number of UUID strings to generate&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;    --help      display this help and exit&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;    --version   output version information and exit&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;EXAMPLES&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;  Sample commands&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   unique&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   4bb8051e-4af3-11e8-6603-4254ffee9a14&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   unique -urn&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   urn:uuid:e9fd7cab-69f2-4cd6-4b5e-d54b9fbf617a&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   unique -method time -repeat 4&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   f2a2faf0-833a-11e9-7373-5eb4cfd7e237&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   f2a2faf0-833a-11e9-7373-afbb9f7b9100&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   f2a2faf0-833a-11e9-7373-cde3ffff3681&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   f2a2faf0-833a-11e9-7373-271cfbfd42bc&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;AUTHOR&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   John S. Urban&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;LICENSE&#39;</span><span class="p">,&amp;</span><span class="w"></span>
-<span class="s1">&#39;   Public Domain&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                   1. time-based UUID                                            &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                   2. Not implemented                                            &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                   3. Not implemented                                            &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                   4. pseudo-RNG(Random Number Generator) based                  &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                   5. Not implemented                                            &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;    --urn       RFC 4122 defines a Uniform Resource Name (URN)                   &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                namespace for UUIDs. IE., the output is                          &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                prefixed with &quot;urn:uuid:&quot;.                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;    --repeat N  Number of UUID strings to generate                               &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;    --help      display this help and exit                                       &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;    --version   output version information and exit                              &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;EXAMPLES                                                                         &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;  Sample commands                                                                &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   unique                                                                        &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   4bb8051e-4af3-11e8-6603-4254ffee9a14                                          &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   unique -urn                                                                   &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   urn:uuid:e9fd7cab-69f2-4cd6-4b5e-d54b9fbf617a                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   unique -method time -repeat 4                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   f2a2faf0-833a-11e9-7373-5eb4cfd7e237                                          &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   f2a2faf0-833a-11e9-7373-afbb9f7b9100                                          &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   f2a2faf0-833a-11e9-7373-cde3ffff3681                                          &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   f2a2faf0-833a-11e9-7373-271cfbfd42bc                                          &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;                                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;AUTHOR                                                                           &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   John S. Urban                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;LICENSE                                                                          &#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="s1">&#39;   Public Domain                                                                 &#39;</span><span class="p">,&amp;</span><span class="w"></span>
 <span class="s1">&#39;&#39;</span><span class="p">]</span><span class="w"></span>
 <span class="k">end subroutine </span><span class="n">setup</span><span class="w"></span>
 <span class="k">end program </span><span class="n">unique</span><span class="w"></span>
@@ -576,7 +576,7 @@
             <p class="text-right">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2023-07-02 23:52              </p>
+ on 2023-07-03 15:38              </p>
           </div>
         </div>
         <br>
