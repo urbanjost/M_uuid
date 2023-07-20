@@ -1,0 +1,41 @@
+getobj circles
+makeobj circles
+circleprecision 300
+curveprecision 300
+set FALSE=0
+set TRUE=1
+polyfill TRUE
+color  1; circle X=300 Y=620 R=1200
+color  2; circle X=X+R*.7 Y=Y*1.2 R=R*0.800
+color  3; circle X=X+R*.7 Y=Y*1.2 R=R*0.800
+color  4; circle X=X+R*.7 Y=Y*1.2 R=R*0.800
+color  5; circle X=X+R*.7 Y=Y*1.2 R=R*0.800
+color  6; circle X=X+R*.7 Y=Y*1.2 R=R*0.800
+polyfill FALSE
+rasters 5
+closeobj circles
+####################################################
+# Background color
+color 7
+# Page setup
+#page 0 2124 0 2124
+#########################
+set INNER_HEIGHT=640-2*80
+set INNER_WIDTH=1280-2*80
+set RATIO=INNER_HEIGHT/2124
+# repository-open-graph-template.png: PNG image data, 1280 x 640, 8-bit/color RGBA, non-interlaced
+#########################
+sz 1280 640
+set border=80
+page 0-border 1280+border 0-border 640+border
+color 7
+makeobj 1234 # URBAN ART
+invokeobj INNER_WIDTH/2-INNER_HEIGHT/2+100 90 0 RATIO RATIO 1 0 0 0 M_orderpack
+closeobj 1234
+color 0
+vflush
+# End of Picture %
+####################################################
+rm -f M_orderpack.gif
+hcopy p6 -obj 1234 -sz 1280+2*border 640+2*border -f |ppmtogif >M_orderpack.gif
+#hcopy xfig -obj 1234 -sz 1280+2*border 640+2*border -f M_orderpack.xfig
