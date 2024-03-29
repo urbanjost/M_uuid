@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,81 +12,56 @@
 
     <title>generate_uuid &ndash; M_uuid</title>
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="../css/pygments.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
       <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-         <script src="../js/jquery-2.1.3.min.js"></script>
-         <script src="../js/svg-pan-zoom.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
           <a class="navbar-brand" href="../index.html">M_uuid </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
-              <a href="#" class="dropdown-toggle"
-                 data-toggle="dropdown" role="button"
-                 aria-haspopup="true"
-                 aria-expanded="false">
-                 Contents <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                    <li><a href="../lists/files.html">Source Files</a></li>
-                  <li><a href="../lists/modules.html">Modules</a></li>
-                  <li><a href="../lists/procedures.html">Procedures</a></li>
-                  <li><a href="../lists/types.html">Derived Types</a></li>
-                  <li><a href="../lists/programs.html">Programs</a></li>
-              </ul>
-            </li>
-                <li class="visible-xs hidden-sm visible-lg">
-                  <a href="../lists/files.html">Source Files</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
                 </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/modules.html">Modules</a>
-              </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/procedures.html">Procedures</a>
-              </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/types.html">Derived Types</a>
-              </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/programs.html">Programs</a>
-              </li>
-          </ul>
-            <form action="../search.html" class="navbar-form navbar-right" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
               </div>
-              <!--
-                  <button type="submit" class="btn btn-default">Submit</button>
-                  -->
-            </form>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
 
     <div class="container">
   <div class="row">
@@ -92,33 +69,37 @@
       <small>Function</small>
       
     </h1>
-      <div class="row" id="info-bar">
-    <div class="col-lg-12">
-      <div class="well well-sm">
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
-          <li id="statements"><i class="fa fa-list-ol"></i>
-            <a data-toggle="tooltip"
-               data-placement="bottom" data-html="true"
-               title="92.0% of total for procedures.">80 statements</a>
-          </li>
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="92.0% of total for procedures.">80 statements</a>
+            </li>
 
-            <li id="source-file">
+            <li class="list-inline-item" id="source-file">
               <i class="fa fa-code"></i>
               <a href="../src/M_uuid.f90"> Source File</a>
             </li>
         </ul>
-        <ol class="breadcrumb in-well text-right">
-              <li><a href='../sourcefile/m_uuid.f90.html'>M_uuid.f90</a></li>
-              <li><a href='../module/m_uuid.html'>M_uuid</a></li>
-          <li class="active">generate_uuid</li>
-        </ol>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/m_uuid.f90.html'>M_uuid.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/m_uuid.html'>M_uuid</a></li>
+            <li class="breadcrumb-item active" aria-current="page">generate_uuid</li>
+          </ol>
+        </nav>
       </div>
     </div>
   </div>
   <script>
     $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-bs-toggle="tooltip"]').tooltip()
     })
   </script>
 
@@ -147,8 +128,9 @@
   
   
   
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
       <div class="list-group">
         <a class="list-group-item" href="../proc/generate_uuid.html#src">generate_uuid</a>
       </div>
@@ -165,63 +147,63 @@
     
 
     <h2 id="name">NAME</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">generate_uuid</span><span class="p">(</span><span class="mi">3</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">[</span><span class="n">M_uuid</span><span class="o">]</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="p">(</span><span class="n">Universally</span><span class="w"> </span><span class="k">Unique</span><span class="w"> </span><span class="n">IDentifier</span><span class="p">)</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">RFC</span><span class="w"> </span><span class="mi">4122</span><span class="w"></span>
-<span class="p">(</span><span class="nl">LICENSE</span><span class="p">:</span><span class="n">BSD</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">Clause</span><span class="p">)</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">generate_uuid</span><span class="p">(</span><span class="mi">3</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">[</span><span class="n">M_uuid</span><span class="o">]</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="p">(</span><span class="n">Universally</span><span class="w"> </span><span class="k">Unique</span><span class="w"> </span><span class="n">IDentifier</span><span class="p">)</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">RFC</span><span class="w"> </span><span class="mi">4122</span>
+<span class="p">(</span><span class="nl">LICENSE</span><span class="p">:</span><span class="n">BSD</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">Clause</span><span class="p">)</span>
 </code></pre></div>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<div class="codehilite"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="nf">generate_uuid(version) result</span><span class="p">(</span>uuid<span class="p">)</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="nf">generate_uuid(version) result</span><span class="p">(</span>uuid<span class="p">)</span>
 
-<span class="w"> </span><span class="n">integer</span><span class="p">,</span><span class="w"> </span><span class="n">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="n">optional</span><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="nb">version</span><span class="w"></span>
-<span class="w"> </span><span class="n">character</span><span class="p">(</span><span class="n">len</span><span class="p">=</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="n">uuid</span><span class="w"></span>
+<span class="w"> </span><span class="n">integer</span><span class="p">,</span><span class="w"> </span><span class="n">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="n">optional</span><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="nb">version</span>
+<span class="w"> </span><span class="n">character</span><span class="p">(</span><span class="n">len</span><span class="p">=</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="n">uuid</span>
 </code></pre></div>
 
 <h2 id="description">DESCRIPTION</h2>
-<div class="codehilite"><pre><span></span><code><span class="nv">A</span> <span class="nv">universally</span> <span class="nv">unique</span> <span class="nv">identifier</span> <span class="ss">(</span><span class="nv">UUID</span><span class="ss">)</span> <span class="nv">is</span> <span class="nv">a</span> <span class="mi">128</span><span class="o">-</span><span class="nv">bit</span> <span class="nv">number</span> <span class="nv">used</span> <span class="nv">to</span>
-<span class="nv">identify</span> <span class="nv">information</span> <span class="nv">in</span> <span class="nv">computer</span> <span class="nv">systems</span>. <span class="nv">When</span> <span class="nv">generated</span> <span class="nv">according</span>
-<span class="nv">to</span> <span class="nv">standard</span> <span class="nv">methods</span> <span class="nv">UUIDs</span> <span class="nv">are</span> <span class="k">for</span> <span class="nv">practical</span> <span class="nv">purposes</span> <span class="nv">unique</span>.
-<span class="nv">generate_uuid</span><span class="ss">(</span><span class="mi">3</span><span class="nv">f</span><span class="ss">)</span> <span class="nv">converts</span> <span class="nv">the</span> <span class="nv">UUID</span> <span class="nv">to</span> <span class="nv">a</span> <span class="nv">standard</span> <span class="nv">string</span> <span class="nv">format</span>
-<span class="nv">per</span> <span class="nv">RFC</span> <span class="mi">4122</span>.
+<div class="codehilite"><pre><span></span><code>A universally unique identifier (UUID) is a 128-bit number used to
+identify information in computer systems. When generated according
+to standard methods UUIDs are for practical purposes unique.
+generate_uuid(3f) converts the UUID to a standard string format
+per RFC 4122.
 </code></pre></div>
 
 <h2 id="authors">AUTHORS</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">based</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="k">work</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Alberto</span><span class="w"> </span><span class="n">Garcia</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">Jon</span><span class="w"> </span><span class="n">Wakelin</span><span class="p">,</span><span class="w"> </span><span class="mi">2003</span><span class="o">-</span><span class="mf">2004.</span><span class="w"></span>
-<span class="n">RNG</span><span class="w"> </span><span class="n">routines</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Scott</span><span class="w"> </span><span class="n">Ladd</span><span class="w"> </span><span class="o">&lt;</span><span class="n">scott</span><span class="p">.</span><span class="n">ladd</span><span class="nv">@coyotegulch</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"></span>
-<span class="n">the</span><span class="w"> </span><span class="n">libFoX</span><span class="w"> </span><span class="n">library</span><span class="p">(</span><span class="w"> </span><span class="n">Toby</span><span class="w"> </span><span class="n">White</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tow</span><span class="nv">@uszla</span><span class="p">.</span><span class="n">me</span><span class="p">.</span><span class="n">uk</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Gen</span><span class="o">-</span><span class="n">Tao</span><span class="w"> </span><span class="n">Chiang</span><span class="w"></span>
-<span class="o">&lt;</span><span class="n">gtc25</span><span class="nv">@cam</span><span class="p">.</span><span class="n">ac</span><span class="p">.</span><span class="n">uk</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Andrew</span><span class="w"> </span><span class="n">Walker</span><span class="w"> </span><span class="o">&lt;</span><span class="n">a</span><span class="p">.</span><span class="n">walker</span><span class="nv">@ucl</span><span class="p">.</span><span class="n">ac</span><span class="p">.</span><span class="n">uk</span><span class="o">&gt;</span><span class="p">).</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nx">based</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">previous</span><span class="w"> </span><span class="nx">work</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Alberto</span><span class="w"> </span><span class="nx">Garcia</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nx">Jon</span><span class="w"> </span><span class="nx">Wakelin</span><span class="p">,</span><span class="w"> </span><span class="mi">2003</span><span class="o">-</span><span class="mi">2004</span><span class="p">.</span>
+<span class="nx">RNG</span><span class="w"> </span><span class="nx">routines</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Scott</span><span class="w"> </span><span class="nx">Ladd</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">scott</span><span class="p">.</span><span class="nx">ladd</span><span class="err">@</span><span class="nx">coyotegulch</span><span class="p">.</span><span class="nx">com</span><span class="p">&gt;,</span><span class="w"> </span><span class="k">and</span>
+<span class="nx">the</span><span class="w"> </span><span class="nx">libFoX</span><span class="w"> </span><span class="kn">library</span><span class="p">(</span><span class="w"> </span><span class="nx">Toby</span><span class="w"> </span><span class="nx">White</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">tow</span><span class="err">@</span><span class="nx">uszla</span><span class="p">.</span><span class="nx">me</span><span class="p">.</span><span class="nx">uk</span><span class="p">&gt;,</span><span class="w"> </span><span class="nx">Gen</span><span class="o">-</span><span class="nx">Tao</span><span class="w"> </span><span class="nx">Chiang</span>
+<span class="p">&lt;</span><span class="nx">gtc25</span><span class="err">@</span><span class="nx">cam</span><span class="p">.</span><span class="nx">ac</span><span class="p">.</span><span class="nx">uk</span><span class="p">&gt;,</span><span class="w"> </span><span class="nx">Andrew</span><span class="w"> </span><span class="nx">Walker</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">a</span><span class="p">.</span><span class="nx">walker</span><span class="err">@</span><span class="nx">ucl</span><span class="p">.</span><span class="nx">ac</span><span class="p">.</span><span class="nx">uk</span><span class="p">&gt;).</span>
 </code></pre></div>
 
 <h2 id="options">OPTIONS</h2>
-<div class="codehilite"><pre><span></span><code><span class="nv">version</span>  <span class="nv">Indicates</span> <span class="nv">which</span> <span class="nv">standard</span> <span class="nv">method</span> <span class="nv">as</span> <span class="nv">described</span> <span class="nv">in</span> <span class="nv">RFC</span> <span class="mi">4122</span>
-         <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">generate</span> <span class="nv">the</span> <span class="nv">string</span>. <span class="nv">Versions</span> <span class="mi">0</span>,<span class="mi">1</span>, <span class="nv">and</span> <span class="mi">4</span> <span class="nv">are</span> <span class="nv">supported</span>.
+<div class="codehilite"><pre><span></span><code><span class="nx">version</span><span class="w">  </span><span class="nx">Indicates</span><span class="w"> </span><span class="nx">which</span><span class="w"> </span><span class="nx">standard</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">described</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">RFC</span><span class="w"> </span><span class="mi">4122</span>
+<span class="w">         </span><span class="k">is</span><span class="w"> </span><span class="nx">used</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">generate</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="kt">string</span><span class="p">.</span><span class="w"> </span><span class="nx">Versions</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">supported</span><span class="p">.</span>
 
-         <span class="mi">0</span>.  <span class="nv">Nil</span> <span class="nv">UUID</span> <span class="ss">(</span><span class="nv">ie</span>. <span class="s1">&#39;</span><span class="s">00000000-0000-0000-0000-000000000000</span><span class="s1">&#39;</span><span class="ss">)</span>
-         <span class="mi">1</span>.  <span class="nv">time</span><span class="o">-</span><span class="nv">based</span> <span class="nv">UUID</span>
-         <span class="mi">2</span>.  <span class="nv">Not</span> <span class="nv">implemented</span>
-         <span class="mi">3</span>.  <span class="nv">Not</span> <span class="nv">implemented</span>
-         <span class="mi">4</span>.  <span class="nv">pseudo</span><span class="o">-</span><span class="nv">RNG</span><span class="ss">(</span><span class="k">Random</span> <span class="nv">Number</span> <span class="nv">Generator</span><span class="ss">)</span> <span class="nv">based</span>
-         <span class="mi">5</span>.  <span class="nv">Not</span> <span class="nv">implemented</span>
+<span class="w">         </span><span class="mi">0</span><span class="p">.</span><span class="w">  </span><span class="nx">Nil</span><span class="w"> </span><span class="nx">UUID</span><span class="w"> </span><span class="p">(</span><span class="nx">ie</span><span class="p">.</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">00000000</span><span class="o">-</span><span class="mi">0000</span><span class="o">-</span><span class="mi">0000</span><span class="o">-</span><span class="mi">0000</span><span class="o">-</span><span class="mi">000000000000</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="w">         </span><span class="mi">1</span><span class="p">.</span><span class="w">  </span><span class="nx">time</span><span class="o">-</span><span class="nx">based</span><span class="w"> </span><span class="nx">UUID</span>
+<span class="w">         </span><span class="mi">2</span><span class="p">.</span><span class="w">  </span><span class="nx">Not</span><span class="w"> </span><span class="nx">implemented</span>
+<span class="w">         </span><span class="mi">3</span><span class="p">.</span><span class="w">  </span><span class="nx">Not</span><span class="w"> </span><span class="nx">implemented</span>
+<span class="w">         </span><span class="mi">4</span><span class="p">.</span><span class="w">  </span><span class="nx">pseudo</span><span class="o">-</span><span class="nx">RNG</span><span class="p">(</span><span class="nx">Random</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="nx">Generator</span><span class="p">)</span><span class="w"> </span><span class="nx">based</span>
+<span class="w">         </span><span class="mi">5</span><span class="p">.</span><span class="w">  </span><span class="nx">Not</span><span class="w"> </span><span class="nx">implemented</span>
 </code></pre></div>
 
 <h2 id="example">EXAMPLE</h2>
 <p>Sample usage:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">program</span> <span class="nv">demo_generate_uuid</span>
-<span class="nv">use</span> <span class="nv">M_uuid</span>, <span class="nv">only</span> : <span class="nv">generate_uuid</span>
-<span class="nv">implicit</span> <span class="nv">none</span>
-<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">36</span><span class="ss">)</span> :: <span class="nv">uuid</span>
-   <span class="o">!</span>
-   <span class="nv">uuid</span><span class="o">=</span><span class="nv">generate_uuid</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>  <span class="o">!</span> <span class="nv">version</span> <span class="mi">1</span> <span class="ss">(</span><span class="nv">time</span><span class="o">-</span><span class="nv">based</span> <span class="nv">UUID</span><span class="ss">)</span>
-   <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="s1">&#39;</span><span class="s">(a36)</span><span class="s1">&#39;</span><span class="ss">)</span><span class="nv">uuid</span>
-   <span class="o">!</span>
-   <span class="nv">uuid</span><span class="o">=</span><span class="nv">generate_uuid</span><span class="ss">(</span><span class="mi">4</span><span class="ss">)</span>  <span class="o">!</span> <span class="nv">version</span> <span class="mi">4</span> <span class="ss">(</span><span class="nv">pseudo</span><span class="o">-</span><span class="nv">RNG</span><span class="o">-</span><span class="nv">based</span><span class="ss">)</span>, <span class="nv">default</span>
-   <span class="o">!</span>
-   <span class="o">!</span> <span class="nv">RFC</span> <span class="mi">4122</span> <span class="nv">defines</span> <span class="nv">a</span> <span class="nv">Uniform</span> <span class="nv">Resource</span> <span class="nv">Name</span> <span class="ss">(</span><span class="nv">URN</span><span class="ss">)</span> <span class="nv">namespace</span> <span class="k">for</span> <span class="nv">UUIDs</span>.
-   <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="s1">&#39;</span><span class="s">(&quot;urn:uuid:&quot;,a36)</span><span class="s1">&#39;</span><span class="ss">)</span><span class="nv">uuid</span>
-   <span class="o">!</span>
-   <span class="o">!</span> <span class="nv">a</span> <span class="nv">good</span> <span class="nv">scratch</span> <span class="nv">file</span> <span class="nv">name</span>
-   <span class="nv">open</span><span class="ss">(</span><span class="nv">file</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">/tmp/scratch_</span><span class="s1">&#39;</span><span class="o">//</span><span class="nv">uuid</span>,<span class="nv">unit</span><span class="o">=</span><span class="mi">10</span><span class="ss">)</span>
-   <span class="o">!</span>
-<span class="k">end</span> <span class="nv">program</span> <span class="nv">demo_generate_uuid</span>
+<div class="codehilite"><pre><span></span><code><span class="nx">program</span><span class="w"> </span><span class="nx">demo_generate_uuid</span>
+<span class="nx">use</span><span class="w"> </span><span class="nx">M_uuid</span><span class="p">,</span><span class="w"> </span><span class="nx">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nx">generate_uuid</span>
+<span class="nx">implicit</span><span class="w"> </span><span class="nx">none</span>
+<span class="nx">character</span><span class="p">(</span><span class="nx">len</span><span class="p">=</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nx">uuid</span>
+<span class="w">   </span><span class="p">!</span>
+<span class="w">   </span><span class="nx">uuid</span><span class="p">=</span><span class="nx">generate_uuid</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">  </span><span class="p">!</span><span class="w"> </span><span class="nx">version</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="nx">time</span><span class="o">-</span><span class="nx">based</span><span class="w"> </span><span class="nx">UUID</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="err">&#39;</span><span class="p">(</span><span class="nx">a36</span><span class="p">)</span><span class="err">&#39;</span><span class="p">)</span><span class="nx">uuid</span>
+<span class="w">   </span><span class="p">!</span>
+<span class="w">   </span><span class="nx">uuid</span><span class="p">=</span><span class="nx">generate_uuid</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">  </span><span class="p">!</span><span class="w"> </span><span class="nx">version</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">(</span><span class="nx">pseudo</span><span class="o">-</span><span class="nx">RNG</span><span class="o">-</span><span class="nx">based</span><span class="p">),</span><span class="w"> </span><span class="k">default</span>
+<span class="w">   </span><span class="p">!</span>
+<span class="w">   </span><span class="p">!</span><span class="w"> </span><span class="nx">RFC</span><span class="w"> </span><span class="mi">4122</span><span class="w"> </span><span class="nx">defines</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">Uniform</span><span class="w"> </span><span class="nx">Resource</span><span class="w"> </span><span class="nx">Name</span><span class="w"> </span><span class="p">(</span><span class="nx">URN</span><span class="p">)</span><span class="w"> </span><span class="kn">namespace</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">UUIDs</span><span class="p">.</span>
+<span class="w">   </span><span class="nx">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="err">&#39;</span><span class="p">(</span><span class="s">&quot;urn:uuid:&quot;</span><span class="p">,</span><span class="nx">a36</span><span class="p">)</span><span class="err">&#39;</span><span class="p">)</span><span class="nx">uuid</span>
+<span class="w">   </span><span class="p">!</span>
+<span class="w">   </span><span class="p">!</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">good</span><span class="w"> </span><span class="nx">scratch</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="nx">name</span>
+<span class="w">   </span><span class="nx">open</span><span class="p">(</span><span class="nx">file</span><span class="p">=</span><span class="err">&#39;</span><span class="o">/</span><span class="nx">tmp</span><span class="o">/</span><span class="nx">scratch_</span><span class="err">&#39;</span><span class="c1">//uuid,unit=10)</span>
+<span class="w">   </span><span class="p">!</span>
+<span class="nx">end</span><span class="w"> </span><span class="nx">program</span><span class="w"> </span><span class="nx">demo_generate_uuid</span>
 </code></pre></div>
 
 <p>Typical output:</p>
@@ -234,11 +216,11 @@
         <table class="table table-striped varlist">
     <thead>
       <tr>
-        <th>Type</th>
-<th>Intent</th><th>Optional</th>        <th>Attributes</th>
-        <th></th>
-        <th>Name</th>
-        <th></th>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
     </thead>
     <tbody>
         <tr>
@@ -268,160 +250,129 @@
       
     <br>
 
-    <section class="visible-xs visible-sm hidden-md">
-        <h3>Contents</h3>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-      <div class="list-group">
-        <a class="list-group-item" href="../proc/generate_uuid.html#src">generate_uuid</a>
-      </div>
-    </div>
-
-
-    </section>
-    <br class="visible-xs visible-sm hidden-md">
-
 
     
     
 
     
     
+
 
 
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="k">function </span><span class="n">generate_uuid</span><span class="p">(</span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">uuid</span><span class="p">)</span><span class="w"></span>
+    <div class="hl codehilite"><pre><span></span><span class="k">function </span><span class="n">generate_uuid</span><span class="p">(</span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">uuid</span><span class="p">)</span>
 
 <span class="c">! ident_2=&quot;@(#) M_uuid generate_uuid(3f) generate(approximately) a UUID (Universally Unique IDentifier) string per RFC 4122&quot;</span>
 
-<span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">version</span><span class="w"></span>
-<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">uuid</span><span class="w"></span>
+<span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">version</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">uuid</span>
 
-<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i8b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">timestamp</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"></span>
-<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i4b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">clock_sequence</span><span class="w"></span>
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i8b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">timestamp</span><span class="p">,</span><span class="w"> </span><span class="n">node</span>
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i4b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">clock_sequence</span>
 
-<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i4b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">time_low</span><span class="p">,</span><span class="w"> </span><span class="n">time_mid</span><span class="p">,</span><span class="w"> </span><span class="n">time_hi_and_version</span><span class="w"></span>
-<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i4b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">clk_seq_hi_res</span><span class="p">,</span><span class="w"> </span><span class="n">clk_seq_low</span><span class="w"></span>
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i4b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">time_low</span><span class="p">,</span><span class="w"> </span><span class="n">time_mid</span><span class="p">,</span><span class="w"> </span><span class="n">time_hi_and_version</span>
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i4b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">clk_seq_hi_res</span><span class="p">,</span><span class="w"> </span><span class="n">clk_seq_low</span>
 
 <span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">values</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="c">! must be default for date_and_time</span>
-<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i4b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">variant</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">i4b</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">variant</span><span class="p">,</span><span class="w"> </span><span class="n">v</span>
 
-<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">initialized</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"></span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">initialized</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="w">      </span><span class="c">! Use the current date and time to init mtprng but this gives limited variability, so mix the result up.</span>
 <span class="w">      </span><span class="c">! Can we do better? In any case, this gets passed through a quick generator inside mtprng_init.</span>
-<span class="w">      </span><span class="k">call </span><span class="nb">date_and_time</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="n">values</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">values</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">values</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">call </span><span class="n">mtprng_init</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="mi">10000</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span><span class="w"> </span><span class="n">i4b</span><span class="p">),</span><span class="w"> </span><span class="n">rng_state</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">clock_seq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="n">i4b</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">initialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="nb">date_and_time</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="w">      </span><span class="n">values</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">      </span><span class="n">values</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="w">      </span><span class="k">call </span><span class="n">mtprng_init</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="mi">10000</span><span class="o">+</span><span class="n">values</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span><span class="w"> </span><span class="n">i4b</span><span class="p">),</span><span class="w"> </span><span class="n">rng_state</span><span class="p">)</span>
+<span class="w">      </span><span class="n">clock_seq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="n">i4b</span><span class="p">)</span>
+<span class="w">      </span><span class="n">initialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span>
 <span class="w">   </span><span class="k">endif</span>
 
-<span class="k">   </span><span class="n">variant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="k">   </span><span class="n">variant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 
 <span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">version</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
-<span class="k">      </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">version</span><span class="w"></span>
+<span class="k">      </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">version</span>
 <span class="w">   </span><span class="k">else</span>
-<span class="k">      </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+<span class="k">      </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
 <span class="w">   </span><span class="k">endif</span>
 
-<span class="k">   select case</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="k">   select case</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="w">   </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="w">      </span><span class="n">uuid</span><span class="o">=</span><span class="s1">&#39;00000000-0000-0000-0000-000000000000&#39;</span><span class="w"> </span><span class="c">! Nil UUID</span>
 <span class="w">      </span><span class="k">return</span>
 <span class="k">   case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">                                                                           </span><span class="c">!  version 1(time-based)</span>
-<span class="w">      </span><span class="k">call </span><span class="nb">date_and_time</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="n">values</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="nb">date_and_time</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 <span class="w">      </span><span class="c">! In case of too-frequent requests, we will replace time_low with the count below ...</span>
 <span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">all</span><span class="p">(</span><span class="n">values</span><span class="o">==</span><span class="n">values_save</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
-<span class="k">         </span><span class="n">hires_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hires_count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="k">         </span><span class="n">hires_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hires_count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
 <span class="w">      </span><span class="k">else</span>
-<span class="k">         </span><span class="n">hires_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="k">         </span><span class="n">hires_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 <span class="w">      </span><span class="k">endif</span>
-<span class="k">      </span><span class="n">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_utc_since_1582</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="w"></span>
+<span class="k">      </span><span class="n">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_utc_since_1582</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
 <span class="w">      </span><span class="n">clock_sequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clock_seq</span><span class="w">                                                      </span><span class="c">! clock sequence (14 bits)</span>
 <span class="w">      </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="mi">16</span><span class="p">))</span><span class="w">       </span><span class="c">! node ( 48 bits)</span>
 <span class="w">      </span><span class="c">! No MAC address accessible - see section 4.5 !FIXME</span>
 <span class="w">   </span><span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="c">! Unimplemented</span>
-<span class="w">      </span><span class="n">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="n">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
 <span class="w">      </span><span class="k">return</span>
 <span class="k">   case</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">                                                                           </span><span class="c">! version 4 (pseudo-RNG-based)</span>
-<span class="w">      </span><span class="n">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="mi">28</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="n">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="mi">28</span><span class="p">))</span>
 <span class="w">      </span><span class="n">clock_sequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="n">i4b</span><span class="p">)</span><span class="w">                             </span><span class="c">! clock sequence (14 bits)</span>
 <span class="w">      </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">mtprng_rand64</span><span class="p">(</span><span class="n">rng_state</span><span class="p">),</span><span class="w"> </span><span class="mi">16</span><span class="p">))</span><span class="w">       </span><span class="c">! node ( 48 bits)</span>
 <span class="w">   </span><span class="k">case </span><span class="n">default</span><span class="w"> </span><span class="c">! Unspecified</span>
-<span class="w">      </span><span class="n">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="n">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
 <span class="w">      </span><span class="k">return</span>
 <span class="k">   end select</span>
 
-<span class="k">   </span><span class="n">time_low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibits</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">time_mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibits</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
+<span class="k">   </span><span class="n">time_low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibits</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span>
+<span class="w">   </span><span class="n">time_mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibits</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span>
 
 <span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hires_count</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">      </span><span class="n">time_hi_and_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">ibits</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">),</span><span class="w"> </span><span class="n">i4b</span><span class="p">),</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">))</span><span class="w"></span>
+<span class="k">      </span><span class="n">time_hi_and_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">ibits</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">),</span><span class="w"> </span><span class="n">i4b</span><span class="p">),</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">))</span>
 <span class="w">   </span><span class="k">else</span>
-<span class="k">      </span><span class="n">time_hi_and_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="n">hires_count</span><span class="p">,</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">))</span><span class="w"></span>
+<span class="k">      </span><span class="n">time_hi_and_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="n">hires_count</span><span class="p">,</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">))</span>
 <span class="w">   </span><span class="k">endif</span>
 
-<span class="k">   </span><span class="n">clk_seq_low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibits</span><span class="p">(</span><span class="n">clock_sequence</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">clk_seq_hi_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="nb">ibits</span><span class="p">(</span><span class="n">clock_sequence</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">variant</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">))</span><span class="w"></span>
+<span class="k">   </span><span class="n">clk_seq_low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibits</span><span class="p">(</span><span class="n">clock_sequence</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span>
+<span class="w">   </span><span class="n">clk_seq_hi_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ior</span><span class="p">(</span><span class="nb">ibits</span><span class="p">(</span><span class="n">clock_sequence</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="nb">ishft</span><span class="p">(</span><span class="n">variant</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">))</span>
 
-<span class="w">   </span><span class="n">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">time_low</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;-&quot;</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">      </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">time_mid</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;-&quot;</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">      </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">time_hi_and_version</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;-&quot;</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">      </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">clk_seq_hi_res</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">      </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">clk_seq_low</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;-&quot;</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span><span class="w"></span>
-<span class="w">      </span><span class="n">int64ToHexOctets</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">time_low</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;-&quot;</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">time_mid</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;-&quot;</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">time_hi_and_version</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;-&quot;</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">clk_seq_hi_res</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">clk_seq_low</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="s2">&quot;-&quot;</span><span class="o">//</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">      </span><span class="n">int64ToHexOctets</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span>
 
-<span class="k">contains</span><span class="w"></span>
+<span class="k">contains</span>
 <span class="c">!==================================================================================================================================!</span>
-<span class="k">function </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"></span>
-<span class="kt">integer</span><span class="p">(</span><span class="n">i4b</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<span class="k">function </span><span class="n">int32ToHexOctets</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="kt">integer</span><span class="p">(</span><span class="n">i4b</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">b</span>
 <span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="c">! number of octets to print</span>
-<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">s</span><span class="w"></span>
-<span class="kt">character</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">hexdigits</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;6&#39;</span><span class="p">,</span><span class="s1">&#39;7&#39;</span><span class="p">,</span><span class="s1">&#39;8&#39;</span><span class="p">,</span><span class="s1">&#39;9&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span><span class="w"></span>
-<span class="kt">integer</span><span class="w">               </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">s</span>
+<span class="kt">character</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">hexdigits</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;6&#39;</span><span class="p">,</span><span class="s1">&#39;7&#39;</span><span class="p">,</span><span class="s1">&#39;8&#39;</span><span class="p">,</span><span class="s1">&#39;9&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span>
+<span class="kt">integer</span><span class="w">               </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
-<span class="w">   </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
-<span class="w">      </span><span class="n">s</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hexdigits</span><span class="p">(</span><span class="nb">ibits</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span><span class="w"></span>
+<span class="w">   </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">      </span><span class="n">s</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hexdigits</span><span class="p">(</span><span class="nb">ibits</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span>
 <span class="w">   </span><span class="k">enddo</span>
 
-<span class="k">end function </span><span class="n">int32ToHexOctets</span><span class="w"></span>
+<span class="k">end function </span><span class="n">int32ToHexOctets</span>
 <span class="c">!==================================================================================================================================!</span>
-<span class="k">function </span><span class="n">int64ToHexOctets</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"></span>
-<span class="kt">integer</span><span class="p">(</span><span class="n">i8b</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<span class="k">function </span><span class="n">int64ToHexOctets</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="kt">integer</span><span class="p">(</span><span class="n">i8b</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">b</span>
 <span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="c">! number of octets to print</span>
-<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">s</span><span class="w"></span>
-<span class="kt">character</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">hexdigits</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;6&#39;</span><span class="p">,</span><span class="s1">&#39;7&#39;</span><span class="p">,</span><span class="s1">&#39;8&#39;</span><span class="p">,</span><span class="s1">&#39;9&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span><span class="w"></span>
-<span class="kt">integer</span><span class="w">               </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="w">       </span><span class="kd">::</span><span class="w"> </span><span class="n">s</span>
+<span class="kt">character</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">hexdigits</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;6&#39;</span><span class="p">,</span><span class="s1">&#39;7&#39;</span><span class="p">,</span><span class="s1">&#39;8&#39;</span><span class="p">,</span><span class="s1">&#39;9&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span>
+<span class="kt">integer</span><span class="w">               </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
-<span class="w">  </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
-<span class="w">     </span><span class="n">s</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hexdigits</span><span class="p">(</span><span class="nb">ibits</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span><span class="w"></span>
+<span class="w">  </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">     </span><span class="n">s</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hexdigits</span><span class="p">(</span><span class="nb">ibits</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span>
 <span class="w">  </span><span class="k">enddo</span>
 
-<span class="k">end function </span><span class="n">int64ToHexOctets</span><span class="w"></span>
+<span class="k">end function </span><span class="n">int64ToHexOctets</span>
 <span class="c">!==================================================================================================================================!</span>
-<span class="k">end function </span><span class="n">generate_uuid</span><span class="w"></span>
+<span class="k">end function </span><span class="n">generate_uuid</span>
 </pre></div>
 
     </section>
@@ -434,32 +385,27 @@
     </div> <!-- /container -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col-xs-6 col-md-6"><p>M_uuid was developed by John S. Urban<br>&copy; 2023 
+        <div class="row justify-content-between">
+          <div class="col"><p>M_uuid was developed by John S. Urban<br>&copy; 2024 
 </p>
           </div>
-          <div class="col-xs-6 col-md-6">
-            <p class="text-right">
+          <div class="col">
+            <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2023-07-03 16:21              </p>
+ on 2024-03-29 03:51              </p>
           </div>
         </div>
         <br>
       </div> <!-- /container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript
-         ================================================== -->
-         <!-- Placed at the end of the document so the pages load faster -->
-    <!--
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        -->
-        <script src="../js/bootstrap.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
 
-        <!-- MathJax JavaScript
+    <!-- MathJax JavaScript
              ================================================== -->
              <!-- Placed at the end of the document so the pages load faster -->
         <script type="text/x-mathjax-config">
