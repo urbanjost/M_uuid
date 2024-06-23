@@ -11,12 +11,12 @@ keywords = ["fortran", "UUID", "RFC 4122", "Universally Unique ID"]
 homepage = "https://github.com/urbanjost/M_uuid.git"
 
 [build]
-auto-executables = true
-auto-tests = true
-auto-examples = true
+   auto-executables = true
+   auto-tests = true
+   auto-examples = true
 
 [install]
-#library = true
+   library = true
 
 [[executable]]
    name="unique"
@@ -26,8 +26,8 @@ auto-examples = true
    M_CLI2 = { git = "https://github.com/urbanjost/M_CLI2.git" }
 
 [[test]]
-name="test_suite_M_uuid"
-source-dir="test"
-main="test_suite_M_uuid.f90"
-[test.dependencies]
-M_framework = { git = "https://github.com/urbanjost/M_framework.git" }
+   name="test_suite_M_uuid"
+   source-dir="test"
+   main="test_suite_M_uuid.f90"
+   [test.dependencies]
+   M_framework = { git = "https://github.com/urbanjost/M_framework.git" }

@@ -44,8 +44,8 @@ OPTIONS
     5.	Not implemented
 
   --urn
-    RFC 4122 defines a Uniform Resource Name (URN) namespace for UUIDs. IE.,
-    the output is prefixed with "urn:uuid:".
+    The output is prefixed with "urn:uuid:". This conforms to RFC 4122, which
+    defines a Uniform Resource Name (URN) namespace for UUIDs.
 
   --repeat N
     Number of UUID strings to generate
@@ -62,15 +62,42 @@ EXAMPLES
      unique
      4bb8051e-4af3-11e8-6603-4254ffee9a14
 
-     unique -urn
+     unique --urn
      urn:uuid:e9fd7cab-69f2-4cd6-4b5e-d54b9fbf617a
 
-     unique -method time -repeat 4
+     unique --method time --repeat 4
      f2a2faf0-833a-11e9-7373-5eb4cfd7e237
      f2a2faf0-833a-11e9-7373-afbb9f7b9100
      f2a2faf0-833a-11e9-7373-cde3ffff3681
      f2a2faf0-833a-11e9-7373-271cfbfd42bc
 
+     unique --usage # show usage, including short names
+     USAGE:
+
+   KEYWORD SHORT PRESENT VALUE
+  help
+    h  F	[F]
+
+  method
+    m  F	["4"]
+
+  repeat
+    r  F	[1]
+
+  urn
+    U  F	[F]
+
+  usage
+    u  T	[T]
+
+  verbose
+    V  F	[F]
+
+  version
+    v  F	[F]
+
+  unique -r 2 -m 1 -U urn:uuid:91c6a054-26df-11ee-5779-c946fe995111
+  urn:uuid:91c6a054-26df-11ee-5779-62307afd65fd
 
 AUTHOR
   John S. Urban
