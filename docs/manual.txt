@@ -39,7 +39,7 @@ OPTIONS
 
     3.	Not implemented
 
-    4.	pseudo-RNG(Random Number Generator) based
+    4.	pseudo-RNG(Random Number Generator) based. The default
 
     5.	Not implemented
 
@@ -73,31 +73,19 @@ EXAMPLES
 
      unique --usage # show usage, including short names
      USAGE:
+     Keyword  Short Present Value
+     help	 h  F	     [F]
+     method	 m  F	     ["4"]
+     repeat	 r  F	     [1]
+     urn	 U  F	     [F]
+     usage	 u  T	     [T]
+     verbose	 V  F	     [F]
+     version	 v  F	     [F]
 
-   KEYWORD SHORT PRESENT VALUE
-  help
-    h  F	[F]
+     unique -r 2 -m 1 -U
+     urn:uuid:91c6a054-26df-11ee-5779-c946fe995111
+     urn:uuid:91c6a054-26df-11ee-5779-62307afd65fd
 
-  method
-    m  F	["4"]
-
-  repeat
-    r  F	[1]
-
-  urn
-    U  F	[F]
-
-  usage
-    u  T	[T]
-
-  verbose
-    V  F	[F]
-
-  version
-    v  F	[F]
-
-  unique -r 2 -m 1 -U urn:uuid:91c6a054-26df-11ee-5779-c946fe995111
-  urn:uuid:91c6a054-26df-11ee-5779-62307afd65fd
 
 AUTHOR
   John S. Urban
@@ -107,7 +95,7 @@ LICENSE
 
 
 
-				 July 20, 2023		       unique(1m_uuid)
+				August 28, 2024 	       unique(1m_uuid)
 M_uuid(3m_uuid) 					       M_uuid(3m_uuid)
 
 
@@ -156,7 +144,7 @@ PROCEDURES
 
 
 
-				 July 20, 2023		       M_uuid(3m_uuid)
+				August 28, 2024 	       M_uuid(3m_uuid)
 generate_uuid(3m_uuid)					generate_uuid(3m_uuid)
 
 
@@ -231,4 +219,4 @@ EXAMPLE
 
 
 
-				 July 20, 2023		generate_uuid(3m_uuid)
+				August 28, 2024 	generate_uuid(3m_uuid)

@@ -48,7 +48,7 @@ $BLOCK variable -varname version_text
 @(#)AUTHOR:         John S. Urban>
 @(#)HOME PAGE:      http://www.urbanjost.altervista.org/index.html>
 @(#)COMPILED:       Tue, Feb 9th, 2021 9:19:16 PM>
-$BLOCK
+$ENDBLOCK
 $!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 $BLOCK variable -varname help_text -file unique.1m_uuid.man
 NAME
@@ -111,7 +111,7 @@ EXAMPLES
 
    unique --usage # show usage, including short names
    USAGE:
-   KEYWORD  SHORT PRESENT VALUE
+   Keyword  Short Present Value
    help        h  F        [F]
    method      m  F        ["4"]
    repeat      r  F        [1]
@@ -128,7 +128,7 @@ AUTHOR
    John S. Urban
 LICENSE
    Public Domain
-$BLOCK
+$ENDBLOCK
 end subroutine setup
 $!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 end program unique 

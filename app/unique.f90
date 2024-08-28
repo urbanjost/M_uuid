@@ -79,7 +79,7 @@ help_text=[ CHARACTER(LEN=128) :: &
 '                   1. time-based UUID                                            ',&
 '                   2. Not implemented                                            ',&
 '                   3. Not implemented                                            ',&
-'                   4. pseudo-RNG(Random Number Generator) based                  ',&
+'                   4. pseudo-RNG(Random Number Generator) based. The default     ',&
 '                   5. Not implemented                                            ',&
 '                                                                                 ',&
 '    --urn       The output is prefixed with "urn:uuid:". This conforms to        ',&
@@ -109,7 +109,7 @@ help_text=[ CHARACTER(LEN=128) :: &
 '                                                                                 ',&
 '   unique --usage # show usage, including short names                            ',&
 '   USAGE:                                                                        ',&
-'   KEYWORD  SHORT PRESENT VALUE                                                  ',&
+'   Keyword  Short Present Value                                                  ',&
 '   help        h  F        [F]                                                   ',&
 '   method      m  F        ["4"]                                                 ',&
 '   repeat      r  F        [1]                                                   ',&
