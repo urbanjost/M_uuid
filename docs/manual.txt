@@ -95,7 +95,7 @@ LICENSE
 
 
 
-				August 28, 2024 	       unique(1m_uuid)
+				August 29, 2024 	       unique(1m_uuid)
 M_uuid(3m_uuid) 					       M_uuid(3m_uuid)
 
 
@@ -106,12 +106,18 @@ NAME
 
 
 SYNOPSIS
-  use M_uuid, only : generate_uuid
+  public entities:
 
-QUOTE
-  Remember you are unique, just like everyone else.
+       use M_uuid, only : generate_uuid
+       !
+       function generate_uuid(version) result(uuid)
+       integer, intent(in), optional :: version
+       character(len=36) :: uuid
+
 
 DESCRIPTION
+  Remember you are unique, just like everyone else.
+
   A universally unique identifier (UUID) is a 128-bit number used to identify
   information in computer systems.
 
@@ -138,13 +144,38 @@ DESCRIPTION
 
   -- Wikipedia
 
-PROCEDURES
-  generate_uuid(version)
-    generate 36-character UUID string
+EXAMPLE
+  Sample program:
+
+      program demo_M_uuid
+      ! generate 36-character UUID string
+      use M_uuid, only : generate_uuid
+      implicit none
+      character(len=36)   :: uuid
+      character(len=4096) :: filename
+	 ! version 1 (time-based UUID)
+	 write(*,'(a36)') generate_uuid(version=1)
+	 ! version 4 (pseudo-RNG-based), default
+	 write(*,'(a36)') generate_uuid(version=4)
+	 ! RFC 4122 defines a UUID Uniform Resource Name (URN) namespace
+	 write(*,'("urn:uuid:",a36)') generate_uuid(version=4)
+	 ! a good scratch file name
+	 open(file='/tmp/scratch_'//generate_uuid(),unit=10)
+	 inquire(unit=10,name=filename)
+	 write(*,'(*(g0))') trim(filename)
+	 close(unit=10,status='delete')
+      end program demo_M_uuid
+
+  Results:
+
+      > 7bc99c22-65ae-11ef-5143-11d1be3150ff
+      > dcdb2c0f-918f-4267-79f6-1612b35ef28b
+      > urn:uuid:fe86c986-31ae-4b34-4e2e-beaed6f7391b
+      > /tmp/scratch_fee7cac1-5756-4195-4102-2d34fd966af9
 
 
 
-				August 28, 2024 	       M_uuid(3m_uuid)
+				August 29, 2024 	       M_uuid(3m_uuid)
 generate_uuid(3m_uuid)					generate_uuid(3m_uuid)
 
 
@@ -155,10 +186,11 @@ NAME
 
 
 SYNOPSIS
-  function generate_uuid(version) result(uuid)
+  interface:
 
-      integer, intent(in), optional :: version
-      character(len=36) :: uuid
+	 function generate_uuid(version) result(uuid)
+	 integer, intent(in), optional :: version
+	 character(len=36) :: uuid
 
 
 DESCRIPTION
@@ -217,10 +249,14 @@ EXAMPLE
 	  write(*,'(*(g0))') trim(filename)
 	  close(unit=10,status='delete')
        end program demo_generate_uuid
-  ``` Results: ```text > afa6bfb4-65a3-11ef-7251-52dbfec73ce6 > 717b923d-
-  c12f-4d99-6446-21b4fbed1337 > urn:uuid:717b923d-c12f-4d99-6446-21b4fbed1337
-  > /tmp/scratch_717b923d-c12f-4d99-6446-21b4fbed1337
+
+  Results:
+
+     > afa6bfb4-65a3-11ef-7251-52dbfec73ce6
+     > 717b923d-c12f-4d99-6446-21b4fbed1337
+     > urn:uuid:717b923d-c12f-4d99-6446-21b4fbed1337
+     > /tmp/scratch_717b923d-c12f-4d99-6446-21b4fbed1337
 
 
 
-				August 28, 2024 	generate_uuid(3m_uuid)
+				August 29, 2024 	generate_uuid(3m_uuid)

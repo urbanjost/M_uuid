@@ -83,11 +83,13 @@ help:
 ship:
 	: make easily distributed archive files of manpages
 	mkdir -p ../docs
-	cd ../man/man3;\
-	   gzip *.3m_uuid;\
-	   zip -r ../../docs/manpages.zip *gz;\
-	   tar cvfz ../../docs/manpages.tgz *gz;\
-	   gunzip *.3m_uuid.gz
+	cd ../man;\
+	   gzip man*/*.?m_uuid*;\
+	   zip -r ../docs/manpages.zip */*gz;\
+	   tar cvfz ../docs/manpages.tgz */*gz;\
+	   gunzip */*.?m_uuid.gz;\
+	   tar tvfz ../docs/manpages.tgz;\
+	   zip -p ../docs/manpages.zip;
 
 .PHONY: run
 run: $(PROG)
