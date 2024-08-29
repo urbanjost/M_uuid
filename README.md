@@ -7,11 +7,14 @@
 ## Synopsis
 ```text
        use M_uuid, only : generate_uuid
+       function generate_uuid(version) result(uuid)
+       integer, intent(in), optional :: version
+       character(len=36) :: uuid
 ```
-## Quote
-####   __Remember you are unique, just like everyone else__.
 
 ## Description
+
+####   __Remember you are unique, just like everyone else__.
 
    _from Wikipedia_ ...
 
@@ -52,9 +55,40 @@
      In Wikipedia, The Free Encyclopedia. Retrieved 01:41, September 25, 2021, from
      https://en.wikipedia.org/w/index.php?title=Universally_unique_identifier&oldid=1045581110
 
-## List of Procedures
-   + generate_uuid(version) ! generate 36-character UUID string
-
+## Example
+```text
+     program demo_generate_uuid
+     ! generate 36-character UUID string
+     use M_uuid, only : generate_uuid
+     implicit none
+     character(len=36)   :: uuid
+     character(len=4096) :: filename
+        !
+	! version 1 (time-based UUID)
+        uuid=generate_uuid(version=1) 
+        write(*,'(a36)')uuid
+        !
+	! version 4 (pseudo-RNG-based), default
+        uuid=generate_uuid(version=4)  
+        write(*,'(a36)')uuid
+        !
+        ! RFC 4122 defines a Uniform Resource Name (URN) namespace for UUIDs.
+        write(*,'("urn:uuid:",a36)')uuid
+        !
+        ! a good scratch file name
+        open(file='/tmp/scratch_'//uuid,unit=10)
+	inquire(unit=10,name=filename)
+	write(*,'(*(g0))') trim(filename)
+	close(unit=10,status='delete')
+     end program demo_generate_uuid
+```
+Results:
+```text
+   > 14d8c5e4-65a3-11ef-73c0-7686f8f3c380
+   > bdd1f289-24b7-40a9-625b-a4c4deefb0f2
+   > urn:uuid:bdd1f289-24b7-40a9-625b-a4c4deefb0f2
+   > /tmp/scratch_bdd1f289-24b7-40a9-625b-a4c4deefb0f2
+```
 ---
 ![gmake](docs/images/gnu.gif)
 ---
@@ -131,13 +165,12 @@ program that exercise the routine.
    - [github action status](docs/STATUS.md) 
 ---
 ## Pedigree
- This is a modified version of generate_uuid(3f).  generate_uuid(3f)
- was originally derived from the xmlf90 codebase, (c) Alberto Garcia &
- Jon Wakelin, 2003-2004.  It also calls RNG routines from Scott Ladd
- <scott.ladd@coyotegulch.com>, and the libFoX modules. Although some
- sections have been replaced, generate_uuid(3f) was originally based on
- the libFoX version.
-
+   This is a modified version of generate_uuid(3f).  generate_uuid(3f)
+   was originally derived from the xmlf90 codebase, (c) Alberto Garcia &
+   Jon Wakelin, 2003-2004.  It also calls RNG routines from Scott Ladd
+   <scott.ladd@coyotegulch.com>, and the libFoX modules. Although some
+   sections have been replaced, generate_uuid(3f) was originally based
+   on the libFoX version.
 ---
 ![-](docs/images/ref.gif)
 ---

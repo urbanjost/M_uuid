@@ -24,6 +24,8 @@ homepage = "https://github.com/urbanjost/M_uuid.git"
    main="unique.f90"
    [executable.dependencies]
    M_CLI2 = { git = "https://github.com/urbanjost/M_CLI2.git" }
+   #M_CLI2 = { namespace = "GPF" }
+   #M_CLI2  = { path = "GLINKS/M_CLI2" }
 
 [[test]]
    name="test_suite_M_uuid"
@@ -31,3 +33,5 @@ homepage = "https://github.com/urbanjost/M_uuid.git"
    main="test_suite_M_uuid.f90"
    [test.dependencies]
    M_framework = { git = "https://github.com/urbanjost/M_framework.git" }
+   #M_framework = { namespace = "GPF" }
+   #M_framework  = { path = "GLINKS/M_framework" }
