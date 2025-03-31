@@ -3,12 +3,9 @@ M_uuid (3m_uuid)     - [M_uuid::INTRO] a module of UUID (Universally Unique IDen
 unique (1m_uuid)     - [FUNIX] generate a UUID (Universally Unique ID) string per RFC 4122 (LICENSE:PD)
 unique(1m_uuid) 					       unique(1m_uuid)
 
-
-
 NAME
   unique(1f) - [FUNIX] generate a UUID (Universally Unique ID) string per RFC
   4122 (LICENSE:PD)
-
 
 SYNOPSIS
   unique [[ --method] NAME][ -urn][ -repeat N]]|[ --help|--version]
@@ -20,7 +17,7 @@ DESCRIPTION
   information in computer systems. When generated according to standard
   methods UUIDs are for practical purposes unique.
 
-  Standard methods 0,1, and 4 are supported as described in RFC 4122.
+  Standard methods 0, 1 and 4 are supported as described in RFC 4122.
 
   UUID strings are particularly useful as keys for relational database
   entries, and for building unique temporary file names (especially in cross-
@@ -86,24 +83,18 @@ EXAMPLES
      urn:uuid:91c6a054-26df-11ee-5779-c946fe995111
      urn:uuid:91c6a054-26df-11ee-5779-62307afd65fd
 
-
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-
-
-				August 29, 2024 	       unique(1m_uuid)
+			       February 23, 2025	       unique(1m_uuid)
 M_uuid(3m_uuid) 					       M_uuid(3m_uuid)
-
-
 
 NAME
   M_uuid(3f) - [M_uuid::INTRO] a module of UUID (Universally Unique
   IDentifier) procedures (LICENSE:BSD-4-Clause)
-
 
 SYNOPSIS
   public entities:
@@ -112,8 +103,7 @@ SYNOPSIS
        !
        function generate_uuid(version) result(uuid)
        integer, intent(in), optional :: version
-       character(len=36) :: uuid
-
+       character(len=36)	     :: uuid
 
 DESCRIPTION
   Remember you are unique, just like everyone else.
@@ -144,7 +134,7 @@ DESCRIPTION
 
   -- Wikipedia
 
-EXAMPLE
+EXAMPLES
   Sample program:
 
       program demo_M_uuid
@@ -173,25 +163,19 @@ EXAMPLE
       > urn:uuid:fe86c986-31ae-4b34-4e2e-beaed6f7391b
       > /tmp/scratch_fee7cac1-5756-4195-4102-2d34fd966af9
 
-
-
-				August 29, 2024 	       M_uuid(3m_uuid)
+			       February 23, 2025	       M_uuid(3m_uuid)
 generate_uuid(3m_uuid)					generate_uuid(3m_uuid)
-
-
 
 NAME
   generate_uuid(3f) - [M_uuid] generate a UUID (Universally Unique IDentifier)
   string per RFC 4122 (LICENSE:BSD-4-Clause)
-
 
 SYNOPSIS
   interface:
 
 	 function generate_uuid(version) result(uuid)
 	 integer, intent(in), optional :: version
-	 character(len=36) :: uuid
-
+	 character(len=36)	       :: uuid
 
 DESCRIPTION
   A universally unique identifier (UUID) is a 128-bit number used to identify
@@ -222,7 +206,7 @@ OPTIONS
 
     5.	Not implemented
 
-EXAMPLE
+EXAMPLES
   Sample usage:
 
        program demo_generate_uuid
@@ -257,6 +241,4 @@ EXAMPLE
      > urn:uuid:717b923d-c12f-4d99-6446-21b4fbed1337
      > /tmp/scratch_717b923d-c12f-4d99-6446-21b4fbed1337
 
-
-
-				August 29, 2024 	generate_uuid(3m_uuid)
+			       February 23, 2025	generate_uuid(3m_uuid)
