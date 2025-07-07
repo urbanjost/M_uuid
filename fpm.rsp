@@ -8,23 +8,23 @@
 #
 @test_ubuntu-latest_gfortran_debug
 print  RESPONSE: ubuntu-latest 
-option test  --target '*' --compiler gfortran --profile debug
+option test  --target '*' --compiler gfortran --profile debug  --flag="-DRSP"
 
 @test_ubuntu-latest_ifx_debug
 print  RESPONSE: ubuntu-latest 
-option test  --target '*' --compiler ifx --profile debug
+option test  --target '*' --compiler ifx --profile debug  --flag="-DRSP"
 
 @test_ubuntu-latest_lfortran_debug
 print RESPONSE:  ubuntu-latest 
-option test  --target '*' --compiler lfortran --flag="--no-style-warnings --cpp" --profile debug
+option test  --target '*' --compiler lfortran --flag="--no-style-warnings --cpp -DRSP" --profile debug
 
 @test_ubuntu-latest_flang-new_debug
 print RESPONSE:  ubuntu-latest 
-option test  --target '*' --compiler flang-new --profile debug
+option test  --target '*' --compiler flang-new --profile debug --flag="-DRSP"
 
 @test_ubuntu-latest_nvfortran_debug
 print RESPONSE:  ubuntu-latest 
-option test  --target '*' --compiler nvfortran --profile debug
+option test  --target '*' --compiler nvfortran --profile debug --flag="-DRSP"
 
 #------------------------------------------------------------------------------#
 #
@@ -34,41 +34,41 @@ option test  --target '*' --compiler gfortran --profile debug
 
 @test_macos-latest_ifx_debug
 print RESPONSE:  macos-latest 
-option test  --target '*' --compiler ifx --profile debug
+option test  --target '*' --compiler ifx --profile debug --flag="-DRSP"
 
 @test_macos-latest_lfortran_debug
 print RESPONSE:  macos-latest 
-option test  --target '*' --compiler lfortran --flag="--no-style-warnings --cpp" --profile debug
+option test  --target '*' --compiler lfortran --flag="--no-style-warnings --cpp -DRSP" --profile debug
 
 @test_macos-latest_flang-new_debug
 print RESPONSE:  macos-latest 
-option test  --target '*' --compiler flang-new --profile debug
+option test  --target '*' --compiler flang-new --profile debug --flag="-DRSP"
 
 @test_macos-latest_nvfortran_debug
 print RESPONSE:  macos-latest 
-option test  --target '*' --compiler nvfortran --profile debug
+option test  --target '*' --compiler nvfortran --profile debug --flag="-DRSP"
 
 #------------------------------------------------------------------------------#
 #
 @test_windows-latest_gfortran_debug
 print RESPONSE:  windows-latest gfortran debug
-option test  --target "*" --compiler gfortran   --flag="-D_WIN32 -Wall -Wextra -fmax-errors=1 -g -fcheck=bounds -fcheck=array-temps -fbacktrace -fcoarray=single -fimplicit-none -Werror=implicit-interface" 
+option test  --target "*" --compiler gfortran   --flag="-D_WIN32 -Wall -Wextra -fmax-errors=1 -g -fcheck=bounds -fcheck=array-temps -fbacktrace -fcoarray=single -fimplicit-none -Werror=implicit-interface -DRSP" 
 
 @test_windows-latest_ifx_debug
 print RESPONSE:  windows-latest ifx debug
-option test  --target "*" --compiler ifx        --flag="/fpp" --profile debug
+option test  --target "*" --compiler ifx        --flag="/fpp /D RSP" --profile debug
 
 @test_windows-latest_lfortran_debug
 print RESPONSE:  windows-latest  lfortran debug
-option test  --target "*" --compiler lfortran   --flag="_WIN32 --no-style-warnings --cpp" --profile debug
+option test  --target "*" --compiler lfortran   --flag="-D_WIN32 --no-style-warnings --cpp -DRSP" --profile debug
 
 @test_windows-latest_flang-new_debug
 print RESPONSE:  windows-latest flang-new debug
-option test  --target "*" --compiler flang-new  --flag="_WIN32" --profile debug
+option test  --target "*" --compiler flang-new  --flag="-D_WIN32 -DRSP" --profile debug
 
 @test_windows-latest_nvfortran_debug
 print RESPONSE:  windows-latest 
-option test  --target "*" --compiler nvfortran  --flag="_WIN32" --profile debug
+option test  --target "*" --compiler nvfortran  --flag="-D_WIN32 -DRSP" --profile debug
 
 #------------------------------------------------------------------------------#
 @test_ubuntu-latest_gfortran_release
@@ -96,13 +96,13 @@ option test  --target '*' --compiler nvfortran --profile release
 @test_windows-latest_gfortran_release
 option test  --target '*' --compiler gfortran   --flag="-D_WIN32 -O3 -funroll-loops -Wimplicit-interface -fmax-errors=1 -fcoarray=single -fimplicit-none -Werror=implicit-interface" 
 @test_windows-latest_ifx_release
-option test  --target '*' --compiler ifx        --flag="/fpp" --profile release
+option test  --target '*' --compiler ifx        --flag="/fpp /DRSP" --profile release
 @test_windows-latest_lfortran_release
-option test  --target '*' --compiler lfortran   --flag="_WIN32" --flag="--no-style-warnings --cpp" --profile release
+option test  --target '*' --compiler lfortran   --flag="-D_WIN32 -DRSP" --flag="--no-style-warnings --cpp" --profile release
 @test_windows-latest_flang-new_release
-option test  --target '*' --compiler flang-new  --flag="_WIN32" --profile release
+option test  --target '*' --compiler flang-new  --flag="-D_WIN32 -DRSP" --profile release
 @test_windows-latest_nvfortran_release
-option test  --target '*' --compiler nvfortran  --flag="_WIN32" --profile release
+option test  --target '*' --compiler nvfortran  --flag="-D_WIN32 -DRSP" --profile release
 #------------------------------------------------------------------------------#
 ################################################################################
 @debugg
