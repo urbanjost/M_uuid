@@ -11,7 +11,7 @@ set(BUILD_DIR ${CMAKE_SOURCE_DIR}/../build)
 #set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${BUILD_DIR})
 
 # Set Fortran compiler flags for modern standards
-set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -std=f2018")
+#set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -std=f2018")
 
 set(INCLUDE_DIRECTORIES ${CMAKE_BINARY_DIR}/include)
 
