@@ -115,7 +115,8 @@ module M_uuid
 !!     > urn:uuid:fe86c986-31ae-4b34-4e2e-beaed6f7391b
 !!     > /tmp/scratch_fee7cac1-5756-4195-4102-2d34fd966af9
 !===================================================================================================================================
-use, intrinsic :: iso_fortran_env, only : int8, int16, int32, int64, real32, real64, dp=>real128
+!use, intrinsic :: iso_fortran_env, only : int8, int16, int32, int64, real32, real64, dp=>real128
+use, intrinsic :: iso_fortran_env, only : int8, int16, int32, int64, real32, real64
 !! provide for routines extracted from other modules (M_time and M_random)
 implicit none
 integer,parameter                     :: realtime=kind(0.0d0)            ! type for unix epoch time and julian days
@@ -339,6 +340,8 @@ end function generate_uuid
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()!
 !==================================================================================================================================!
 function get_utc_since_1582(values) result(ns)
+!use, intrinsic :: iso_fortran_env, only : wp=>real128
+use, intrinsic :: iso_fortran_env, only : wp=>real64
 
 ! returns the number of 100-ns intervals since 1582-10-15T00:00:00-0
 
@@ -355,7 +358,7 @@ real(kind=realtime) :: starttime
 integer             :: ierr
 integer             :: clicks,maxclicks
 real                :: rate
-real(kind=dp)       :: rate8,frac8
+real(kind=wp)       :: rate8,frac8
 integer(kind=i8b)   :: frac
 integer,parameter   :: ref(8)=[1582,10,15,0,0,0,0,0]
    call date_to_unix(ref,starttime,ierr)                                       ! seconds from 1582-10-15-00-00-00 to Unix Epoch Time
@@ -363,8 +366,8 @@ integer,parameter   :: ref(8)=[1582,10,15,0,0,0,0,0]
    ! if system clock is higher resolution use it even though that makes fractional second wrong
    call system_clock(count=clicks,count_rate=rate,count_max=maxclicks)
    if(rate > 1000)then                                                        ! system clock available and higher resolution
-      rate8=real(rate,kind=dp)
-      frac8=mod(real(clicks,kind=dp),rate8)/rate8*10000000_i8b                 ! MOD(A,P) == A - INT (A/P) * P.
+      rate8=real(rate,kind=wp)
+      frac8=mod(real(clicks,kind=wp),rate8)/rate8*10000000_i8b                 ! MOD(A,P) == A - INT (A/P) * P.
       frac=int(frac8)                                                          ! truncate to one remainder of one second
       ns=int((unixtime-starttime)*10000000_i8b,kind=i8b)+frac                  ! get date and time to nearest second and add frac
    else                                                                        ! use date even though accurate only to 1/1000 second

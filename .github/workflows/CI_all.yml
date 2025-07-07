@@ -107,10 +107,10 @@ jobs:
           platform: ubuntu-latest
           generate-doc-ford: true
           ford-working-directory: .
-          ford-config: README.md
-          ford-output-directory: doc/ford
+          ford-config: ford.md
+          ford-output-directory: docs/fpm-ford
           ford-branch: gh-pages-ford
-          ford-target-folder: doc/ford
+          ford-target-folder: docs/fpm-ford
 
   doc_doxygen:
     name: Generate Doxygen Documentation
@@ -124,9 +124,9 @@ jobs:
           generate-doc-doxygen: true
           doxygen-working-directory: .
           doxygen-config: Doxyfile
-          doxygen-output-directory: doc/doxygen
+          doxygen-output-directory: docs/doxygen
           doxygen-branch: gh-pages-doxygen
-          doxygen-target-folder: doc/doxygen
+          doxygen-target-folder: docs/doxygen
 
   status_fpm:
     name: Generate STATUS.md
