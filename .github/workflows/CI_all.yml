@@ -109,7 +109,7 @@ jobs:
           ford-working-directory: .
           ford-config: ford.md
           ford-output-directory: docs/fpm-ford
-          ford-branch: gh-pages-ford
+          ford-branch: gh-pages
           ford-target-folder: docs/fpm-ford
 
   doc_doxygen:
@@ -125,7 +125,7 @@ jobs:
           doxygen-working-directory: src/
           doxygen-config: dox.in
           doxygen-output-directory: ../docs/doxygen_out
-          doxygen-branch: gh-pages-doxygen
+          doxygen-branch: gh-pages
           doxygen-target-folder: ../docs/doxygen_out
 
   status_fpm:
