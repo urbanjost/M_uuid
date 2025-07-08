@@ -70,7 +70,7 @@ option test --target "*" --compiler lfortran --flag "-D_WIN32 --no-style-warning
 
 @test_windows-latest_flang-new_debug
 print RESPONSE: windows-latest flang-new debug
-option test --target "*" --compiler flang-new --flag "-D_WIN32 -DRSP" --profile debug --verbose
+option test --target "*" --compiler flang-new --flag "-D_WIN32 -DRSP" --verbose
 
 @test_windows-latest_nvfortran_debug
 print RESPONSE: windows-latest
@@ -100,13 +100,14 @@ option test --target '*' --compiler flang-new --profile release --flag "-DRSP" -
 option test --target '*' --compiler nvfortran --profile release --flag "-DRSP" --verbose
 #------------------------------------------------------------------------------#
 @test_windows-latest_gfortran_release
-option test --target "*" --compiler gfortran --flag "-D_WIN32 -O3 -funroll-loops -Wimplicit-interface -fmax-errors=1 -fcoarray=single -fimplicit-none -Werror=implicit-interface -DRSP" --verbose
+option test --target "*" --compiler gfortran --verbose 
+options --flag "-D_WIN32 -O3 -funroll-loops -Wimplicit-interface -fmax-errors=1 -fcoarray=single -fimplicit-none -Werror=implicit-interface -DRSP" 
 @test_windows-latest_ifx_release
 option test --target "*" --compiler ifx --flag "/fpp /DRSP" --profile release --verbose
 @test_windows-latest_lfortran_release
 option test --target "*" --compiler lfortran --flag "-D_WIN32 -DRSP" --flag="--no-style-warnings --cpp" --profile release --verbose
 @test_windows-latest_flang-new_release
-option test --target "*" --compiler flang-new --flag "-D_WIN32 -DRSP" --profile release --verbose
+option test --target "*" --compiler flang-new --flag "-D_WIN32 -DRSP" --verbose
 @test_windows-latest_nvfortran_release
 option test --target "*" --compiler nvfortran --flag "-D_WIN32 -DRSP" --profile release --verbose
 #------------------------------------------------------------------------------#

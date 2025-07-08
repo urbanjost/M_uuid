@@ -123,10 +123,10 @@ jobs:
           platform: ubuntu-latest
           generate-doc-doxygen: true
           doxygen-working-directory: .
-          doxygen-config: Doxyfile
-          doxygen-output-directory: docs/doxygen
+          doxygen-config: dox.in
+          doxygen-output-directory: docs/doxygen_out
           doxygen-branch: gh-pages-doxygen
-          doxygen-target-folder: docs/doxygen
+          doxygen-target-folder: docs/doxygen_out
 
   status_fpm:
     name: Generate STATUS.md
