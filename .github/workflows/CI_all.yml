@@ -122,11 +122,11 @@ jobs:
           compiler: gfortran
           platform: ubuntu-latest
           generate-doc-doxygen: true
-          doxygen-working-directory: .
+          doxygen-working-directory: src/
           doxygen-config: dox.in
-          doxygen-output-directory: docs/doxygen_out
+          doxygen-output-directory: ../docs/doxygen_out
           doxygen-branch: gh-pages-doxygen
-          doxygen-target-folder: docs/doxygen_out
+          doxygen-target-folder: ../docs/doxygen_out
 
   status_fpm:
     name: Generate STATUS.md
