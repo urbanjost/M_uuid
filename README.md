@@ -50,7 +50,7 @@
 ```text
              urn:uuid:123e4567-e89b-12d3-a456-426655440000
 ```
-   + Wikipedia contributors. (2021, September 21). Universally unique identifier. 
+   + Wikipedia contributors. (2021, September 21). Universally unique identifier.
      In Wikipedia, The Free Encyclopedia. Retrieved 01:41, September 25, 2021, from
      https://en.wikipedia.org/w/index.php?title=Universally_unique_identifier&oldid=1045581110
 
@@ -63,12 +63,12 @@
      character(len=36)   :: uuid
      character(len=4096) :: filename
         !
-	! version 1 (time-based UUID)
-        uuid=generate_uuid(version=1) 
+        ! version 1 (time-based UUID)
+        uuid=generate_uuid(version=1)
         write(*,'(a36)')uuid
         !
-	! version 4 (pseudo-RNG-based), default
-        uuid=generate_uuid(version=4)  
+        ! version 4 (pseudo-RNG-based), default
+        uuid=generate_uuid(version=4)
         write(*,'(a36)')uuid
         !
         ! RFC 4122 defines a Uniform Resource Name (URN) namespace for UUIDs.
@@ -76,9 +76,9 @@
         !
         ! a good scratch file name
         open(file='/tmp/scratch_'//uuid,unit=10)
-	inquire(unit=10,name=filename)
-	write(*,'(*(g0))') trim(filename)
-	close(unit=10,status='delete')
+        inquire(unit=10,name=filename)
+        write(*,'(*(g0))') trim(filename)
+        close(unit=10,status='delete')
      end program demo_generate_uuid
 ```
 Results:
@@ -95,11 +95,11 @@ Results:
      git clone https://github.com/urbanjost/M_uuid.git
      cd M_uuid/src
      # change Makefile if not using one of the listed compilers
-     
+
      # for gfortran
      make clean
      make F90=gfortran gfortran
-     
+
      # for ifort
      make clean
      make F90=ifort ifort
@@ -140,12 +140,12 @@ program that exercise the routine.
 
 ### User
    - A single page that uses javascript to combine all the HTML
-     descriptions of the man-pages is at 
+     descriptions of the man-pages is at
      [BOOK_M_uuid](https://urbanjost.github.io/M_uuid/BOOK_M_uuid.html).
 
    - a simple index to the man-pages in HTML form for the
-   [routines](https://urbanjost.github.io/M_uuid/man3.html) 
-   and [programs](https://urbanjost.github.io/M_uuid/man1.html) 
+   [routines](https://urbanjost.github.io/M_uuid/man3.html)
+   and [programs](https://urbanjost.github.io/M_uuid/man1.html)
 
    - There are man-pages in the repository download in the docs/ directory
      that may be installed on ULS (Unix-Like Systems).
@@ -161,7 +161,7 @@ program that exercise the routine.
 <!--
    - [doxygen(1) output](https://urbanjost.github.io/M_uuid/doxygen_out/html/index.html).
 -->
-   - [github action status](docs/STATUS.md) 
+   - [github action status](docs/STATUS.md)
 ---
 ## Pedigree
    This is a modified version of generate_uuid(3f).  generate_uuid(3f)
