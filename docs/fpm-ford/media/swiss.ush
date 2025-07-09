@@ -1,0 +1,96 @@
+set TRUE=1 FALSE=0
+set BLACK=0 RED=1 GREEN=2 YELLOW=3 BLUE=4 MAGENTA=5 CYAN=6 WHITE=7
+############################################
+sz 640 640
+##############
+genobj saw
+makeobj saw
+move2    397.374329       392.563782    
+draw2    148.827896       653.938416    
+draw2    135.999680       684.405457    
+draw2    127.982025       713.268860    
+draw2    132.792618       732.511230    
+draw2    144.017334       769.392334    
+draw2    158.449051       756.564087    
+draw2    169.673721       751.753540    
+draw2    188.916016       746.942871    
+draw2    201.744232       751.753540    
+draw2    193.726608       722.890076    
+draw2    237.021790       724.493530    
+draw2    222.590088       695.630127    
+draw2    259.471130       705.251282    
+draw2    253.057053       676.387756    
+draw2    288.334625       681.198425    
+draw2    273.902893       647.524353    
+draw2    305.973389       660.352539    
+draw2    304.369873       625.075012    
+draw2    334.836884       634.696167    
+draw2    328.422760       601.022095    
+draw2    360.493286       607.436218    
+draw2    352.475616       580.176270    
+draw2    379.735565       586.590393    
+draw2    378.132050       552.916321    
+draw2    398.977875       564.141052    
+closeobj
+##############
+set r=10
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+linewidth 150
+circleprecision 100
+color WHITE
+##############
+polyfill TRUE
+circle 0 35 2
+polyfill FALSE
+##############
+# swiss cross
+move2 0 -35-2
+draw2 0 -35+2
+move2 -2 -35
+draw2 2 -35
+##############
+# case
+move2 0-r -35
+uarc 0 -35 180
+draw2 0+r 35
+uarc 0 35 180
+draw2 0-r -35
+##############
+a=30
+move2  0+r*cosd(a) 35+r*sind(a)
+rdraw2 40*cosd(-45) 40*sind(-45)
+rdraw2 18*cosd(-65) 18*sind(-65)
+uarc 40 35 -24
+draw2 0+r 20
+##############
+move2 0+r -35+3
+draw2 0+4*r -35+3
+draw2 0+4*r+3 -35
+draw2 0+4*r -35-3
+draw2 0+r -35-3
+move2 0+4*r+3 -35
+draw2 0+4*r -35
+##############
+invokeobj -50 -60 0 0.10 0.10 1 0 0 0 saw
+closeobj
+################################################
+rm -f swiss.p6
+hcopy p6 -obj 1234 -f swiss.p6 -sz 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >swiss.gif
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale 
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >swiss_github.gif
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
+################################################
