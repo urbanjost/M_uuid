@@ -11,6 +11,7 @@ permissions:
   pull-requests: write
 
 jobs:
+################################################################################
   test_fpm:
     name: ${{ matrix.os }}_${{ matrix.compiler }}_fpm
     runs-on: ${{ matrix.os }}
@@ -35,7 +36,7 @@ jobs:
             compiler: nvfortran
           - os: windows-latest
             compiler: nvfortran
-
+################################################################################
     steps:
       - name: Setup Fortran
         uses: gha3mi/setup-fortran-conda@latest
@@ -44,12 +45,52 @@ jobs:
           platform: ${{ matrix.os }}
           extra-packages: ${{ matrix.extra-packages }}
 
+      - name: Set environment for lfortran
+        if: matrix.compiler == 'lfortran'
+        run: |
+          echo "end" >_empty.f90
+
+      - name: Set environment for gfortran and windows
+        if: matrix.compiler == 'gfortran' && matrix.os == 'windows-latest'
+        run: |
+          echo "end" >_empty.f90
+          gfortran -cpp -dM -E _empty.f90
+          gfortran --version
+
+      - name: Set environment for gfortran and not windows
+        if: matrix.compiler == 'gfortran' && matrix.os != 'windows-latest'
+        run: |
+          echo "end" >_empty.f90
+          gfortran -cpp -dM -E _empty.f90
+          gfortran --version
+
+      - name: Set environment for flang-new
+        if: matrix.compiler == 'flang-new'
+        run: |
+          echo "end" >_empty.f90
+          flang-new -cpp -dM -E _empty.f90
+          flang-new --version
+
+      - name: Set environment for ifx and windows
+        if: matrix.compiler == 'ifx' &&  matrix.os == 'windows-latest'
+        run: |
+          echo "end" >_empty.f90
+          ifx -E -fpp empty.f90 -dryrun 2>&1 | perl -lne 'print for /-D(\S+)/'
+
+      - name: Set environment for ifx and not windows
+        if: matrix.compiler == 'ifx' &&  matrix.os != 'windows-latest'
+        run: |
+          echo "end" >_empty.f90
+          ifx -E -fpp empty.f90 -dryrun 2>&1 | perl -lne 'print for /-D(\S+)/'
+          ifx --version
+
       - name: fpm test (debug)
         run: fpm @test_${{ matrix.os }}_${{ matrix.compiler }}_debug --verbose
 
       - name: fpm test (release)
         run: fpm @test_${{ matrix.os }}_${{ matrix.compiler }}_release -- --brief
 
+################################################################################
   test_cmake:
     name: ${{ matrix.os }}_${{ matrix.compiler }}_cmake
     runs-on: ${{ matrix.os }}
@@ -85,7 +126,7 @@ jobs:
 
       - name: cmake test (debug)
         run: |
-          
+
           cmake -S src -B build/debug -DCMAKE_BUILD_TYPE=Debug -DCMAKE_Fortran_COMPILER=${{ matrix.compiler }} -G Ninja
           cmake --build build/debug
           ctest --test-dir build/debug --output-on-failure
@@ -95,7 +136,7 @@ jobs:
           cmake -S src -B build/release -DCMAKE_BUILD_TYPE=Release -DCMAKE_Fortran_COMPILER=${{ matrix.compiler }} -G Ninja
           cmake --build build/release
           ctest --test-dir build/release --output-on-failure
-
+################################################################################
   doc_ford:
     name: Generate FORD Documentation
     runs-on: ubuntu-latest
