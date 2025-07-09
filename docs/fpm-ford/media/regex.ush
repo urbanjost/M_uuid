@@ -1,0 +1,35 @@
+sz 550 550
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+   circleprecision 60
+   linewidth 200
+   color 7
+   circle 0 0 45
+   color 2
+   polyfill TRUE
+   circle 0 0 45
+   polyfill FALSE
+   color 7
+   linewidth 350
+   textsize 50 50
+   centertext TRUE
+   move2 0 0
+   drawstr (.*)
+closeobj
+rm -f regex.p6
+hcopy p6 -obj 1234 -f regex.p6 -sz 550 550
+hcopy p6 -obj 1234 -sz 50*10 50*10 -f |ppmtogif >regex.gif
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale 
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >regex_github.gif
+#####################################################################
+sz 550 550
+page -50 50 -50 50
+callobj 1234
