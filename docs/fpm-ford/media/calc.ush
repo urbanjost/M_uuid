@@ -1,0 +1,85 @@
+sz 500 800
+set TRUE=0 FALSE=1
+################################################
+parcel roundrect
+ !set tall=50 width=80 radius=10
+ dotx=0-width/2+radius
+ doty=0-tall/2+radius
+ arc dotx doty radius 180 270
+ dotx=width/2-radius
+ draw2 dotx doty-radius
+ arc dotx doty radius 270 360
+ doty=abs(doty)
+ draw2 dotx+radius tall/2-radius
+ arc dotx doty radius 0 90
+ dotx=-dotx
+ draw2 dotx doty+radius
+ arc dotx doty radius 90 180
+ doty=-doty
+ draw2 dotx-radius doty
+post
+################################################
+genobj key
+makeobj key
+linewidth 200
+execute roundrect tall=10 width=10 radius=3
+linewidth 120
+textsize 6.5 7
+centertext TRUE
+move2 0 0
+closeobj 
+################################################
+genobj display
+makeobj display
+color 7
+execute roundrect tall=10 width=42 radius=2
+linewidth 120
+textsize 6.5 8
+centertext TRUE
+move2 0 0
+drawstr 3.14159265
+closeobj 
+################################################
+parcel column
+set S=.90 I=I+1
+invokeobj H R 0 S S S 0 0 0 key
+pushmatrix
+translate H R 0
+drawstr $X(I)
+popmatrix
+set H=H-11
+post 
+################################################
+parcel rows
+   set I=0
+   set H=17 R=-28
+   execute column DO=4
+   set H=17 R=R+11
+   execute column DO=4
+   set H=17 R=R+11
+   execute column DO=4
+   set H=17 R=R+11
+   execute column DO=4
+   set H=17 R=R+11
+   execute column DO=4
+post
+################################################
+################################################
+makeobj 1234  # URBAN ART
+   page -28 28 -42 42
+   circleprecision 60
+   linewidth 200
+   color 7
+   execute roundrect tall=80 width=50 radius=5
+   invokeobj 0 30 0 1 1 1 0 0 0 display
+   linewidth 200
+   color 7
+   set $XSTORE(1,"=",")","(","C","/","^","0","%","*","3","2","1","-","6","5","4","+","9","8","7")
+   execute rows
+closeobj
+rm -f calc.p6
+hcopy p6 -obj 1234 -f calc.p6 -sz 50*10 80*10
+hcopy p6 -obj 1234 -sz 50*10 80*10 -f |ppmtogif >calc.gif
+
+page
+callobj 1234

@@ -1,0 +1,75 @@
+sz 640 640
+set TRUE=1 FALSE=0
+################################################
+set a=12 
+genobj arrow
+makeobj arrow
+   polyfill TRUE
+   makepoly
+      move2  0.00*a  0.80*a
+      draw2  0.30*a  0.30*a
+      draw2  0.10*a  0.30*a
+      draw2  0.10*a -0.80*a
+      draw2 -0.10*a -0.80*a
+      draw2 -0.10*a  0.30*a
+      draw2 -0.30*a  0.30*a
+      draw2  0.00*a  0.80*a
+   closepoly
+   polyfill FALSE
+closeobj
+################################################
+genobj funnel
+makeobj funnel
+   move2 -40 10 
+   draw2 40 10
+   draw2 10 -20
+   draw2 10 -40
+   draw2 -10 -40
+   draw2 -10 -20
+   draw2 -40 10
+closeobj funnel
+################################################
+genobj lineout
+makeobj lineout
+   move2 0 -30
+   draw2 0 -45
+closeobj lineout
+################################################
+page -50 50 -50 50
+makeobj 1234  # URBAN ART
+   circleprecision 60
+   linewidth 200
+   color 7
+   invokeobj 0 15 0 1 1 1 0 0 0 funnel
+   invokeobj 0 5 0 1 1 1 0 0 180 arrow
+   invokeobj 0 0 0 1 1 1 0 0 0 lineout
+   invokeobj -5 0 0 1 1 1 0 0 0 lineout
+   invokeobj +5 0 0 1 1 1 0 0 0 lineout
+   circle 0 36 13 2-0.35
+   circle -20 40  8-0.35
+   circle -32 35  6-0.35
+   circle  20 40  8-0.35
+   circle  30 35  4-0.35
+   circle  12  0  2 
+   circle  11 15  4.2
+   circle -26 15  3
+   circle  -9 12  4.6
+closeobj
+rm -f prep.p6
+hcopy p6 -obj 1234 -f prep.p6 -sz 640 640
+hcopy p6 -obj 1234 -sz 640*4 640*4 -f |ppmtogif >prep.gif
+#####################################################################
+# 1280×640px for best display on github
+set size=200
+set adjust=1.1
+set xsize=1280*adjust ysize=640
+set adjust=0.80
+set scale=max(xsize,ysize)/size*adjust
+sz xsize ysize
+page (-xsize/2)/scale xsize/2/scale (-ysize/2)/scale ysize/2/scale 
+hcopy p6 -obj 1234 -sz xsize ysize -f |ppmtogif >funnel_github.gif
+#####################################################################
+sz 640 640
+page -50 50 -50 50
+page
+callobj 1234
