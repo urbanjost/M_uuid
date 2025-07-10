@@ -1,4 +1,6 @@
-name: Setup Fortran Conda CI/CD
+################################################################################
+# from https://github.com/gha3mi/setup-fortran-conda
+name: multi-platform fpm test using conda setup
 
 on:
   push:
@@ -28,14 +30,14 @@ jobs:
           - os: macos-latest
             extra-packages: ""
         exclude:
-          - os: macos-latest
-            compiler: flang-new
+# ifx is not supported on macos like ifort was 2025-07-09
           - os: macos-latest
             compiler: ifx
+# maybe could do macos with cross-compilation, perhaps from a container but appears to not be supported directly
           - os: macos-latest
             compiler: nvfortran
-          - os: windows-latest
-            compiler: nvfortran
+    env:
+      TZ: UTC+04:00
 ################################################################################
     steps:
       - name: Setup Fortran
@@ -45,10 +47,21 @@ jobs:
           platform: ${{ matrix.os }}
           extra-packages: ${{ matrix.extra-packages }}
 
+# ENVIRONMENT VARIABLES FOR COMPILERS
+#  FPM_FC            sets the path to the Fortran compiler used for the build, ==> --compiler
+#  FPM_FFLAGS        sets the arguments for the Fortran compiler               ==> --flag
+#  FPM_CC            sets the path to the C compiler used for the build        ==> --c-compiler
+#  FPM_CFLAGS        sets the arguments for the C compiler                     ==> --c-flag
+#  FPM_CXX           sets the path to the C++ compiler used for the build,     ==> --cxx-compiler
+#  FPM_CXXFLAGS      sets the arguments for the C++ compiler                   ==> --cxx-flag
+#  FPM_AR            sets the path to the archiver used for the build,         ==> --archiver
+#  FPM_LDFLAGS       sets additional link arguments for creating executables   ==> --link-flag
+#
       - name: Set environment for lfortran
         if: matrix.compiler == 'lfortran'
         run: |
           echo "end" >_empty.f90
+          echo "FPM_FFLAGS='--no-style-warnings' --cpp" >> $GITHUB_ENV
 
       - name: Set environment for gfortran and windows
         if: matrix.compiler == 'gfortran' && matrix.os == 'windows-latest'
@@ -90,6 +103,38 @@ jobs:
       - name: fpm test (release)
         run: fpm @test_${{ matrix.os }}_${{ matrix.compiler }}_release -- --brief
 
+################################################################################
+# EXAMPLES OF CONDIIONAL RUN TESTS
+
+#      - name: fpm test (debug)
+#        if: matrix.os != 'windows-latest'
+#        run: |
+#          fpm test --compiler ${{ matrix.compiler }} --profile debug --verbose
+#
+#      - name: fpm test (release)
+#        if: matrix.os != 'windows-latest'
+#        run: |
+#          fpm test --compiler ${{ matrix.compiler }} --profile release -- --brief
+#
+#      - name: fpm test (debug)
+#        if: matrix.os == 'windows-latest' && matrix.compiler != 'gfortran'
+#        run: |
+#          fpm test --compiler ${{ matrix.compiler }} --profile debug --verbose
+#
+#      - name: fpm test (release)
+#        if: matrix.os == 'windows-latest' && matrix.compiler != 'gfortran'
+#        run: |
+#          fpm test --compiler ${{ matrix.compiler }} --profile release -- --brief
+#
+#      - name: fpm test (debug)
+#        if: matrix.os == 'windows-latest' && matrix.compiler == 'gfortran'
+#        run: |
+#          fpm test --compiler ${{ matrix.compiler }} --verbose --fflags="-D_WIN32 -Wall -Wextra -fmax-errors=1 -g -fcheck=bounds -fcheck=array-temps -fbacktrace -fcoarray=single -fimplicit-none -Werror=implicit-interface"
+#
+#      - name: fpm test (release)
+#        if: matrix.os == 'windows-latest' && matrix.compiler == 'gfortran'
+#        run: |
+#          fpm test --compiler ${{ matrix.compiler }} --verbose --fflags="-D_WIN32 -O3 -funroll-loops -Wimplicit-interface -fmax-errors=1 -fcoarray=single -fimplicit-none -Werror=implicit-interface -ffree-form" -- --brief
 ################################################################################
   test_cmake:
     name: ${{ matrix.os }}_${{ matrix.compiler }}_cmake
@@ -152,7 +197,7 @@ jobs:
           ford-output-directory: docs/fpm-ford
           ford-branch: gh-pages
           ford-target-folder: docs/fpm-ford
-
+################################################################################
   doc_doxygen:
     name: Generate Doxygen Documentation
     runs-on: ubuntu-latest
@@ -168,7 +213,7 @@ jobs:
           doxygen-output-directory: ../docs/doxygen_out
           doxygen-branch: gh-pages
           doxygen-target-folder: ../docs/doxygen_out
-
+################################################################################
   status_fpm:
     name: Generate STATUS.md
     if: always()
@@ -179,7 +224,7 @@ jobs:
         uses: gha3mi/setup-fortran-conda@latest
         with:
           generate-status-fpm: true
-
+################################################################################
   status_cmake:
     name: Generate STATUS.md
     if: always()
@@ -190,7 +235,7 @@ jobs:
         uses: gha3mi/setup-fortran-conda@latest
         with:
           generate-status-cmake: true
-
+################################################################################
   update_readme_table:
     name: Update README.md status table
     if: |
@@ -206,3 +251,4 @@ jobs:
           update-readme-token: ${{ secrets.GH_PAT }}   # Update with your GitHub personal access token
           update-readme-user-name: "John S. Urban" # Update with your name
           update-readme-user-email: "urbanjost@proton.me"  # Update with your email
+################################################################################
