@@ -33,7 +33,10 @@ jobs:
 # ifx is not supported on macos like ifort was 2025-07-09
           - os: macos-latest
             compiler: ifx
-# maybe could do macos with cross-compilation, perhaps from a container but appears to not be supported directly
+# flang-new is not supported on macos via conda 2025-07-10
+          - os: macos-latest
+            compiler: flang-new
+# maybe could do nvfortran on macos with cross-compilation, perhaps from a container but appears to not be supported directly
           - os: macos-latest
             compiler: nvfortran
     env:
